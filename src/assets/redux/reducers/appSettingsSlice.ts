@@ -5,10 +5,12 @@ export type Language = 'ru' | 'kz';
 
 export type AppSettings = {
   language: Language,
+  appVersion: string,
 };
 
 const initialState: AppSettings = {
   language: 'ru',
+  appVersion: '0.01',
 };
 
 const appSettingsSlice = createSlice({
