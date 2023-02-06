@@ -27,6 +27,8 @@
       "@hooks/*": ["src/assets/hooks/*"],
       "@types/*": ["src/assets/types/*"],
       "@utils/*": ["src/assets/utils/*"],
+      "@localization/*": ["src/assets/localization/*"],
+      "@locales/*": ["src/assets/localization/locales/*"]
     }
   },
   "include": ["src"],

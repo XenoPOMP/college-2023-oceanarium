@@ -1,7 +1,7 @@
-import { ToolkitState } from '@redux/types/toolkit-reducer-types';
+import { AppSettings } from '@redux/reducers/appSettingsSlice';
 
 export type StoreType = {
-  toolkit: ToolkitState,
+  appSettings: AppSettings,
 };
 
 export type ReduxAction<A> = {
