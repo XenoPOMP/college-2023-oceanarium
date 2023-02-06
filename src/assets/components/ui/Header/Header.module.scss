@@ -1,0 +1,9 @@
+@import "src/assets/styles/templates";
+
+header.appHeader {
+  @extend %uiGrid;
+  @extend %mainFont;
+
+  height: 100px;
+  background: red;
+}
