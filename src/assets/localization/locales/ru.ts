@@ -38,7 +38,7 @@ const ru: Localization = {
       title: 'МЫ ПРЕДЛАГАЕМ',
       swimWithFishes: 'Поплавать с рыбками',
       lookAtFishes: 'Посмотреть на рыбок',
-      laughOverFishes: 'Посмеятьсянад рыбками',
+      laughOverFishes: 'Посмеяться над рыбками',
       doSomeDungWithFishes: 'Покакать с рыбками',
     },
   },

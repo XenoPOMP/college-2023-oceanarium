@@ -37,6 +37,9 @@ const kz: Localization = {
     servicesSection: {
       title: 'БІЗ ҰСЫНАМЫЗ',
       swimWithFishes: 'Балықпен жүзу',
+      lookAtFishes: 'Балыққа қарау',
+      laughOverFishes: 'Балықтарға күлу',
+      doSomeDungWithFishes: 'Балықпен нәжіс',
     },
   },
 };
