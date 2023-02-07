@@ -11,6 +11,7 @@ const UpperMenu = () => {
       className={cn(styles.menu)}
       style={getUiSx({
         maxWidth: 'unset',
+        gap: 0,
       })}
     >
       <div className={cn(styles.link)}>{loc.nav.aboutUs}</div>
