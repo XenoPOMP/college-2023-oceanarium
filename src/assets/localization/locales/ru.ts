@@ -1,6 +1,19 @@
 import Localization from '@localization/Localization';
 
 const ru: Localization = {
+  meta: {
+    mainPage: {
+      title: 'Главная',
+      desc: '',
+      keywords: '',
+    },
+    notFoundPage: {
+      title: '404',
+      desc: '',
+      keywords: '',
+    },
+  },
+
   header: {
     logoTitle: 'Моря Талдыкоргана',
     logoDesc: 'Океанариум',
