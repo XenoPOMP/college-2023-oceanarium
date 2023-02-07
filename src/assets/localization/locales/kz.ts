@@ -27,6 +27,18 @@ const kz: Localization = {
     forVisitors: 'Келушілер үшін',
     merchShop: 'Кәдесыйлар дүкені',
   },
+
+  exhibitionPreview: {
+    seeMoreButton: 'Толығырақ оқыңыз',
+    aboutSection: {
+      title: 'ОКЕАНАРИУМ ТУРАЛЫ',
+      desc: 'No text at the moment',
+    },
+    servicesSection: {
+      title: 'БІЗ ҰСЫНАМЫЗ',
+      swimWithFishes: 'Балықпен жүзу',
+    },
+  },
 };
 
 export default kz;

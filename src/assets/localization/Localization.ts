@@ -21,6 +21,20 @@ type Localization = {
     forVisitors: string,
     merchShop: string,
   },
+  exhibitionPreview: {
+    seeMoreButton: string,
+    aboutSection: {
+      title: string,
+      desc: string
+    },
+    servicesSection: {
+      title: string
+      swimWithFishes: string,
+      lookAtFishes: string,
+      laughOverFishes: string,
+      doSomeDungWithFishes: string
+    }
+  }
 };
 
 export default Localization;

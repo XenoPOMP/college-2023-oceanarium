@@ -10,6 +10,7 @@ header.appHeader {
   padding: 1.5em 3.04em;
   font-size: 24px;
   justify-content: space-between;
+  z-index: 200;
 
   .logo {
     @extend %notSelectable;

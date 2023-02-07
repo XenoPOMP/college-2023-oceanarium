@@ -27,6 +27,21 @@ const ru: Localization = {
     forVisitors: 'Для посетителей',
     merchShop: 'Магазин сувениров',
   },
+
+  exhibitionPreview: {
+    seeMoreButton: 'Узнать подробнее',
+    aboutSection: {
+      title: 'ОБ ОКЕАНАРИУМЕ',
+      desc: 'ексттестксттекст',
+    },
+    servicesSection: {
+      title: 'МЫ ПРЕДЛАГАЕМ',
+      swimWithFishes: 'Поплавать с рыбками',
+      lookAtFishes: 'Посмотреть на рыбок',
+      laughOverFishes: 'Посмеятьсянад рыбками',
+      doSomeDungWithFishes: 'Покакать с рыбками',
+    },
+  },
 };
 
 export default ru;
