@@ -1,0 +1,28 @@
+@import "src/assets/styles/templates";
+
+.menu {
+  @extend %uiGrid;
+  @extend %mainFont;
+
+  background: rgba(98, 160, 255, 1);
+  font-size: 20px;
+  padding: 1.25em 0;
+  position: sticky;
+  top: 0;
+
+  .link {
+    @extend %thin;
+    @extend %flexCenter;
+    @extend %notSelectable;
+    $borderColor: 1px solid rgba(255, 255, 255, 0.45);
+
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+    border-right: $borderColor;
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+}

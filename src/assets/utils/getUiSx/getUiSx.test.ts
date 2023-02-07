@@ -4,9 +4,10 @@ import getUiSx from '@utils/getUiSx/getUiSx';
 describe('Get UI styles', () => {
   test('return default items if args are not defined', () => {
     expect(getUiSx({})).toStrictEqual({
-      '--cols': 12,
+      '--cols': 5,
       '--rows': 1,
-      '--max-width': '1440px',
+      '--max-width': '1920px',
+      '--gap': '20px',
     });
   });
 

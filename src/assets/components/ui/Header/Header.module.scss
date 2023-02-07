@@ -2,12 +2,52 @@
 
 header.appHeader {
   @extend %mainFont;
+  @extend %flexCenter;
 
   width: 100vw;
   height: 100px;
+  background: white;
+  padding: 1.5em 3.04em;
+  font-size: 24px;
+  justify-content: space-between;
 
-  .container {
-    @extend %uiGrid;
-    height: 100%;
+  .logo {
+    @extend %notSelectable;
+
+    h1 {
+      font-size: 1.33em;
+      color: black;
+    }
+
+    .desc {
+      color: hsla(216, 100%, 65%, 1);
+      font-size: 1em;
+    }
+  }
+
+  .contacts {
+    @extend %flexCenter;
+    justify-content: space-between;
+    column-gap: .833em;
+
+    .item {
+      @extend %flexCenter;
+      justify-content: space-between;
+
+      img.icon {
+        width: 1.25em;
+        margin-right: .833em;
+      }
+
+      .data {
+        @extend %semiBold;
+
+        color: black;
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        row-gap: .208em;
+      }
+    }
   }
 }

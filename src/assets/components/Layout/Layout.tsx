@@ -8,7 +8,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <GlobalProvider>
       <Header />
 
-      <main>{children}</main>
+      <main style={{ height: '3000px' }}>{children}</main>
     </GlobalProvider>
   );
 };
