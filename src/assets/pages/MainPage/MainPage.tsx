@@ -1,6 +1,7 @@
 import Page from '@components/Page/Page';
 import ExhibitionsPreview from '@components/ExhibitionsPreview/ExhibitionsPreview';
 import useLocalization from '@hooks/useLocalization';
+import Plans from '@components/Plans/Plans';
 
 const MainPage = () => {
   const loc = useLocalization();
@@ -14,6 +15,8 @@ const MainPage = () => {
       }}
     >
       <ExhibitionsPreview />
+
+      <Plans />
     </Page>
   );
 };

@@ -42,6 +42,17 @@ const kz: Localization = {
       doSomeDungWithFishes: 'Балықпен нәжіс',
     },
   },
+
+  plansSection: {
+    header: 'Тарифтер',
+    plans: {
+      benefits: 'Жеңілдіктер',
+      discounts: 'Акциялар мен жеңілдіктер',
+      electronicTicket: 'Талдықанариумға электронды билет',
+      prices: 'Бағалар',
+      familyPass: 'Демалыс күндері отбасылық билет',
+    },
+  },
 };
 
 export default kz;

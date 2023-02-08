@@ -42,6 +42,17 @@ const ru: Localization = {
       doSomeDungWithFishes: 'Покакать с рыбками',
     },
   },
+
+  plansSection: {
+    header: 'ТАРИФЫ',
+    plans: {
+      benefits: 'Льготы',
+      discounts: 'Акции и скидки',
+      electronicTicket: 'Электронный билет в Талдыканариум',
+      prices: 'Цены',
+      familyPass: 'Семейный абонемент выходного дня',
+    },
+  },
 };
 
 export default ru;

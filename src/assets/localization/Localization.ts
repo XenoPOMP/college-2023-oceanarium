@@ -34,6 +34,16 @@ type Localization = {
       laughOverFishes: string,
       doSomeDungWithFishes: string
     }
+  },
+  plansSection: {
+    header: string,
+    plans: {
+      benefits: string,
+      discounts: string,
+      electronicTicket: string,
+      prices: string,
+      familyPass: string
+    }
   }
 };
 
