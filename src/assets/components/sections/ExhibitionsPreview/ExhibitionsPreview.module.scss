@@ -1,4 +1,4 @@
-@import "src/assets/styles/templates";
+@import "../../../styles/templates";
 
 .preview {
   @extend %mainFont;
@@ -14,23 +14,6 @@
     @extend %flexCenter;
     grid-column-start: 2;
     grid-column-end: 5;
-
-    .button {
-      @extend %light;
-      @extend %notSelectable;
-
-      cursor: pointer;
-      padding: .6em;
-      font-size: 1em;
-      color: black;
-      background: #FFE600;
-      border-radius: 1.25em;
-      transition: .075s ease;
-
-      &:active {
-        filter: brightness(.8);
-      }
-    }
 
     &.switchers {
       @extend %flexCenter;

@@ -1,0 +1,36 @@
+@import "src/assets/styles/templates";
+
+section.merch {
+  @extend %uiGrid;
+  @extend %mainFont;
+
+  font-size: 24px;
+  background: url("src/media/backs/merch-back.png");
+  background-size: cover;
+  padding-top: 3.75em;
+  padding-bottom: 3.25em;
+
+  .placeholder {
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+    h2 {
+      @extend %regular;
+      text-transform: uppercase;
+      font-size: 1em;
+      color: white;
+    }
+
+    img {
+      width: 100%;
+      padding: 1.125em 0 1.041em 0;
+    }
+
+    .desc {
+      @extend %light;
+      width: 100%;
+      font-size: 1em;
+      color: white;
+    }
+  }
+}

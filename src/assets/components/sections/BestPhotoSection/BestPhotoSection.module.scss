@@ -1,0 +1,40 @@
+@import "../../../styles/templates";
+
+section.bestPhoto {
+  @extend %uiGrid;
+  @extend %mainFont;
+
+  background: url("../../../../media/backs/best-photos-section-back.png");
+  background-size: cover;
+  font-size: 20px;
+  padding-top: 3.85em;
+  padding-bottom: 8.15em;
+
+  .placeholder {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    width: 100%;
+
+    &.title {
+      @extend %flexCenter;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: .5em;
+      color: white;
+
+      h2 {
+        @extend %regular;
+        text-transform: uppercase;
+        font-size: 1em;
+      }
+    }
+
+    &.photo {
+      @extend %uiGrid;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../../styles/templates";
+
+.button {
+  @extend %light;
+  @extend %notSelectable;
+
+  cursor: pointer;
+  padding: .6em;
+  font-size: 1em;
+  color: black;
+  background: #FFE600;
+  border-radius: 1.25em;
+  transition: .075s ease;
+
+  &:active {
+    filter: brightness(.8);
+  }
+}

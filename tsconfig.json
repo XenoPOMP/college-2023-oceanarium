@@ -29,7 +29,8 @@
       "@utils/*": ["src/assets/utils/*"],
       "@localization/*": ["src/assets/localization/*"],
       "@locales/*": ["src/assets/localization/locales/*"],
-      "@media/*": ["src/media/*"]
+      "@media/*": ["src/media/*"],
+      "@sections/*": ["src/assets/components/sections/*"]
     }
   },
   "include": ["src"],

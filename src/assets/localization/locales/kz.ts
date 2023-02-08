@@ -53,6 +53,16 @@ const kz: Localization = {
       familyPass: 'Демалыс күндері отбасылық билет',
     },
   },
+
+  bestPhotos: {
+    header: 'ҮЗДІК ФОТОСУРЕТТЕР',
+    seeMoreButton: 'Барлығын қараңыз',
+  },
+
+  merchSection: {
+    header: 'БІЗДІҢ КӘДЕСЫЙЛАР ДҮКЕНІ',
+    desc: 'No desc provided',
+  },
 };
 
 export default kz;

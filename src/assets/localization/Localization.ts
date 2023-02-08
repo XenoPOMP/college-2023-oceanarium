@@ -44,6 +44,14 @@ type Localization = {
       prices: string,
       familyPass: string
     }
+  },
+  bestPhotos: {
+    header: string,
+    seeMoreButton: string
+  },
+  merchSection: {
+    header: string,
+    desc: string
   }
 };
 

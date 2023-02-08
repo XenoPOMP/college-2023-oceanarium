@@ -1,0 +1,19 @@
+import cn from 'classnames';
+import { FC } from 'react';
+import styles from './YellowButton.module.scss';
+import { YellowButtonProps } from './YellowButton.props';
+
+const YellowButton: FC<YellowButtonProps> = ({ children, onClick }) => {
+  return (
+    <div
+      onClick={() => {
+        if (onClick) onClick();
+      }}
+      className={cn(styles.button)}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default YellowButton;

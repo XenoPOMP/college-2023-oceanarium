@@ -1,7 +1,9 @@
 import Page from '@components/Page/Page';
-import ExhibitionsPreview from '@components/ExhibitionsPreview/ExhibitionsPreview';
+import ExhibitionsPreview from '@sections/ExhibitionsPreview/ExhibitionsPreview';
 import useLocalization from '@hooks/useLocalization';
-import Plans from '@components/Plans/Plans';
+import Plans from '@sections/Plans/Plans';
+import BestPhotoSection from '@sections/BestPhotoSection/BestPhotoSection';
+import MerchSection from '@sections/MerchSection/MerchSection';
 
 const MainPage = () => {
   const loc = useLocalization();
@@ -17,6 +19,10 @@ const MainPage = () => {
       <ExhibitionsPreview />
 
       <Plans />
+
+      <BestPhotoSection />
+
+      <MerchSection />
     </Page>
   );
 };

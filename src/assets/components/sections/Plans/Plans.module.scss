@@ -1,11 +1,12 @@
-@import "src/assets/styles/templates";
+@import "../../../styles/templates";
 
 section.plans {
   @extend %mainFont;
   background-size: cover;
-  background: url("src/media/backs/plans-back.png") center;
+  background: url("../../../../media/backs/plans-back.png") center;
   font-size: 20px;
   color: white;
+  padding-bottom: 2.6em;
 
   h2 {
     @extend %light;

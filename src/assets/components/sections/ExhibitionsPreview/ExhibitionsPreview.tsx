@@ -7,6 +7,7 @@ import { useState } from 'react';
 import useLocalization from '@hooks/useLocalization';
 import { motion } from 'framer-motion';
 import getUiSx from '@utils/getUiSx/getUiSx';
+import YellowButton from '@ui/YellowButton/YellowButton';
 
 const ExhibitionsPreview = () => {
   // prettier-ignore
@@ -16,9 +17,7 @@ const ExhibitionsPreview = () => {
   return (
     <div className={cn(styles.preview)}>
       <div className={cn(styles.placeholder)}>
-        <div className={cn(styles.button)}>
-          {loc.exhibitionPreview.seeMoreButton}
-        </div>
+        <YellowButton>{loc.exhibitionPreview.seeMoreButton}</YellowButton>
       </div>
 
       <div className={cn(styles.placeholder, styles.switchers)}>
