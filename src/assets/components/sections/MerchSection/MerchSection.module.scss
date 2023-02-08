@@ -13,6 +13,7 @@ section.merch {
   .placeholder {
     grid-column-start: 2;
     grid-column-end: 5;
+    width: 100%;
 
     h2 {
       @extend %regular;
@@ -26,7 +27,7 @@ section.merch {
       padding: 1.125em 0 1.041em 0;
     }
 
-    .desc {
+    &.desc {
       @extend %light;
       width: 100%;
       font-size: 1em;
