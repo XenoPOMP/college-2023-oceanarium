@@ -10,7 +10,7 @@ export type AppSettings = {
 
 const initialState: AppSettings = {
   language: 'ru',
-  appVersion: '0.01',
+  appVersion: '1.00',
 };
 
 const appSettingsSlice = createSlice({
