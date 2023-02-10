@@ -18,19 +18,34 @@
       @extend %light;
       color: white;
       font-size: 1.6em;
-      padding-top: .969em;
-      padding-bottom: 4.344em;
+      padding-top: 6.21875em;
+      padding-bottom: 2.28125em;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     &.switchers {
       @extend %flexCenter;
-      margin-bottom: 1.95em;
+      justify-content: space-between;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      // margin-bottom: 0.6em;
+      grid-column-start: 1;
+      grid-column-end: 6;
+      padding: 0 3.1em;
 
       svg {
         cursor: pointer;
 
-        &:last-of-type {
-          margin-left: 1.45em;
+        &.blocked {
+          pointer-events: none;
+          opacity: 0;
+        }
+
+        &:first-of-type {
           transform: rotate(.5turn);
         }
       }
@@ -57,6 +72,14 @@
       section.about {
         border-right: 1px solid black;
         padding-right: 1em;
+
+        .desc {
+          margin-bottom: 2.45em;
+        }
+
+        .button {
+          display: inline;
+        }
       }
 
       section.services {

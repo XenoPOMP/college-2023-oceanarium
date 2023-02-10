@@ -25,7 +25,8 @@ type Localization = {
     seeMoreButton: string,
     aboutSection: {
       title: string,
-      desc: string
+      desc: string,
+      aboutButton: string
     },
     servicesSection: {
       title: string

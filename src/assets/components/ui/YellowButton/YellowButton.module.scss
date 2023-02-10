@@ -7,12 +7,17 @@
   cursor: pointer;
   padding: .6em;
   font-size: 1em;
-  color: black;
-  background: #FFE600;
   border-radius: 1.25em;
   transition: .075s ease;
+  color: black;
+  background: #FFE600;
 
   &:active {
     filter: brightness(.8);
+  }
+
+  &.blue {
+    color: black;
+    background: rgba(0, 92, 160, 0.6);
   }
 }

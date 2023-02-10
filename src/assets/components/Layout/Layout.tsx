@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { LayoutProps } from './Layout.props';
 import GlobalProvider from '@providers/GlobalProvider/GlobalProvider';
 import Header from '@ui/Header/Header';
+import Footer from '@ui/Footer/Footer';
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
@@ -9,6 +10,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <Header />
 
       <main>{children}</main>
+
+      <Footer />
     </GlobalProvider>
   );
 };

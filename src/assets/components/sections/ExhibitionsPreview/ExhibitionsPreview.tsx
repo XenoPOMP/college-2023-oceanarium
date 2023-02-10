@@ -16,6 +16,10 @@ import YellowButton from '@ui/YellowButton/YellowButton';
 const ExhibitionsPreview = () => {
   // prettier-ignore
   const [slide, setSlide] = useState<number>(1);
+  const slideConstraints = {
+    min: 0,
+    max: 2,
+  };
   const loc = useLocalization();
 
   return (
@@ -35,22 +39,61 @@ const ExhibitionsPreview = () => {
           viewBox='0 0 36 36'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
+          className={cn(slide === slideConstraints.min ? styles.blocked : '')}
           onClick={() => {
-            if (slide === 0) return;
+            if (slide === slideConstraints.min) return;
 
             setSlide((prevSlide) => prevSlide - 1);
           }}
         >
-          <path
-            d='M35.0769 18C35.0769 27.6706 27.3311 35.5 17.7885 35.5C8.24586 35.5 0.5 27.6706 0.5 18C0.5 8.32943 8.24586 0.5 17.7885 0.5C27.3311 0.5 35.0769 8.32943 35.0769 18Z'
-            stroke='black'
-            strokeOpacity='0.8'
-          />
-          <path
-            d='M22.0188 7.99998L12.5 17.8995L22.0188 27.799'
-            stroke='black'
-            strokeOpacity='0.8'
-          />
+          <g filter='url(#filter0_b_3_36)'>
+            <ellipse
+              cx='17.7885'
+              cy='18'
+              rx='17.7885'
+              ry='18'
+              transform='matrix(-1 0 0 1 35.5769 0)'
+              fill='#D9D9D9'
+              fillOpacity='0.3'
+            />
+            <path
+              d='M0.874981 18C0.874981 27.4677 8.45712 35.125 17.7884 35.125C27.1198 35.125 34.7019 27.4677 34.7019 18C34.7019 8.53234 27.1198 0.875 17.7884 0.875C8.45712 0.875 0.874981 8.53234 0.874981 18Z'
+              stroke='white'
+              strokeOpacity='0.7'
+              strokeWidth='1.75'
+            />
+            <path
+              d='M13.5582 7.99998L23.0769 17.8995L13.5582 27.799'
+              stroke='white'
+              strokeOpacity='0.7'
+              strokeWidth='1.75'
+            />
+          </g>
+          <defs>
+            <filter
+              id='filter0_b_3_36'
+              x='-25'
+              y='-25'
+              width='85.5769'
+              height='86'
+              filterUnits='userSpaceOnUse'
+              colorInterpolationFilters='sRGB'
+            >
+              <feFlood floodOpacity='0' result='BackgroundImageFix' />
+              <feGaussianBlur in='BackgroundImageFix' stdDeviation='12.5' />
+              <feComposite
+                in2='SourceAlpha'
+                operator='in'
+                result='effect1_backgroundBlur_3_36'
+              />
+              <feBlend
+                mode='normal'
+                in='SourceGraphic'
+                in2='effect1_backgroundBlur_3_36'
+                result='shape'
+              />
+            </filter>
+          </defs>
         </svg>
 
         <svg
@@ -59,22 +102,61 @@ const ExhibitionsPreview = () => {
           viewBox='0 0 36 36'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
+          className={cn(slide === slideConstraints.max ? styles.blocked : '')}
           onClick={() => {
-            if (slide === 2) return;
+            if (slide === slideConstraints.max) return;
 
             setSlide((prevSlide) => prevSlide + 1);
           }}
         >
-          <path
-            d='M35.0769 18C35.0769 27.6706 27.3311 35.5 17.7885 35.5C8.24586 35.5 0.5 27.6706 0.5 18C0.5 8.32943 8.24586 0.5 17.7885 0.5C27.3311 0.5 35.0769 8.32943 35.0769 18Z'
-            stroke='black'
-            strokeOpacity='0.8'
-          />
-          <path
-            d='M22.0188 7.99998L12.5 17.8995L22.0188 27.799'
-            stroke='black'
-            strokeOpacity='0.8'
-          />
+          <g filter='url(#filter0_b_3_36)'>
+            <ellipse
+              cx='17.7885'
+              cy='18'
+              rx='17.7885'
+              ry='18'
+              transform='matrix(-1 0 0 1 35.5769 0)'
+              fill='#D9D9D9'
+              fillOpacity='0.3'
+            />
+            <path
+              d='M0.874981 18C0.874981 27.4677 8.45712 35.125 17.7884 35.125C27.1198 35.125 34.7019 27.4677 34.7019 18C34.7019 8.53234 27.1198 0.875 17.7884 0.875C8.45712 0.875 0.874981 8.53234 0.874981 18Z'
+              stroke='white'
+              strokeOpacity='0.7'
+              strokeWidth='1.75'
+            />
+            <path
+              d='M13.5582 7.99998L23.0769 17.8995L13.5582 27.799'
+              stroke='white'
+              strokeOpacity='0.7'
+              strokeWidth='1.75'
+            />
+          </g>
+          <defs>
+            <filter
+              id='filter0_b_3_36'
+              x='-25'
+              y='-25'
+              width='85.5769'
+              height='86'
+              filterUnits='userSpaceOnUse'
+              colorInterpolationFilters='sRGB'
+            >
+              <feFlood floodOpacity='0' result='BackgroundImageFix' />
+              <feGaussianBlur in='BackgroundImageFix' stdDeviation='12.5' />
+              <feComposite
+                in2='SourceAlpha'
+                operator='in'
+                result='effect1_backgroundBlur_3_36'
+              />
+              <feBlend
+                mode='normal'
+                in='SourceGraphic'
+                in2='effect1_backgroundBlur_3_36'
+                result='shape'
+              />
+            </filter>
+          </defs>
         </svg>
       </div>
 
@@ -94,6 +176,10 @@ const ExhibitionsPreview = () => {
           <div className={cn(styles.desc)}>
             {loc.exhibitionPreview.aboutSection.desc}
           </div>
+
+          <YellowButton isBlue className={cn(styles.button)}>
+            {loc.exhibitionPreview.aboutSection.aboutButton}
+          </YellowButton>
         </section>
 
         <section className={cn(styles.services)}>
