@@ -22,7 +22,7 @@ const ru: Localization = {
 
   nav: {
     aboutUs: 'О нас ',
-    contacts: 'Контакты',
+    restaurant: 'Ресторан',
     exhibitions: 'Выставки',
     forVisitors: 'Для посетителей',
     merchShop: 'Магазин сувениров',

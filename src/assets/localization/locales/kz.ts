@@ -22,7 +22,7 @@ const kz: Localization = {
 
   nav: {
     aboutUs: 'Біз туралы',
-    contacts: 'Байланыс',
+    restaurant: 'Мейрамхана',
     exhibitions: 'Көрмелер',
     forVisitors: 'Келушілер үшін',
     merchShop: 'Кәдесыйлар дүкені',

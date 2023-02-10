@@ -16,7 +16,7 @@ const UpperMenu = () => {
     >
       <div className={cn(styles.link)}>{loc.nav.aboutUs}</div>
 
-      <div className={cn(styles.link)}>{loc.nav.contacts}</div>
+      <div className={cn(styles.link)}>{loc.nav.restaurant}</div>
 
       <div className={cn(styles.link)}>{loc.nav.exhibitions}</div>
 

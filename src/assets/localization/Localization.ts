@@ -16,7 +16,7 @@ type Localization = {
   },
   nav: {
     aboutUs: string,
-    contacts: string,
+    restaurant: string,
     exhibitions: string,
     forVisitors: string,
     merchShop: string,
