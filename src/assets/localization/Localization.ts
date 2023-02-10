@@ -54,6 +54,11 @@ type Localization = {
   merchSection: {
     header: string,
     desc: string
+  },
+  footer: {
+    address: string,
+    phoneLabel: string,
+    emailLabel: string
   }
 };
 

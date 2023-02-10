@@ -6,11 +6,13 @@ export type Language = 'ru' | 'kz';
 export type AppSettings = {
   language: Language,
   appVersion: string,
+  cookiePrefix: string,
 };
 
 const initialState: AppSettings = {
   language: 'ru',
   appVersion: '1.01',
+  cookiePrefix: 'taldyk',
 };
 
 const appSettingsSlice = createSlice({
