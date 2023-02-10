@@ -17,6 +17,10 @@ const ExhibitionsPreview = () => {
   return (
     <div className={cn(styles.preview)}>
       <div className={cn(styles.placeholder)}>
+        <h2>{loc.exhibitionPreview.exhibitionsTitles[slide]}</h2>
+      </div>
+
+      <div className={cn(styles.placeholder)}>
         <YellowButton>{loc.exhibitionPreview.seeMoreButton}</YellowButton>
       </div>
 

@@ -41,6 +41,7 @@ const ru: Localization = {
       laughOverFishes: 'Посмеяться над рыбками',
       doSomeDungWithFishes: 'Покакать с рыбками',
     },
+    exhibitionsTitles: ['Название 0', 'Название 1', 'Название 2'],
   },
 
   plansSection: {

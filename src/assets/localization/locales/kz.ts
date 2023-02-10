@@ -41,6 +41,7 @@ const kz: Localization = {
       laughOverFishes: 'Балықтарға күлу',
       doSomeDungWithFishes: 'Балықпен нәжіс',
     },
+    exhibitionsTitles: ['Атауы 0', 'Атауы 1', 'Атауы 2'],
   },
 
   plansSection: {

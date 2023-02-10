@@ -33,7 +33,8 @@ type Localization = {
       lookAtFishes: string,
       laughOverFishes: string,
       doSomeDungWithFishes: string
-    }
+    },
+    exhibitionsTitles: string[]
   },
   plansSection: {
     header: string,
