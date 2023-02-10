@@ -3,6 +3,10 @@ import cn from 'classnames';
 import exZero from '@media/exhebitions/ex_0.png';
 import exOne from '@media/exhebitions/ex_1.png';
 import exTwo from '@media/exhebitions/ex_2.png';
+import swimmingMaskIcon from '@media/icons/swimming-mask.png';
+import fishIcon from '@media/icons/fish-icon.png';
+import feedFishesIcon from '@media/icons/feed-fishes.png';
+import eatFishes from '@media/icons/eat-fishes-icon.png';
 import { useState } from 'react';
 import useLocalization from '@hooks/useLocalization';
 import { motion } from 'framer-motion';
@@ -98,16 +102,26 @@ const ExhibitionsPreview = () => {
           </div>
 
           <div className={cn(styles.service)}>
-            <div>{loc.exhibitionPreview.servicesSection.swimWithFishes}</div>
+            <div className={cn(styles.item)}>
+              <img alt={'swimming-mask-icon'} src={swimmingMaskIcon} />
+              <div>{loc.exhibitionPreview.servicesSection.swimWithFishes}</div>
+            </div>
 
-            <div>{loc.exhibitionPreview.servicesSection.lookAtFishes}</div>
+            <div className={cn(styles.item)}>
+              <img alt={'fish-icon'} src={fishIcon} />
+              <div>{loc.exhibitionPreview.servicesSection.lookAtFishes}</div>
+            </div>
           </div>
 
           <div className={cn(styles.service)}>
-            <div>{loc.exhibitionPreview.servicesSection.laughOverFishes}</div>
+            <div className={cn(styles.item)}>
+              <img alt={'feed-fish-icon'} src={feedFishesIcon} />
+              <div>{loc.exhibitionPreview.servicesSection.feedFishes}</div>
+            </div>
 
-            <div>
-              {loc.exhibitionPreview.servicesSection.doSomeDungWithFishes}
+            <div className={cn(styles.item)}>
+              <img alt={'eat-fish-icon'} src={eatFishes} />
+              <div>{loc.exhibitionPreview.servicesSection.eatFishes}</div>
             </div>
           </div>
         </section>

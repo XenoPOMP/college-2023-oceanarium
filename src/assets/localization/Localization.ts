@@ -31,8 +31,8 @@ type Localization = {
       title: string
       swimWithFishes: string,
       lookAtFishes: string,
-      laughOverFishes: string,
-      doSomeDungWithFishes: string
+      feedFishes: string,
+      eatFishes: string
     },
     exhibitionsTitles: string[]
   },
