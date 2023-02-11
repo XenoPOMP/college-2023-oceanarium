@@ -12,6 +12,11 @@ const ru: Localization = {
       desc: '',
       keywords: '',
     },
+    aboutPage: {
+      title: 'О нас',
+      desc: '',
+      keywords: '',
+    },
   },
 
   header: {

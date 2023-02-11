@@ -12,6 +12,11 @@ const kz: Localization = {
       desc: '',
       keywords: '',
     },
+    aboutPage: {
+      title: 'Біз туралы',
+      desc: '',
+      keywords: '',
+    },
   },
 
   header: {
