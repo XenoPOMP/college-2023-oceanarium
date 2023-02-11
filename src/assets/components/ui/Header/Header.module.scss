@@ -5,12 +5,55 @@ header.appHeader {
   @extend %flexCenter;
 
   width: 100vw;
-  height: 100px;
+  // height: 100px;
   background: white;
   padding: 1.5em 3.04em;
   font-size: 24px;
   justify-content: space-between;
   z-index: 200;
+
+  &.localization {
+    &.ru {
+      @media (max-width: 1200px) {
+        font-size: 22px;
+      }
+
+      @media (max-width: 1060px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 960px) {
+        font-size: 18px;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .contacts {
+          justify-content: start;
+          column-gap: 1em;
+        }
+      }
+    }
+
+    &.kz {
+      @media (max-width: 1334px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 1162px) {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .contacts {
+          justify-content: start;
+          column-gap: 1em;
+        }
+      }
+
+      @media (max-width: 823px) {
+        font-size: 18px;
+      }
+    }
+  }
 
   .logo {
     @extend %notSelectable;

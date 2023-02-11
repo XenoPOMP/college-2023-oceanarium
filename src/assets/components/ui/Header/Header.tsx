@@ -4,13 +4,26 @@ import useLocalization from '@hooks/useLocalization';
 import clockIcon from '@media/icons/clock.svg';
 import phoneIcon from '@media/icons/phone-tube.svg';
 import UpperMenu from '@ui/UpperMenu/UpperMenu';
+import { AppSettings } from '@redux/reducers/appSettingsSlice';
+import { useSelector } from 'react-redux';
+import { StoreType } from '@redux/types/redux-types';
 
 const Header = () => {
   const loc = useLocalization();
+  const { language }: AppSettings = useSelector(
+    (state: StoreType) => state.appSettings,
+  );
 
   return (
     <>
-      <header className={cn(styles.appHeader)}>
+      <header
+        className={cn(
+          styles.appHeader,
+          styles.localization,
+          language === 'ru' ? styles.ru : '',
+          language === 'kz' ? styles.kz : '',
+        )}
+      >
         <div className={cn(styles.logo)}>
           <h1>{loc.header.logoTitle}</h1>
           <div className={cn(styles.desc)}>{loc.header.logoDesc}</div>
