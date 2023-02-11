@@ -7,6 +7,7 @@ import UpperMenu from '@ui/UpperMenu/UpperMenu';
 import { AppSettings } from '@redux/reducers/appSettingsSlice';
 import { useSelector } from 'react-redux';
 import { StoreType } from '@redux/types/redux-types';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const loc = useLocalization();
@@ -24,10 +25,10 @@ const Header = () => {
           language === 'kz' ? styles.kz : '',
         )}
       >
-        <div className={cn(styles.logo)}>
+        <Link to={'/'} className={cn(styles.logo)}>
           <h1>{loc.header.logoTitle}</h1>
           <div className={cn(styles.desc)}>{loc.header.logoDesc}</div>
-        </div>
+        </Link>
 
         <div className={cn(styles.contacts)}>
           <div className={cn(styles.item)}>
