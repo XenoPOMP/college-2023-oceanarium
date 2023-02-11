@@ -19,6 +19,16 @@ const AboutSection: FC<AboutSectionProps> = ({}) => {
       >
         <div className={cn(styles.menu)}>
           <h2>{loc.aboutPage.menu.header}</h2>
+
+          <div className={cn(styles.item)}>{loc.aboutPage.menu.news}</div>
+
+          <div className={cn(styles.item)}>{loc.aboutPage.menu.plan}</div>
+
+          <div className={cn(styles.item)}>{loc.aboutPage.menu.faq}</div>
+
+          <div className={cn(styles.item)}>{loc.aboutPage.menu.reviews}</div>
+
+          <div className={cn(styles.item)}>{loc.aboutPage.menu.vacancies}</div>
         </div>
 
         <article>{loc.aboutPage.article}</article>

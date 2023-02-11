@@ -41,7 +41,16 @@ section.aboutUs {
 
       .item {
         @extend %light;
+        @extend %notSelectable;
+
         font-size: 1em;
+        text-align: start;
+        cursor: pointer;
+        margin-bottom: 1em;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
     }
 
