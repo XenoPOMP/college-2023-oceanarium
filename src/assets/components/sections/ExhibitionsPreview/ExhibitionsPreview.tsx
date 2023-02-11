@@ -15,6 +15,7 @@ import YellowButton from '@ui/YellowButton/YellowButton';
 import { AppSettings } from '@redux/reducers/appSettingsSlice';
 import { useSelector } from 'react-redux';
 import { StoreType } from '@redux/types/redux-types';
+import { useNavigate } from 'react-router-dom';
 
 const ExhibitionsPreview = () => {
   // prettier-ignore
@@ -27,6 +28,8 @@ const ExhibitionsPreview = () => {
   const { language }: AppSettings = useSelector(
     (state: StoreType) => state.appSettings,
   );
+
+  const navigate = useNavigate();
 
   return (
     <div
@@ -190,7 +193,13 @@ const ExhibitionsPreview = () => {
             {loc.exhibitionPreview.aboutSection.desc}
           </div>
 
-          <YellowButton isBlue className={cn(styles.button)}>
+          <YellowButton
+            onClick={() => {
+              navigate('about');
+            }}
+            isBlue
+            className={cn(styles.button)}
+          >
             {loc.exhibitionPreview.aboutSection.aboutButton}
           </YellowButton>
         </section>

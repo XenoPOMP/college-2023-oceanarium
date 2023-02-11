@@ -1,0 +1,53 @@
+@import "src/assets/styles/templates";
+
+section.aboutUs {
+  @extend %uiGrid;
+  @extend %mainFont;
+
+  background: url("src/media/backs/aboutUs-back.png") center;
+  background-size: cover;
+  font-size: 20px;
+  padding: 3.3em 0;
+
+  .block {
+    @extend %uiGrid;
+    @extend %light;
+
+    min-height: 100px;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    background: rgba(217, 217, 217, 0.85);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+
+    .menu, article {
+      padding: .5em;
+      background: rgba(217, 217, 217, 0.3);
+      margin: calc(var(--gap) / 2);
+      font-size: 1em;
+    }
+
+    .menu {
+      color: black;
+
+      h2 {
+        @extend %light;
+        font-size: 1em;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 1em;
+      }
+
+      .item {
+        @extend %light;
+        font-size: 1em;
+      }
+    }
+
+    article {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+  }
+}

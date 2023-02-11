@@ -60,6 +60,17 @@ type Localization = {
     address: string,
     phoneLabel: string,
     emailLabel: string
+  },
+  aboutPage: {
+    menu: {
+      header: string,
+      news: string,
+      plan: string,
+      faq: string,
+      reviews: string,
+      vacancies: string
+    },
+    article: string
   }
 };
 
