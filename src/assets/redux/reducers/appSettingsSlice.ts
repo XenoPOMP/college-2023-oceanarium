@@ -27,3 +27,4 @@ const appSettingsSlice = createSlice({
 
 export default appSettingsSlice.reducer;
 export const { changeLang } = appSettingsSlice.actions;
+export const initialAppSettings = appSettingsSlice.getInitialState();
