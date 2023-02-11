@@ -17,7 +17,14 @@ const Footer: FC<FooterProps> = ({}) => {
   const loc = useLocalization();
 
   return (
-    <footer className={cn(styles.appFooter)}>
+    <footer
+      className={cn(
+        styles.appFooter,
+        styles.localization,
+        language === 'ru' && styles.ru,
+        language === 'kz' && styles.kz,
+      )}
+    >
       <div className={cn(styles.group, styles.lang)}>
         <div
           className={cn(styles.switch, language === 'ru' ? styles.active : '')}

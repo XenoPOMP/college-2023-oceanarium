@@ -9,6 +9,34 @@ footer.appFooter {
   padding: 1.25em 1.5em;
   justify-content: space-between;
 
+  &.localization {
+    &.ru {
+      @media (max-width: 1340px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1.15em;
+        grid-row-gap: 1.15em;
+      }
+
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &.kz {
+      @media (max-width: 1340px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1.15em;
+        grid-row-gap: 1.15em;
+      }
+
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
   .group {
     @extend %flexCenter;
 
