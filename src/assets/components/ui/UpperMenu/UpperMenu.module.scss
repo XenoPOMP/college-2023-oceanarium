@@ -11,6 +11,28 @@
   top: 0;
   z-index: 2000;
 
+  &.localization {
+    &.ru {
+      @media (max-width: 1134px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 887px) {
+        font-size: 16px;
+      }
+    }
+
+    &.kz {
+      @media (max-width: 1134px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 887px) {
+        font-size: 16px;
+      }
+    }
+  }
+
   .link {
     @extend %light;
     @extend %flexCenter;
