@@ -12,6 +12,9 @@ import useLocalization from '@hooks/useLocalization';
 import { motion } from 'framer-motion';
 import getUiSx from '@utils/getUiSx/getUiSx';
 import YellowButton from '@ui/YellowButton/YellowButton';
+import { AppSettings } from '@redux/reducers/appSettingsSlice';
+import { useSelector } from 'react-redux';
+import { StoreType } from '@redux/types/redux-types';
 
 const ExhibitionsPreview = () => {
   // prettier-ignore
@@ -21,9 +24,19 @@ const ExhibitionsPreview = () => {
     max: 2,
   };
   const loc = useLocalization();
+  const { language }: AppSettings = useSelector(
+    (state: StoreType) => state.appSettings,
+  );
 
   return (
-    <div className={cn(styles.preview)}>
+    <div
+      className={cn(
+        styles.preview,
+        styles.localization,
+        language === 'ru' ? styles.ru : '',
+        language === 'kz' ? styles.kz : '',
+      )}
+    >
       <div className={cn(styles.placeholder)}>
         <h2>{loc.exhibitionPreview.exhibitionsTitles[slide]}</h2>
       </div>

@@ -9,6 +9,44 @@
   position: relative;
   z-index: 0;
 
+  &.localization {
+    &.ru {
+      @media (max-width: 1377px) {
+        font-size: 19px;
+      }
+
+      @media (max-width: 1220px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 952px) {
+        font-size: 15px;
+
+        .placeholder.textContent {
+          grid-template-columns: 4fr 1fr;
+        }
+      }
+    }
+
+    &.kz {
+      @media (max-width: 1377px) {
+        font-size: 19px;
+      }
+
+      @media (max-width: 1220px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 952px) {
+        font-size: 15px;
+
+        .placeholder.textContent {
+          grid-template-columns: 4fr 1fr;
+        }
+      }
+    }
+  }
+
   .placeholder {
     @extend %flexCenter;
     grid-column-start: 2;
