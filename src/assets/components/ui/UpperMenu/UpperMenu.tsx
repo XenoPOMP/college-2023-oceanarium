@@ -5,6 +5,7 @@ import useLocalization from '@hooks/useLocalization';
 import { AppSettings } from '@redux/reducers/appSettingsSlice';
 import { useSelector } from 'react-redux';
 import { StoreType } from '@redux/types/redux-types';
+import { NavLink } from 'react-router-dom';
 
 const UpperMenu = () => {
   const loc = useLocalization();
@@ -29,12 +30,12 @@ const UpperMenu = () => {
         <span>{loc.nav.account}</span>
 
         <div className={cn(styles.dropdown)}>
-          <div className={cn(styles.link)}>
+          <NavLink to={'/account/visitor'} className={cn(styles.link)}>
             <span>{loc.nav.accountDropdown.visitor}</span>
-          </div>
-          <div className={cn(styles.link)}>
+          </NavLink>
+          <NavLink to={'/account/employee'} className={cn(styles.link)}>
             <span>{loc.nav.accountDropdown.employee}</span>
-          </div>
+          </NavLink>
         </div>
       </div>
 
