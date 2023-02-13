@@ -25,15 +25,34 @@ const UpperMenu = () => {
         gap: 0,
       })}
     >
-      <div className={cn(styles.link)}>{loc.nav.account}</div>
+      <div className={cn(styles.link)}>
+        <span>{loc.nav.account}</span>
 
-      <div className={cn(styles.link)}>{loc.nav.restaurant}</div>
+        <div className={cn(styles.dropdown)}>
+          <div className={cn(styles.link)}>
+            <span>Elem</span>
+          </div>
+          <div className={cn(styles.link)}>
+            <span>Elem</span>
+          </div>
+        </div>
+      </div>
 
-      <div className={cn(styles.link)}>{loc.nav.exhibitions}</div>
+      <div className={cn(styles.link)}>
+        <span>{loc.nav.restaurant}</span>
+      </div>
 
-      <div className={cn(styles.link)}>{loc.nav.forVisitors}</div>
+      <div className={cn(styles.link)}>
+        <span>{loc.nav.exhibitions}</span>
+      </div>
 
-      <div className={cn(styles.link)}>{loc.nav.merchShop}</div>
+      <div className={cn(styles.link)}>
+        <span>{loc.nav.forVisitors}</span>
+      </div>
+
+      <div className={cn(styles.link)}>
+        <span>{loc.nav.merchShop}</span>
+      </div>
     </nav>
   );
 };
