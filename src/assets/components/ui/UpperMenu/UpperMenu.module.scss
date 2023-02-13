@@ -39,6 +39,7 @@
     @extend %flexCenter;
     @extend %notSelectable;
     $borderColor: 1px solid rgba(255, 255, 255, 0.45);
+    $hoverEffect: brightness(.95);
 
     background: rgba(98, 160, 255, 1);
     padding: 1.25em 0;
@@ -47,19 +48,23 @@
     cursor: pointer;
     color: white;
     font-size: 1em;
+    transition: filter .15s ease;
 
+    // Text content
     span {
       @extend %flexCenter;
       width: 100%;
       border-right: $borderColor;
     }
 
+    // Not render border of last link
     &:last-of-type {
       span {
         border-right: none;
       }
     }
 
+    // Show dropdown on hover
     &:hover {
       .dropdown {
         opacity: 1;
@@ -67,7 +72,16 @@
       }
     }
 
-    .dropdown {
+    // Hover effect for each link that has not dropdown
+    &:not(:has(> .dropdown)) {
+      &:hover {
+        filter: $hoverEffect;
+      }
+    }
+
+    // Dropdown styles
+    & > .dropdown {
+      border-top: 1px solid white;
       opacity: 0;
       pointer-events: none;
       position: absolute;
@@ -76,8 +90,15 @@
       width: 100%;
       transition: .07s ease;
 
-      .link {
+      & > .link {
         padding: 0;
+
+        // Hide border of last element in dropdown
+        &:last-of-type {
+          span {
+            border-bottom: none;
+          }
+        }
 
         span {
           border-right: none;

@@ -17,6 +17,10 @@ type Localization = {
   },
   nav: {
     account: string,
+    accountDropdown: {
+      visitor: string,
+      employee: string
+    },
     restaurant: string,
     exhibitions: string,
     forVisitors: string,

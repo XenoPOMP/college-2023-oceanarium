@@ -30,10 +30,10 @@ const UpperMenu = () => {
 
         <div className={cn(styles.dropdown)}>
           <div className={cn(styles.link)}>
-            <span>Elem</span>
+            <span>{loc.nav.accountDropdown.visitor}</span>
           </div>
           <div className={cn(styles.link)}>
-            <span>Elem</span>
+            <span>{loc.nav.accountDropdown.employee}</span>
           </div>
         </div>
       </div>

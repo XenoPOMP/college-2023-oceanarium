@@ -27,6 +27,10 @@ const kz: Localization = {
 
   nav: {
     account: 'Жеке кабинет',
+    accountDropdown: {
+      visitor: 'Келуші',
+      employee: 'Қызметкер',
+    },
     restaurant: 'Мейрамхана',
     exhibitions: 'Көрмелер',
     forVisitors: 'Келушілер үшін',

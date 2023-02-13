@@ -27,6 +27,10 @@ const ru: Localization = {
 
   nav: {
     account: 'Личный кабинет',
+    accountDropdown: {
+      visitor: 'Посетитель',
+      employee: 'Сотрудник',
+    },
     restaurant: 'Ресторан',
     exhibitions: 'Выставки',
     forVisitors: 'Для посетителей',
