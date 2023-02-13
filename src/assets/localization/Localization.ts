@@ -16,7 +16,7 @@ type Localization = {
     workingTime: string,
   },
   nav: {
-    aboutUs: string,
+    account: string,
     restaurant: string,
     exhibitions: string,
     forVisitors: string,

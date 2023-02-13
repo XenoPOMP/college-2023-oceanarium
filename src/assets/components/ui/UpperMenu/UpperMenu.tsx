@@ -25,7 +25,7 @@ const UpperMenu = () => {
         gap: 0,
       })}
     >
-      <div className={cn(styles.link)}>{loc.nav.aboutUs}</div>
+      <div className={cn(styles.link)}>{loc.nav.account}</div>
 
       <div className={cn(styles.link)}>{loc.nav.restaurant}</div>
 

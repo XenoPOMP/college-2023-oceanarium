@@ -26,7 +26,7 @@ const ru: Localization = {
   },
 
   nav: {
-    aboutUs: 'О нас ',
+    account: 'Личный кабинет',
     restaurant: 'Ресторан',
     exhibitions: 'Выставки',
     forVisitors: 'Для посетителей',
