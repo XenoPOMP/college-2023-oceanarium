@@ -2,11 +2,15 @@ import cn from 'classnames';
 import { FC, useEffect } from 'react';
 import styles from './GalleryOverlay.module.scss';
 import { GalleryOverlayProps } from './GalleryOverlay.props';
-import { changeSlide, Gallery } from '@redux/reducers/gallerySlice';
+import {
+  changeSlide,
+  Gallery,
+  hideGallery,
+} from '@redux/reducers/gallerySlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { StoreType } from '@redux/types/redux-types';
 import { motion } from 'framer-motion';
-import getUiSx from '@utils/getUiSx/getUiSx';
+import SliderIcon from '@ui/SliderIcon/SliderIcon';
 
 const GalleryOverlay: FC<GalleryOverlayProps> = ({}) => {
   const { shown, currentIndex, slides }: Gallery = useSelector(
@@ -41,6 +45,7 @@ const GalleryOverlay: FC<GalleryOverlayProps> = ({}) => {
       <div
         className={cn(
           styles.arrowBlock,
+          styles.hoverable,
           currentIndex === 0 ? styles.hidden : '',
         )}
         onClick={() => dispatch(changeSlide(currentIndex - 1))}
@@ -59,17 +64,50 @@ const GalleryOverlay: FC<GalleryOverlayProps> = ({}) => {
         </svg>
       </div>
 
-      <div className={cn(styles.imageTitle)}>{slides[currentIndex]?.title}</div>
+      <div className={cn(styles.imageTitle)}>
+        <div className={cn(styles.element)}></div>
+
+        <div className={cn(styles.element)} style={{ cursor: 'default' }}>
+          {slides[currentIndex]?.title}
+        </div>
+
+        <div
+          className={cn(styles.element, styles.hoverable)}
+          onClick={() => dispatch(hideGallery())}
+        >
+          <svg
+            width='18'
+            height='18'
+            viewBox='0 0 18 18'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              d='M0.514718 0.514695C0.905243 0.124171 1.53841 0.124171 1.92893 0.514695L17.4853 16.071C17.8758 16.4616 17.8758 17.0947 17.4853 17.4853C17.0948 17.8758 16.4616 17.8758 16.0711 17.4853L0.514719 1.92891C0.124194 1.53838 0.124194 0.905219 0.514718 0.514695Z'
+              fill='white'
+            />
+            <path
+              d='M17.4851 0.5147C17.8757 0.905225 17.8757 1.53839 17.4851 1.92891L1.92879 17.4853C1.53826 17.8758 0.905097 17.8758 0.514573 17.4853C0.124049 17.0947 0.124049 16.4616 0.514573 16.071L16.0709 0.514701C16.4614 0.124176 17.0946 0.124176 17.4851 0.5147Z'
+              fill='white'
+            />
+          </svg>
+        </div>
+      </div>
 
       <div className={cn(styles.viewBlock)}>
         <img src={slides[currentIndex]?.src} />
       </div>
 
-      <div className={cn(styles.slider)}></div>
+      <div className={cn(styles.slider)}>
+        {slides.map((slide, index) => (
+          <SliderIcon index={index} />
+        ))}
+      </div>
 
       <div
         className={cn(
           styles.arrowBlock,
+          styles.hoverable,
           currentIndex === slides.length - 1 ? styles.hidden : '',
         )}
         onClick={() => dispatch(changeSlide(currentIndex + 1))}

@@ -1,0 +1,34 @@
+@import "src/assets/styles/templates";
+
+.icon {
+  @extend %flexCenter;
+  @extend %notSelectable;
+  --back-src: '';
+
+  height: calc(100% - (var(--gap)));
+  aspect-ratio: 1;
+  // border-radius: 10px;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+    max-height: 100%;
+  }
+
+  &:not(&.passive) {
+    border: 2px solid white;
+  }
+
+  &.passive {
+    &:after {
+      position: absolute;
+      pointer-events: none;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: inherit;
+    }
+  }
+}

@@ -20,6 +20,7 @@ import {
 } from '@redux/reducers/gallerySlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { StoreType } from '@redux/types/redux-types';
+import useGallery from '@hooks/useGallery';
 
 const BestPhotoSection: FC<BestPhotoSectionProps> = ({}) => {
   const loc = useLocalization();
@@ -27,46 +28,34 @@ const BestPhotoSection: FC<BestPhotoSectionProps> = ({}) => {
   const gallery: Gallery = useSelector((state: StoreType) => state.gallery);
   const dispatch = useDispatch();
 
-  const openGallery = (index: number) => {
-    // List of images
-    const images: Slide[] = [
-      {
-        title: 'Photo 0',
-        src: itemZero,
-      },
-      {
-        title: 'Photo 1',
-        src: itemOne,
-      },
-      {
-        title: 'Photo 2',
-        src: itemTwo,
-      },
-      {
-        title: 'Photo 3',
-        src: itemThree,
-      },
-      {
-        title: 'Photo 4',
-        src: itemFour,
-      },
-      {
-        title: 'Photo 5',
-        src: itemFive,
-      },
-    ];
-
-    // Show gallery
-    dispatch(showGallery());
-    // Set slides to best photos
-    dispatch(setSlides(images));
-    // Change index
-    dispatch(changeSlide(index));
-  };
-
-  useEffect(() => {
-    console.log(gallery);
-  }, [gallery]);
+  // List of images
+  const images: Slide[] = [
+    {
+      title: 'Photo 0',
+      src: itemZero,
+    },
+    {
+      title: 'Photo 1',
+      src: itemOne,
+    },
+    {
+      title: 'Photo 2',
+      src: itemTwo,
+    },
+    {
+      title: 'Photo 3',
+      src: itemThree,
+    },
+    {
+      title: 'Photo 4',
+      src: itemFour,
+    },
+    {
+      title: 'Photo 5',
+      src: itemFive,
+    },
+  ];
+  const [openGallery, closeGallery] = useGallery(images);
 
   return (
     <section
