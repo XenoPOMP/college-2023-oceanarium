@@ -1,0 +1,72 @@
+@import "src/assets/styles/templates";
+
+.overlay {
+  --gap: 20px;
+  --background: rgba(96, 94, 94, 0.8);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background: var(--background);
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-columns: 71px 1fr 71px;
+  grid-template-rows: 80px 1fr 80px;
+
+  .imageTitle {
+    @extend %flexCenter;
+    @extend %mainFont;
+
+    font-size: 51px;
+    color: white;
+  }
+
+  .viewBlock {
+    background: yellow;
+  }
+
+  .slider {
+    background: orange;
+  }
+
+  .arrowBlock {
+    @extend %flexCenter;
+    @extend %notSelectable;
+
+    cursor: pointer;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 100%;
+    transition: background .15s ease;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    svg {
+      width: 35%;
+    }
+
+    &:first-of-type {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    &:last-of-type {
+      grid-column-start: 3;
+      grid-column-end: 4;
+
+      svg {
+        transform: rotate(.5turn);
+      }
+    }
+  }
+}
