@@ -61,7 +61,9 @@ const GalleryOverlay: FC<GalleryOverlayProps> = ({}) => {
 
       <div className={cn(styles.imageTitle)}>{slides[currentIndex]?.title}</div>
 
-      <div className={cn(styles.viewBlock)}></div>
+      <div className={cn(styles.viewBlock)}>
+        <img src={slides[currentIndex]?.src} />
+      </div>
 
       <div className={cn(styles.slider)}></div>
 

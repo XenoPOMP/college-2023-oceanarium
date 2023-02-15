@@ -25,7 +25,12 @@
   }
 
   .viewBlock {
-    background: yellow;
+    @extend %flexCenter;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
   }
 
   .slider {
