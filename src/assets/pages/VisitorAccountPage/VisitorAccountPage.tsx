@@ -4,6 +4,8 @@ import styles from './VisitorAccountPage.module.scss';
 import { VisitorAccountPageProps } from './VisitorAccountPage.props';
 import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
+import VisitorAccount from '@sections/VisitorAccount/VisitorAccount';
+import getUiSx from '@utils/getUiSx/getUiSx';
 
 const VisitorAccountPage: FC<VisitorAccountPageProps> = ({}) => {
   const loc = useLocalization();
@@ -16,7 +18,13 @@ const VisitorAccountPage: FC<VisitorAccountPageProps> = ({}) => {
         keywords: loc.meta.account.visitor.keywords,
       }}
       className={cn(styles.visitorPage)}
-    ></Page>
+      sx={getUiSx({
+        cols: 5,
+        maxWidth: 'unset',
+      })}
+    >
+      <VisitorAccount />
+    </Page>
   );
 };
 

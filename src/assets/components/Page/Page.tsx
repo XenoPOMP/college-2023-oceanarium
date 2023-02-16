@@ -4,9 +4,9 @@ import Layout from '@components/Layout/Layout';
 import MetaTitle from '@components/MetaTitle/MetaTitle';
 import cn from 'classnames';
 
-const Page: FC<PageProps> = ({ meta, children, className }) => {
+const Page: FC<PageProps> = ({ meta, children, className, sx }) => {
   return (
-    <Layout className={cn(className)}>
+    <Layout className={cn(className)} sx={sx}>
       <MetaTitle
         pageTitle={meta.pageTitle}
         pageDescription={meta.pageDescription}

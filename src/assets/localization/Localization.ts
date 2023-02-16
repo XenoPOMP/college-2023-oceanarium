@@ -78,6 +78,15 @@ type Localization = {
       vacancies: string
     },
     article: string
+  },
+  accountPage: {
+    visitor: {
+      buttons: {
+        bonuses: string,
+        history: string,
+        personalData: string
+      }
+    }
   }
 };
 
