@@ -17,6 +17,13 @@ const ru: Localization = {
       desc: '',
       keywords: '',
     },
+    account: {
+      visitor: {
+        title: 'Личный кабинет',
+        desc: '',
+        keywords: '',
+      },
+    },
   },
 
   header: {

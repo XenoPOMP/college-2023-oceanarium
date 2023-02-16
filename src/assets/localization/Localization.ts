@@ -8,7 +8,10 @@ type Localization = {
   meta: {
     mainPage: MetaInfo,
     notFoundPage: MetaInfo,
-    aboutPage: MetaInfo
+    aboutPage: MetaInfo,
+    account: {
+      visitor: MetaInfo
+    }
   }
   header: {
     logoTitle: string,

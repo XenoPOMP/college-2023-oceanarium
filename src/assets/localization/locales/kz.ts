@@ -17,6 +17,13 @@ const kz: Localization = {
       desc: '',
       keywords: '',
     },
+    account: {
+      visitor: {
+        title: 'Жеке кабинет',
+        desc: '',
+        keywords: '',
+      },
+    },
   },
 
   header: {
