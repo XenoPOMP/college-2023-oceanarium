@@ -4,7 +4,6 @@ import styles from './VisitorAccount.module.scss';
 import { VisitorAccountProps } from './VisitorAccount.props';
 import getUiSx from '@utils/getUiSx/getUiSx';
 import useLocalization from '@hooks/useLocalization';
-import backgroundImg from '@media/backs/bonuses-back.png';
 
 const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
   const loc = useLocalization();
