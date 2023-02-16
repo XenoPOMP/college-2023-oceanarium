@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { StoreType } from '@redux/types/redux-types';
 import { motion } from 'framer-motion';
 import SliderIcon from '@ui/SliderIcon/SliderIcon';
+import KeyboardEventHandler from 'react-keyboard-event-handler';
 
 const GalleryOverlay: FC<GalleryOverlayProps> = ({}) => {
   const { shown, currentIndex, slides }: Gallery = useSelector(
@@ -42,6 +43,33 @@ const GalleryOverlay: FC<GalleryOverlayProps> = ({}) => {
         ease: 'easeOut',
       }}
     >
+      <KeyboardEventHandler
+        handleKeys={['left', 'right', 'esc']}
+        onKeyEvent={(key, event) => {
+          if (!shown) return;
+
+          switch (key) {
+            case 'left': {
+              if (currentIndex !== 0) {
+                dispatch(changeSlide(currentIndex - 1));
+              }
+
+              break;
+            }
+            case 'right': {
+              if (currentIndex !== slides.length - 1) {
+                dispatch(changeSlide(currentIndex + 1));
+              }
+
+              break;
+            }
+            case 'esc': {
+              dispatch(hideGallery());
+            }
+          }
+        }}
+      />
+
       <div
         className={cn(
           styles.arrowBlock,
@@ -100,7 +128,7 @@ const GalleryOverlay: FC<GalleryOverlayProps> = ({}) => {
 
       <div className={cn(styles.slider)}>
         {slides.map((slide, index) => (
-          <SliderIcon index={index} />
+          <SliderIcon index={index} key={`slide-preview-${index}`} />
         ))}
       </div>
 
