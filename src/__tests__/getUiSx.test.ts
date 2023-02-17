@@ -41,4 +41,12 @@ describe('Get UI styles', () => {
 
     expect(maxWidth).toBe(width);
   });
+
+  test('change gap in pixels', () => {
+    const gap = 10;
+    // @ts-ignore
+    const gapValue = getUiSx({ gap })['--gap'];
+
+    expect(gapValue).toBe(`${gap}px`);
+  });
 });
