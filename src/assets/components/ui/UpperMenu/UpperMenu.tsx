@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import styles from './UpperMenu.module.scss';
-import getUiSx from '@utils/getUiSx/getUiSx';
+import getUiSx from '@utils/getUiSx';
 import useLocalization from '@hooks/useLocalization';
 import { AppSettings } from '@redux/reducers/appSettingsSlice';
 import { useSelector } from 'react-redux';

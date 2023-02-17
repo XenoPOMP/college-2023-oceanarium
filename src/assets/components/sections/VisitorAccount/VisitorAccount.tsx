@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { FC } from 'react';
 import styles from './VisitorAccount.module.scss';
 import { VisitorAccountProps } from './VisitorAccount.props';
-import getUiSx from '@utils/getUiSx/getUiSx';
+import getUiSx from '@utils/getUiSx';
 import useLocalization from '@hooks/useLocalization';
 
 const VisitorAccount: FC<VisitorAccountProps> = ({}) => {

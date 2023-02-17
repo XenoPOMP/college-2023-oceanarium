@@ -4,7 +4,7 @@ import styles from './MerchSection.module.scss';
 import { MerchSectionProps } from './MerchSection.props';
 import useLocalization from '@hooks/useLocalization';
 import shopPhoto from '@media/merch shop/shop.png';
-import getUiSx from '@utils/getUiSx/getUiSx';
+import getUiSx from '@utils/getUiSx';
 
 const MerchSection: FC<MerchSectionProps> = ({}) => {
   const loc = useLocalization();

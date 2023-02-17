@@ -5,7 +5,7 @@ import { VisitorAccountPageProps } from './VisitorAccountPage.props';
 import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
 import VisitorAccount from '@sections/VisitorAccount/VisitorAccount';
-import getUiSx from '@utils/getUiSx/getUiSx';
+import getUiSx from '@utils/getUiSx';
 
 const VisitorAccountPage: FC<VisitorAccountPageProps> = ({}) => {
   const loc = useLocalization();

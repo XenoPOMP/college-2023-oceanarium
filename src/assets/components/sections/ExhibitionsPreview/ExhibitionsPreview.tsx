@@ -10,7 +10,7 @@ import eatFishes from '@media/icons/eat-fishes-icon.png';
 import { useState } from 'react';
 import useLocalization from '@hooks/useLocalization';
 import { motion } from 'framer-motion';
-import getUiSx from '@utils/getUiSx/getUiSx';
+import getUiSx from '@utils/getUiSx';
 import YellowButton from '@ui/YellowButton/YellowButton';
 import { AppSettings } from '@redux/reducers/appSettingsSlice';
 import { useSelector } from 'react-redux';

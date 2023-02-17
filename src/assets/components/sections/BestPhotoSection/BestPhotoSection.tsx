@@ -4,7 +4,7 @@ import styles from './BestPhotoSection.module.scss';
 import { BestPhotoSectionProps } from './BestPhotoSection.props';
 import useLocalization from '@hooks/useLocalization';
 import YellowButton from '@ui/YellowButton/YellowButton';
-import getUiSx from '@utils/getUiSx/getUiSx';
+import getUiSx from '@utils/getUiSx';
 import itemZero from '@media/gallery/item0.png';
 import itemOne from '@media/gallery/item1.png';
 import itemTwo from '@media/gallery/item2.png';

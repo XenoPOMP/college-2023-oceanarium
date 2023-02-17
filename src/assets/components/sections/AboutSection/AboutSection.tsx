@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { FC } from 'react';
 import styles from './AboutSection.module.scss';
 import { AboutSectionProps } from './AboutSection.props';
-import getUiSx from '@utils/getUiSx/getUiSx';
+import getUiSx from '@utils/getUiSx';
 import useLocalization from '@hooks/useLocalization';
 
 const AboutSection: FC<AboutSectionProps> = ({}) => {
