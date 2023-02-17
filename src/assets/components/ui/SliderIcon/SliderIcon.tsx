@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { CSSProperties, FC } from 'react';
+import { FC } from 'react';
 import styles from './SliderIcon.module.scss';
 import { SliderIconProps } from './SliderIcon.props';
 import { changeSlide, Gallery } from '@redux/reducers/gallerySlice';

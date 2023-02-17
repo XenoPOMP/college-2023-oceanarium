@@ -8,4 +8,10 @@ describe('Slider icon', () => {
 
     expect(component).toMatchSnapshot();
   });
+
+  test('Correct src insert', () => {
+    const component = renderWithProvider(<SliderIcon index={0} />);
+
+    expect(component.asFragment().querySelector('img')?.src).toBeDefined();
+  });
 });
