@@ -15,6 +15,7 @@ dist-ssr
 # Vitest
 /coverage
 !/coverage/
+!/src/__tests__/__snapshots__/
 
 # Ignored folders inside project
 ./src/assets/pages/Testing
