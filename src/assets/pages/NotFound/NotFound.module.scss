@@ -1,0 +1,11 @@
+@import "src/assets/styles/templates";
+
+.notFound {
+  @extend %mainFont;
+  @extend %regular;
+
+  color: black;
+  font-size: 32px;
+  padding: 2em;
+  text-align: center;
+}

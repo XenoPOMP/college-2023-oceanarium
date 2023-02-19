@@ -8,7 +8,7 @@ const kz: Localization = {
       keywords: '',
     },
     notFoundPage: {
-      title: '404',
+      title: 'Қате 404',
       desc: '',
       keywords: '',
     },
@@ -117,6 +117,10 @@ const kz: Localization = {
         personalData: 'ЖЕКЕ ДЕРЕКТЕР',
       },
     },
+  },
+
+  notFoundPage: {
+    errorLabel: 'Қате 404: бет табылмады',
   },
 };
 

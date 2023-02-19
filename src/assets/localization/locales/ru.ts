@@ -8,7 +8,7 @@ const ru: Localization = {
       keywords: '',
     },
     notFoundPage: {
-      title: '404',
+      title: 'Ошибка 404',
       desc: '',
       keywords: '',
     },
@@ -118,6 +118,10 @@ const ru: Localization = {
         personalData: 'ЛИЧНЫЕ ДАННЫЕ',
       },
     },
+  },
+
+  notFoundPage: {
+    errorLabel: 'Ошибка 404: страница не найдена',
   },
 };
 

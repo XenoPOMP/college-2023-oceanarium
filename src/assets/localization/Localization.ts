@@ -87,6 +87,9 @@ type Localization = {
         personalData: string
       }
     }
+  },
+  notFoundPage: {
+    errorLabel: string
   }
 };
 
