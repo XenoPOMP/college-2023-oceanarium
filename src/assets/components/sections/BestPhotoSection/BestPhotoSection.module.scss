@@ -37,7 +37,7 @@ section.bestPhoto {
         cursor: pointer;
         transition: transform .15s ease;
 
-        &:hover {
+        &:hover, &:active {
           transform: scale(.9);
         }
       }
