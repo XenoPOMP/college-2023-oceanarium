@@ -3,6 +3,7 @@ import MainPage from '@pages/MainPage/MainPage';
 import NotFound from '@pages/NotFound/NotFound';
 import AboutPage from '@pages/AboutPage/AboutPage';
 import VisitorAccountPage from '@pages/VisitorAccountPage/VisitorAccountPage';
+import EmployeeAccountPage from '@pages/EmployeeAccountPage/EmployeeAccountPage';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
 
         <Route path={'/account'}>
           <Route path={'visitor'} element={<VisitorAccountPage />} />
+
+          <Route path={'employee'} element={<EmployeeAccountPage />} />
         </Route>
       </Routes>
     </Router>

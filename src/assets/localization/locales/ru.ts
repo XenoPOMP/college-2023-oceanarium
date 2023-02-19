@@ -23,6 +23,12 @@ const ru: Localization = {
         desc: '',
         keywords: '',
       },
+
+      employee: {
+        title: 'Личный кабинет',
+        desc: '',
+        keywords: '',
+      },
     },
   },
 
@@ -116,6 +122,14 @@ const ru: Localization = {
         bonuses: 'БОНУСЫ',
         history: 'ИСТОРИЯ ПОСЕЩЕНИЙ',
         personalData: 'ЛИЧНЫЕ ДАННЫЕ',
+      },
+    },
+
+    employee: {
+      buttons: {
+        shifts: 'СМЕНЫ',
+        awards: 'ПРЕМИИ И ШТРАФЫ',
+        personal: 'ЛИЧНЫЕ ДАННЫЕ',
       },
     },
   },

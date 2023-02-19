@@ -10,7 +10,8 @@ type Localization = {
     notFoundPage: MetaInfo,
     aboutPage: MetaInfo,
     account: {
-      visitor: MetaInfo
+      visitor: MetaInfo,
+      employee: MetaInfo
     }
   }
   header: {
@@ -85,6 +86,13 @@ type Localization = {
         bonuses: string,
         history: string,
         personalData: string
+      }
+    },
+    employee: {
+      buttons: {
+        shifts: string,
+        awards: string,
+        personal: string
       }
     }
   },

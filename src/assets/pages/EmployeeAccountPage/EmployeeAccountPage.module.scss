@@ -1,0 +1,11 @@
+@import "src/assets/styles/templates";
+
+.page {
+  @extend %uiGrid;
+
+  // Transparent bottom
+  // background: linear-gradient(180deg, #62A0FF 0%, rgba(98, 160, 255, 0) 100%);
+
+  // Dark bottom
+  background: linear-gradient(180deg, #62A0FF 0%, #1E1E1E 100%);
+}

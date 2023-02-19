@@ -23,6 +23,12 @@ const kz: Localization = {
         desc: '',
         keywords: '',
       },
+
+      employee: {
+        title: 'Жеке кабинет',
+        desc: '',
+        keywords: '',
+      },
     },
   },
 
@@ -115,6 +121,14 @@ const kz: Localization = {
         bonuses: 'Бонустар',
         history: 'КЕЛУ ТАРИХЫ',
         personalData: 'ЖЕКЕ ДЕРЕКТЕР',
+      },
+    },
+
+    employee: {
+      buttons: {
+        shifts: 'Ауысым',
+        awards: 'СЫЙЛЫҚАҚЫЛАР МЕН АЙЫППҰЛДАР',
+        personal: 'ЖЕКЕ ДЕРЕКТЕР',
       },
     },
   },
