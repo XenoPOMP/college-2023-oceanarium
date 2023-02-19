@@ -11,7 +11,7 @@ export type AppSettings = {
 
 const initialState: AppSettings = {
   language: 'ru',
-  appVersion: '1.06',
+  appVersion: '1.07',
   cookiePrefix: 'taldyk',
 };
 
