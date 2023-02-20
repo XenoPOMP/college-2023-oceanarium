@@ -32,9 +32,9 @@ const AuthForm: FC<AuthFormProps> = ({ preferredRole }) => {
         duration: 0.3,
         ease: 'easeInOut',
       }}
-      className={cn(styles.placeholder)}
+      className={cn(styles.formPlaceholder)}
     >
-      <div className={cn(styles.form)}></div>
+      <div className={cn(styles.container, styles.form)}></div>
     </motion.div>
   );
 };

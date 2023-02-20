@@ -1,6 +1,6 @@
 @import "src/assets/styles/templates";
 
-.placeholder {
+.formPlaceholder {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -12,11 +12,13 @@
   grid-template-columns: 60px 1fr 60px;
   grid-template-rows: 60px 1fr 60px;
 
-  .form {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    background: white;
+  .container {
+    &.form {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      background: white;
+    }
   }
 }
