@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { ReduxAction } from '@redux/types/redux-types';
-import { ac } from 'vitest/dist/types-aac763a5';
+
+export type UserRole = 'visitor' | 'employee';
 
 export type Authentication = {
   isLogged: boolean,
   _uid?: number,
-  userRole?: 'visitor' | 'employee',
+  userRole?: UserRole,
 };
 
 const initialState: Authentication = {
