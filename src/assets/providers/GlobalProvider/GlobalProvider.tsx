@@ -3,6 +3,7 @@ import { ProviderProps } from '@providers/Provider.props';
 import ThemeProvider from '@providers/ThemeProvider/ThemeProvider';
 import DebugElement from '@providers/DebugElement/DebugElement';
 import GalleryOverlay from '@components/GalleryOverlay/GalleryOverlay';
+import AuthProvider from '@providers/AuthProvider/AuthProvider';
 
 const GlobalProvider: FC<ProviderProps> = ({ children }) => {
   return (
@@ -10,7 +11,9 @@ const GlobalProvider: FC<ProviderProps> = ({ children }) => {
       <DebugElement useDebug />
       <GalleryOverlay />
 
-      <ThemeProvider>{children}</ThemeProvider>
+      <AuthProvider>
+        <ThemeProvider>{children}</ThemeProvider>
+      </AuthProvider>
     </>
   );
 };
