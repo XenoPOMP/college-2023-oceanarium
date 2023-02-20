@@ -7,7 +7,7 @@ import useLocalization from '@hooks/useLocalization';
 import VisitorAccount from '@sections/VisitorAccount/VisitorAccount';
 import getUiSx from '@utils/getUiSx';
 import useAuth from '@hooks/useAuth';
-import useEnv, { Env } from '@hooks/useEnv';
+import useEnv from '@hooks/useEnv';
 
 const VisitorAccountPage: FC<VisitorAccountPageProps> = ({}) => {
   const loc = useLocalization();
