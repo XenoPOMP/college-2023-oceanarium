@@ -7,15 +7,13 @@ import useLocalization from '@hooks/useLocalization';
 import VisitorAccount from '@sections/VisitorAccount/VisitorAccount';
 import getUiSx from '@utils/getUiSx';
 import useAuth from '@hooks/useAuth';
+import useEnv, { Env } from '@hooks/useEnv';
 
 const VisitorAccountPage: FC<VisitorAccountPageProps> = ({}) => {
   const loc = useLocalization();
+  const { API_URL }: Env = useEnv();
 
   const { isLogged, _uid, userRole } = useAuth();
-
-  useEffect(() => {
-    console.log({ isLogged, _uid, userRole });
-  }, []);
 
   return (
     <Page

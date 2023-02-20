@@ -7,14 +7,12 @@ export type AppSettings = {
   language: Language,
   appVersion: string,
   cookiePrefix: string,
-  apiUrl: string,
 };
 
 const initialState: AppSettings = {
   language: 'ru',
-  appVersion: '1.09.2',
+  appVersion: '1.09.3',
   cookiePrefix: 'taldyk',
-  apiUrl: 'http://localhost:4200/api/',
 };
 
 const appSettingsSlice = createSlice({
