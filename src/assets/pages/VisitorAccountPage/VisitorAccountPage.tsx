@@ -8,6 +8,7 @@ import VisitorAccount from '@sections/VisitorAccount/VisitorAccount';
 import getUiSx from '@utils/getUiSx';
 import useAuth from '@hooks/useAuth';
 import useEnv from '@hooks/useEnv';
+import AuthForm from '@components/AuthForm/AuthForm';
 
 const VisitorAccountPage: FC<VisitorAccountPageProps> = ({}) => {
   const loc = useLocalization();
@@ -28,6 +29,8 @@ const VisitorAccountPage: FC<VisitorAccountPageProps> = ({}) => {
       })}
     >
       <VisitorAccount />
+
+      <AuthForm preferredRole={'visitor'} />
     </Page>
   );
 };
