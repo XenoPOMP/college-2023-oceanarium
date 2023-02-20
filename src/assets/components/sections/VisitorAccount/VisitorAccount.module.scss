@@ -37,8 +37,14 @@
       width: 100%;
       height: 100%;
       border-radius: 1.25em;
-      border: none;
       padding: .6em .75em;
+      cursor: pointer;
+      border: 1px solid transparent;
+
+      &:hover, &.bonuses:hover {
+        background: transparent;
+        border: 1px solid black;
+      }
 
       &.bonuses {
         background: url("/src/media/backs/bonuses-back.png");
