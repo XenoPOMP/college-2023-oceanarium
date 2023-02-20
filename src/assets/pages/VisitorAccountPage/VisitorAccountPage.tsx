@@ -11,8 +11,7 @@ import useEnv, { Env } from '@hooks/useEnv';
 
 const VisitorAccountPage: FC<VisitorAccountPageProps> = ({}) => {
   const loc = useLocalization();
-  const { API_URL }: Env = useEnv();
-
+  const { API_URL } = useEnv();
   const { isLogged, _uid, userRole } = useAuth();
 
   return (
