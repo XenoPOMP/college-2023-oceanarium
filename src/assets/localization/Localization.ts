@@ -98,6 +98,12 @@ type Localization = {
   },
   notFoundPage: {
     errorLabel: string
+  },
+  authForm: {
+    header: string,
+    placeholders: {
+      password: string
+    }
   }
 };
 

@@ -137,6 +137,13 @@ const ru: Localization = {
   notFoundPage: {
     errorLabel: 'Ошибка 404: страница не найдена',
   },
+
+  authForm: {
+    header: 'Вход в личный кабинет',
+    placeholders: {
+      password: 'Пароль',
+    },
+  },
 };
 
 export default ru;

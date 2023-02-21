@@ -136,6 +136,13 @@ const kz: Localization = {
   notFoundPage: {
     errorLabel: 'Қате 404: бет табылмады',
   },
+
+  authForm: {
+    header: 'Жеке кабинетке кіру',
+    placeholders: {
+      password: 'Құпия сөз',
+    },
+  },
 };
 
 export default kz;

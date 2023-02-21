@@ -1,10 +1,13 @@
 @import "src/assets/styles/templates";
 
 .formPlaceholder {
+  @extend %mainFont;
+
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: black;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(7px);
   top: 0;
   left: 0;
   z-index: 20000;
@@ -13,12 +16,79 @@
   grid-template-rows: 60px 1fr 60px;
 
   .container {
-    &.form {
+    &.hoverable {
+      cursor: pointer;
+      transition: .15s ease background;
+
+      svg {
+        path {
+          transition: .15s ease fill;
+        }
+      }
+
+      &:hover {
+        background: black;
+
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+
+    &.goBack {
+      @extend %flexCenter;
+
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    &.forForm {
+      @extend %flexCenter;
+
+      font-size: 20px;
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 2;
       grid-row-end: 3;
-      background: white;
+      border: 2px solid red;
+
+      .form {
+        @extend %mainFont;
+
+        color: black;
+        max-width: 100%;
+        max-height: 100%;
+        background: white;
+        font-size: 1em;
+        padding: 2em 3em;
+
+        h3 {
+          // 32 px font size
+          @extend %light;
+          @extend %notSelectable;
+
+          text-align: center;
+          font-size: 1.6em;
+          margin-bottom: .625em;
+        }
+
+        input {
+          @extend %mainFont;
+
+          width: 100%;
+          font-size: 1em;
+          border: .5px solid black;
+          outline: none;
+          padding: .25em .5em;
+          background: rgba(217, 217, 217, 0.5);
+          border-radius: 1.2em;
+          margin-bottom: 1em;
+        }
+      }
     }
   }
 }
