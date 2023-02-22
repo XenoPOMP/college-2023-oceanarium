@@ -1,0 +1,17 @@
+a.link {
+  --initial-color: black;
+  --hover-color: #3072F1;
+
+  font-size: 1em;
+  color: var(--initial-color);
+  font-weight: normal;
+  transition: color .15s ease;
+
+  &:hover {
+    color: var(--hover-color);
+  }
+
+  svg {
+    margin-left: .25em;
+  }
+}
