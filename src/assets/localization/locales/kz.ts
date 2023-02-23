@@ -132,6 +132,10 @@ const kz: Localization = {
         personal: 'ЖЕКЕ ДЕРЕКТЕР',
       },
     },
+
+    messages: {
+      internalServerErrorMessage: 'Ішкі сервер қатесі орын алды',
+    },
   },
 
   notFoundPage: {

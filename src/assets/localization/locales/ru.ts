@@ -133,6 +133,10 @@ const ru: Localization = {
         personal: 'ЛИЧНЫЕ ДАННЫЕ',
       },
     },
+
+    messages: {
+      internalServerErrorMessage: 'Произошла внутренняя ошибка сервера',
+    },
   },
 
   notFoundPage: {

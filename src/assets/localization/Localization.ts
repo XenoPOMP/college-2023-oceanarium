@@ -87,7 +87,7 @@ type Localization = {
         history: string,
         personalData: string
       },
-      totalBonusesText: string
+      totalBonusesText: string,
     },
     employee: {
       buttons: {
@@ -95,6 +95,9 @@ type Localization = {
         awards: string,
         personal: string
       }
+    },
+    messages: {
+      internalServerErrorMessage: string
     }
   },
   notFoundPage: {

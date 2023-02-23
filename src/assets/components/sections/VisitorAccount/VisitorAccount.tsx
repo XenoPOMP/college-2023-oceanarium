@@ -8,7 +8,14 @@ import { summary } from '@utils/math-utils';
 import useAuth from '@hooks/useAuth';
 import { useQuery } from 'react-query';
 import { VisitorService } from '../../../../services/Visitor.service';
-import CircleLoader from '@ui/CircleLoader';
+import CircleLoader from '@ui/CircleLoader/CircleLoader';
+import VisitorBonus from '@ui/VisitorBonus/VisitorBonus';
+
+export type Bonus = {
+  bonus_amount: number,
+  bonus_purpose: string,
+  bonus_date: string,
+};
 
 const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
   const loc = useLocalization();
@@ -24,12 +31,6 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
   const [page, setPage] = useState<number>(0);
 
   const getTotalBonuses = (): number => {
-    type Bonus = {
-      bonus_amount: number,
-      bonus_purpose: string,
-      bonus_date: string,
-    };
-
     if (data) {
       return summary(...data?.data.map((bonus: Bonus) => bonus.bonus_amount));
     } else return 0;
@@ -92,12 +93,18 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
                   )}
                 </h4>
               </div>
+
+              <div className={cn(styles.bonusList)}>
+                {data?.data.map((bonus: Bonus) => (
+                  <VisitorBonus bonus={bonus} />
+                ))}
+              </div>
             </>
           )}
 
           {error && (
             <div className={cn(styles.serverMessagePlaceholder)}>
-              Internal error
+              {loc.accountPage.messages.internalServerErrorMessage}
             </div>
           )}
         </>
