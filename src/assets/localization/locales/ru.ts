@@ -123,6 +123,7 @@ const ru: Localization = {
         history: 'ИСТОРИЯ ПОСЕЩЕНИЙ',
         personalData: 'ЛИЧНЫЕ ДАННЫЕ',
       },
+      totalBonusesText: 'Доступно бонусов: XXXX',
     },
 
     employee: {

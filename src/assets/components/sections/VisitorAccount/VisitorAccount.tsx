@@ -23,6 +23,18 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
   // prettier-ignore
   const [page, setPage] = useState<number>(0);
 
+  const getTotalBonuses = (): number => {
+    type Bonus = {
+      bonus_amount: number,
+      bonus_purpose: string,
+      bonus_date: string,
+    };
+
+    if (data) {
+      return summary(...data?.data.map((bonus: Bonus) => bonus.bonus_amount));
+    } else return 0;
+  };
+
   return (
     <div
       style={getUiSx({
@@ -73,7 +85,12 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
           ) : (
             <>
               <div className={cn(styles.totalBonuses)}>
-                <h4>Available</h4>
+                <h4>
+                  {loc.accountPage.visitor.totalBonusesText.replace(
+                    'XXXX',
+                    `${getTotalBonuses()}`,
+                  )}
+                </h4>
               </div>
             </>
           )}

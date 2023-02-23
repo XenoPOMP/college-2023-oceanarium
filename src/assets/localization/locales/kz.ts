@@ -122,6 +122,7 @@ const kz: Localization = {
         history: 'КЕЛУ ТАРИХЫ',
         personalData: 'ЖЕКЕ ДЕРЕКТЕР',
       },
+      totalBonusesText: 'Бонустар Қол жетімді: XXXX',
     },
 
     employee: {
