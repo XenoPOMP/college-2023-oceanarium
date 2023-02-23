@@ -44,6 +44,7 @@
       &:hover, &.bonuses:hover {
         background: transparent;
         border: 1px solid black;
+        filter: drop-shadow(0px 0px 5px #000000);
       }
 
       &.bonuses {
@@ -65,5 +66,28 @@
     margin: 0 var(--gap);
     height: 2px;
     background: white;
+  }
+
+  .serverMessagePlaceholder {
+    @extend %flexCenter;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding: 0 1em 1em 1em;
+  }
+
+  .totalBonuses {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding: 0 1.5em 1em 1.5em;
+
+    h4 {
+      @extend %mainFont;
+      @extend %light;
+
+      // Font size => 20px
+      font-size: 1em;
+    }
   }
 }

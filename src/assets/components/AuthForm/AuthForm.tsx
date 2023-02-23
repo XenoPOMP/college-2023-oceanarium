@@ -20,8 +20,10 @@ const AuthForm: FC<AuthFormProps> = ({}) => {
   const [login, setLogin] = useState<string>('');
   // prettier-ignore
   const [password, setPassword] = useState<string>('');
-  const { isLoading, refetch, data } = useQuery('POST user api call', () =>
-    UserService.loginUser(login, password),
+  const { isLoading, refetch, data } = useQuery(
+    'POST user api call',
+    () => UserService.loginUser(login, password),
+    { enabled: !isLogged },
   );
 
   const showForm = !isLogged;

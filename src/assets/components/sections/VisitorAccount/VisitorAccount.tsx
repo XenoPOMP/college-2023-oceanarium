@@ -1,60 +1,27 @@
 import cn from 'classnames';
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
 import styles from './VisitorAccount.module.scss';
 import { VisitorAccountProps } from './VisitorAccount.props';
 import getUiSx from '@utils/getUiSx';
 import useLocalization from '@hooks/useLocalization';
 import { summary } from '@utils/math-utils';
+import useAuth from '@hooks/useAuth';
+import { useQuery } from 'react-query';
+import { VisitorService } from '../../../../services/Visitor.service';
+import CircleLoader from '@ui/CircleLoader';
 
 const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
   const loc = useLocalization();
-
-  type Bonus = {
-    value: number,
-    purpose: 'visit',
-    fireDate: string,
-  };
-
-  const getTotalBonuses = (bonuses: Bonus[]): number => {
-    return summary(...bonuses.map((bonus) => bonus.value));
-  };
-
-  const mockBonuses: Bonus[] = [
+  const { _uid, isLogged } = useAuth();
+  const { isLoading, data, error } = useQuery(
+    'get visitor bonuses',
+    () => VisitorService.getUserBonuses(_uid),
     {
-      value: 12,
-      purpose: 'visit',
-      fireDate: '01.01.2014',
+      enabled: isLogged,
     },
-    {
-      value: 12,
-      purpose: 'visit',
-      fireDate: '01.01.2014',
-    },
-    {
-      value: 12,
-      purpose: 'visit',
-      fireDate: '01.01.2014',
-    },
-    {
-      value: 12,
-      purpose: 'visit',
-      fireDate: '01.01.2014',
-    },
-    {
-      value: 12,
-      purpose: 'visit',
-      fireDate: '01.01.2014',
-    },
-    {
-      value: 12,
-      purpose: 'visit',
-      fireDate: '01.01.2014',
-    },
-  ];
-
-  useEffect(() => {
-    console.log({ totalBonuses: getTotalBonuses(mockBonuses) });
-  }, []);
+  );
+  // prettier-ignore
+  const [page, setPage] = useState<number>(0);
 
   return (
     <div
@@ -65,22 +32,59 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
       className={cn(styles.block)}
     >
       <div className={cn(styles.buttonPlaceholder)}>
-        <button className={cn(styles.bonuses)}>
+        <button
+          className={cn(styles.bonuses)}
+          onClick={() => {
+            setPage(0);
+          }}
+        >
           <span>{loc.accountPage.visitor.buttons.bonuses}</span>
         </button>
       </div>
 
       <div className={cn(styles.buttonPlaceholder)}>
-        <button>{loc.accountPage.visitor.buttons.history}</button>
+        <button
+          onClick={() => {
+            setPage(1);
+          }}
+        >
+          {loc.accountPage.visitor.buttons.history}
+        </button>
       </div>
 
       <div className={cn(styles.buttonPlaceholder, styles.last)}>
-        <button>{loc.accountPage.visitor.buttons.personalData}</button>
+        <button
+          onClick={() => {
+            setPage(2);
+          }}
+        >
+          {loc.accountPage.visitor.buttons.personalData}
+        </button>
       </div>
 
       <div className={cn(styles.divider)}></div>
 
-      <div></div>
+      {page === 0 && (
+        <>
+          {isLoading ? (
+            <div className={cn(styles.serverMessagePlaceholder)}>
+              <CircleLoader />
+            </div>
+          ) : (
+            <>
+              <div className={cn(styles.totalBonuses)}>
+                <h4>Available</h4>
+              </div>
+            </>
+          )}
+
+          {error && (
+            <div className={cn(styles.serverMessagePlaceholder)}>
+              Internal error
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 };
