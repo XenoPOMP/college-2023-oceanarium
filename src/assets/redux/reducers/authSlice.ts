@@ -11,18 +11,26 @@ export type Authentication = {
 
 const initialState: Authentication = {
   isLogged: false,
+  _uid: undefined,
+  userRole: undefined,
 };
 
 const authSlice = createSlice({
   name: 'authenticationSlice',
   initialState,
   reducers: {
-    login(state, action: ReduxAction<number>) {
-      state._uid = action.payload;
+    login(state, action: ReduxAction<{ uid: number, role: UserRole }>) {
+      state.isLogged = true;
+      state._uid = action.payload.uid;
+      state.userRole = action.payload.role;
     },
 
     loadData(state, action: ReduxAction<Authentication>) {
-      state = action.payload;
+      const { isLogged, _uid, userRole } = action.payload;
+
+      state.isLogged = isLogged;
+      state._uid = _uid;
+      state.userRole = userRole;
     },
   },
 });

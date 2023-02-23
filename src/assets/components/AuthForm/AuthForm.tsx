@@ -9,27 +9,20 @@ import useLocalization from '@hooks/useLocalization';
 import useEnv from '@hooks/useEnv';
 import { useQuery } from 'react-query';
 import { UserService } from '../../../services/User.service';
+import CircleLoader from '@ui/CircleLoader';
 
 const AuthForm: FC<AuthFormProps> = ({}) => {
   const loc = useLocalization();
   const { API_URL } = useEnv();
-  const { isLogged, _uid, userRole } = useAuth();
+  const { isLogged, _uid, userRole, loginUser } = useAuth();
   const navigate = useNavigate();
   // prettier-ignore
   const [login, setLogin] = useState<string>('');
   // prettier-ignore
   const [password, setPassword] = useState<string>('');
-  const { isLoading, error, refetch, data } = useQuery('user api call', () =>
+  const { isLoading, refetch, data } = useQuery('POST user api call', () =>
     UserService.loginUser(login, password),
   );
-
-  useEffect(() => {
-    refetch();
-  }, [login, password]);
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   const showForm = !isLogged;
 
@@ -91,9 +84,23 @@ const AuthForm: FC<AuthFormProps> = ({}) => {
             onChange={(event) => setPassword(event.target.value)}
           />
 
-          <button>{loc.authForm.buttonText}</button>
+          <button
+            onClick={() => {
+              refetch();
 
-          {isLoading && <div>Loading...</div>}
+              if (data?.data._uid !== undefined) {
+                const { login, _uid, role } = data?.data;
+
+                loginUser(_uid, role);
+              }
+            }}
+          >
+            {isLoading ? (
+              <CircleLoader className={cn(styles.loader)} />
+            ) : (
+              loc.authForm.buttonText
+            )}
+          </button>
         </div>
       </div>
     </motion.div>

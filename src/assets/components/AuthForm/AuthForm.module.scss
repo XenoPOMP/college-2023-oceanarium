@@ -54,7 +54,7 @@
       grid-column-end: 3;
       grid-row-start: 2;
       grid-row-end: 3;
-      border: 2px solid red;
+      // border: 2px solid red;
 
       .form {
         @extend %mainFont;
@@ -94,6 +94,7 @@
         button {
           @extend %mainFont;
           @extend %light;
+          @extend %flexCenter;
 
           margin: 0 auto;
           outline: none;
@@ -108,6 +109,10 @@
 
           &:active {
             filter: brightness(.9);
+          }
+
+          .loader {
+            margin: .2em 0;
           }
         }
       }
