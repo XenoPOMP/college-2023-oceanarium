@@ -124,6 +124,13 @@ const ru: Localization = {
         personalData: 'ЛИЧНЫЕ ДАННЫЕ',
       },
       totalBonusesText: 'Доступно бонусов: XXXX',
+      bonusLabels: {
+        bonuses: 'бонусов',
+        reasons: {
+          visit: 'за посещение океанариума',
+        },
+        availableBefore: 'до',
+      },
     },
 
     employee: {

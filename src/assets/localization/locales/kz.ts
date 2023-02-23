@@ -123,6 +123,13 @@ const kz: Localization = {
         personalData: 'ЖЕКЕ ДЕРЕКТЕР',
       },
       totalBonusesText: 'Бонустар Қол жетімді: XXXX',
+      bonusLabels: {
+        bonuses: 'бонустар',
+        reasons: {
+          visit: 'аквариумға барғаны үшін',
+        },
+        availableBefore: 'дейін',
+      },
     },
 
     employee: {

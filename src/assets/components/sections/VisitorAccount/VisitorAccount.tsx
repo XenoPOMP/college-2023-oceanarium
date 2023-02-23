@@ -27,8 +27,12 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
       enabled: isLogged,
     },
   );
+
+  enum PagesEnum {
+    bonuses, history, personalData
+  }
   // prettier-ignore
-  const [page, setPage] = useState<number>(0);
+  const [page, setPage] = useState<PagesEnum>(0);
 
   const getTotalBonuses = (): number => {
     if (data) {
@@ -77,7 +81,7 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
 
       <div className={cn(styles.divider)}></div>
 
-      {page === 0 && (
+      {page === PagesEnum.bonuses && (
         <>
           {isLoading ? (
             <div className={cn(styles.serverMessagePlaceholder)}>
@@ -95,8 +99,8 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
               </div>
 
               <div className={cn(styles.bonusList)}>
-                {data?.data.map((bonus: Bonus) => (
-                  <VisitorBonus bonus={bonus} />
+                {data?.data.map((bonus: Bonus, index: number) => (
+                  <VisitorBonus bonus={bonus} key={`bonus-${index}`} />
                 ))}
               </div>
             </>

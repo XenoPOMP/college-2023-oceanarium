@@ -88,6 +88,13 @@ type Localization = {
         personalData: string
       },
       totalBonusesText: string,
+      bonusLabels: {
+        bonuses: string,
+        reasons: {
+          visit: string
+        },
+        availableBefore: string
+      }
     },
     employee: {
       buttons: {
