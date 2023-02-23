@@ -6,15 +6,30 @@ import useAuth from '@hooks/useAuth';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import useLocalization from '@hooks/useLocalization';
+import useEnv from '@hooks/useEnv';
+import { useQuery } from 'react-query';
+import { UserService } from '../../../services/User.service';
 
-const AuthForm: FC<AuthFormProps> = ({ preferredRole }) => {
+const AuthForm: FC<AuthFormProps> = ({}) => {
   const loc = useLocalization();
+  const { API_URL } = useEnv();
   const { isLogged, _uid, userRole } = useAuth();
   const navigate = useNavigate();
   // prettier-ignore
   const [login, setLogin] = useState<string>('');
   // prettier-ignore
   const [password, setPassword] = useState<string>('');
+  const { isLoading, error, refetch, data } = useQuery('user api call', () =>
+    UserService.loginUser(login, password),
+  );
+
+  useEffect(() => {
+    refetch();
+  }, [login, password]);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
   const showForm = !isLogged;
 
@@ -64,21 +79,11 @@ const AuthForm: FC<AuthFormProps> = ({ preferredRole }) => {
         <div className={cn(styles.form)}>
           <h3>{loc.authForm.header}</h3>
 
-          {preferredRole === 'visitor' && (
-            <input
-              placeholder={'8 (9__) ___ - __ -__'}
-              value={login}
-              onChange={(event) => setLogin(event.target.value)}
-            />
-          )}
-
-          {preferredRole === 'employee' && (
-            <input
-              placeholder={''}
-              value={login}
-              onChange={(event) => setLogin(event.target.value)}
-            />
-          )}
+          <input
+            placeholder={loc.authForm.placeholders.login}
+            value={login}
+            onChange={(event) => setLogin(event.target.value)}
+          />
 
           <input
             placeholder={loc.authForm.placeholders.password}
@@ -86,7 +91,9 @@ const AuthForm: FC<AuthFormProps> = ({ preferredRole }) => {
             onChange={(event) => setPassword(event.target.value)}
           />
 
-          <button></button>
+          <button>{loc.authForm.buttonText}</button>
+
+          {isLoading && <div>Loading...</div>}
         </div>
       </div>
     </motion.div>

@@ -140,8 +140,10 @@ const kz: Localization = {
   authForm: {
     header: 'Жеке кабинетке кіру',
     placeholders: {
+      login: 'Кіру',
       password: 'Құпия сөз',
     },
+    buttonText: 'Тіркелгіге кіру',
   },
 };
 

@@ -141,8 +141,10 @@ const ru: Localization = {
   authForm: {
     header: 'Вход в личный кабинет',
     placeholders: {
+      login: 'Логин',
       password: 'Пароль',
     },
+    buttonText: 'Войти',
   },
 };
 

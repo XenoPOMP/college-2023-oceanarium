@@ -102,8 +102,10 @@ type Localization = {
   authForm: {
     header: string,
     placeholders: {
+      login: string,
       password: string
-    }
+    },
+    buttonText: string
   }
 };
 
