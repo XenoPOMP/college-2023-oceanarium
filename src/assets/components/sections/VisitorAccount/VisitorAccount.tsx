@@ -88,24 +88,22 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
             <div className={cn(styles.serverMessagePlaceholder)}>
               <CircleLoader />
             </div>
-          ) : (
-            <>
-              <div className={cn(styles.totalBonuses)}>
-                <h4>
-                  {loc.accountPage.visitor.totalBonusesText.replace(
-                    'XXXX',
-                    `${getTotalBonuses()}`,
-                  )}
-                </h4>
-              </div>
+          ) : !error && <>
+            <div className={cn(styles.totalBonuses)}>
+              <h4>
+                {loc.accountPage.visitor.totalBonusesText.replace(
+                  'XXXX',
+                  `${getTotalBonuses()}`,
+                )}
+              </h4>
+            </div>
 
-              <div className={cn(styles.bonusList)}>
-                {data?.data.map((bonus: Bonus, index: number) => (
-                  <VisitorBonus bonus={bonus} key={`bonus-${index}`} />
-                ))}
-              </div>
-            </>
-          )}
+            <div className={cn(styles.bonusList)}>
+              {data?.data.map((bonus: Bonus, index: number) => (
+                <VisitorBonus bonus={bonus} key={`bonus-${index}`} />
+              ))}
+            </div>
+          </>}
 
           {error && (
             <div className={cn(styles.serverMessagePlaceholder)}>
