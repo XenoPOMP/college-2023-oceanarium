@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import styles from './BonusesTab.module.scss';
 import { BonusesTabProps } from './BonusesTab.props';
 import { summary } from '@utils/math-utils';
@@ -16,7 +16,7 @@ import parentStyles from '@components/sections/VisitorAccount/VisitorAccount.mod
 const BonusesTab: FC<BonusesTabProps> = ({}) => {
   const loc = useLocalization();
   const { _uid, isLogged } = useAuth();
-  const { isLoading, data, error } = useQuery(
+  const { isLoading, data, error, refetch } = useQuery(
     'get visitor bonuses for tab',
     () => VisitorService.getUserBonuses(_uid),
     {
