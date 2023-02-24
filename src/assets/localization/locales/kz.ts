@@ -158,6 +158,11 @@ const kz: Localization = {
     },
     buttonText: 'Тіркелгіге кіру',
   },
+
+  accessDenied: {
+    label: 'Кіруге тыйым салынады',
+    goBackText: 'Артқа қайту',
+  },
 };
 
 export default kz;

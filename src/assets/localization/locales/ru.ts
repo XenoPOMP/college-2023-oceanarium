@@ -159,6 +159,11 @@ const ru: Localization = {
     },
     buttonText: 'Войти',
   },
+
+  accessDenied: {
+    label: 'Доступ запрещен',
+    goBackText: 'Вернуться назад',
+  },
 };
 
 export default ru;

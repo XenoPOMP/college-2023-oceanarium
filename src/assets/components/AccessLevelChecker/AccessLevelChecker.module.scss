@@ -1,0 +1,50 @@
+@import "src/assets/styles/templates";
+
+.accessChecker {
+  @extend %mainFont;
+  @extend %regular;
+  @extend %flexCenter;
+  @extend %notSelectable;
+
+  text-align: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  color: black;
+  top: 0;
+  left: 0;
+  z-index: 30000;
+  font-size: 32px;
+  flex-direction: column;
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .goBack {
+    @extend %light;
+    @extend %flexCenter;
+
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 1em;
+    position: relative;
+    color: inherit;
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: calc(100% + 3px);
+      right: 0;
+      width: 6px;
+      height: 3px;
+      background: black;
+      transition: width .2s ease;
+    }
+  }
+}

@@ -9,6 +9,7 @@ import getUiSx from '@utils/getUiSx';
 import useAuth from '@hooks/useAuth';
 import useEnv from '@hooks/useEnv';
 import AuthForm from '@components/AuthForm/AuthForm';
+import AccessLevelChecker from '@components/AccessLevelChecker/AccessLevelChecker';
 
 const VisitorAccountPage: FC<VisitorAccountPageProps> = ({}) => {
   const loc = useLocalization();
@@ -28,9 +29,15 @@ const VisitorAccountPage: FC<VisitorAccountPageProps> = ({}) => {
         maxWidth: 'unset',
       })}
     >
-      <VisitorAccount />
+      {userRole === 'visitor' && (
+        <>
+          <VisitorAccount />
+        </>
+      )}
 
-      <AuthForm preferredRole={'visitor'} />
+      <AuthForm />
+
+      {isLogged && <AccessLevelChecker preferredRole={'visitor'} />}
     </Page>
   );
 };

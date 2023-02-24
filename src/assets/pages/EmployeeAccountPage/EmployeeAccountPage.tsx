@@ -6,9 +6,13 @@ import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
 import EmployeeAccountSection from '@sections/EmployeeAccountSection/EmployeeAccountSection';
 import getUiSx from '@utils/getUiSx';
+import AuthForm from '@components/AuthForm/AuthForm';
+import AccessLevelChecker from '@components/AccessLevelChecker/AccessLevelChecker';
+import useAuth from '@hooks/useAuth';
 
 const EmployeeAccountPage: FC<EmployeeAccountPageProps> = ({}) => {
   const loc = useLocalization();
+  const { isLogged, userRole } = useAuth();
 
   return (
     <Page
@@ -23,7 +27,15 @@ const EmployeeAccountPage: FC<EmployeeAccountPageProps> = ({}) => {
       })}
       className={cn(styles.page)}
     >
-      <EmployeeAccountSection />
+      {userRole === 'employee' && (
+        <>
+          <EmployeeAccountSection />
+        </>
+      )}
+
+      <AuthForm />
+
+      {isLogged && <AccessLevelChecker preferredRole={'employee'} />}
     </Page>
   );
 };

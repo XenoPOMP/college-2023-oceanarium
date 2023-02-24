@@ -118,6 +118,10 @@ type Localization = {
       password: string
     },
     buttonText: string
+  },
+  accessDenied: {
+    label: string,
+    goBackText: string
   }
 };
 
