@@ -142,6 +142,7 @@ const ru: Localization = {
     },
 
     messages: {
+      noConnectionToServer: 'Нет подключения к серверу',
       internalServerErrorMessage: 'Произошла внутренняя ошибка сервера',
     },
   },

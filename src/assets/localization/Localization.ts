@@ -104,6 +104,7 @@ type Localization = {
       }
     },
     messages: {
+      noConnectionToServer: string,
       internalServerErrorMessage: string
     }
   },

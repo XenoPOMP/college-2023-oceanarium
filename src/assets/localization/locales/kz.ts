@@ -141,6 +141,7 @@ const kz: Localization = {
     },
 
     messages: {
+      noConnectionToServer: 'Серверге қосылу жоқ',
       internalServerErrorMessage: 'Ішкі сервер қатесі орын алды',
     },
   },

@@ -10,6 +10,7 @@ import { useQuery } from 'react-query';
 import { VisitorService } from '../../../../services/Visitor.service';
 import CircleLoader from '@ui/CircleLoader/CircleLoader';
 import VisitorBonus from '@ui/VisitorBonus/VisitorBonus';
+import { AxiosError } from 'axios';
 
 export type Bonus = {
   bonus_amount: number,
@@ -108,7 +109,11 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
 
           {error && (
             <div className={cn(styles.serverMessagePlaceholder)}>
-              {loc.accountPage.messages.internalServerErrorMessage}
+              {(error as AxiosError).code === 'ERR_NETWORK'
+                && loc.accountPage.messages.noConnectionToServer}
+
+              {(error as AxiosError).code === '500'
+                && loc.accountPage.messages.internalServerErrorMessage}
             </div>
           )}
         </>
