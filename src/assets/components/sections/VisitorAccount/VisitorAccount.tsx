@@ -32,7 +32,7 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
     >
       <div className={cn(styles.buttonPlaceholder)}>
         <button
-          className={cn(styles.bonuses)}
+          className={cn(styles.bonuses, page === 0 ? styles.chosen : '')}
           onClick={() => {
             setPage(0);
           }}
@@ -43,6 +43,7 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
 
       <div className={cn(styles.buttonPlaceholder)}>
         <button
+          className={cn(page === 1 ? styles.chosen : '')}
           onClick={() => {
             setPage(1);
           }}
@@ -53,6 +54,7 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
 
       <div className={cn(styles.buttonPlaceholder, styles.last)}>
         <button
+          className={cn(page === 2 ? styles.chosen : '')}
           onClick={() => {
             setPage(2);
           }}
