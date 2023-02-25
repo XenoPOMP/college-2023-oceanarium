@@ -1,0 +1,26 @@
+@import "src/assets/styles/templates";
+
+.block {
+  @extend %mainFont;
+  @extend %light;
+
+  font-size: 20px;
+  width: calc(100% - .4em);
+  color: black;
+  padding: .5em 0 .65em 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-column-gap: 1.55em;
+
+  &:not(&:last-of-type) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  span.pavilion, .date {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .date {
+    text-align: end;
+  }
+}

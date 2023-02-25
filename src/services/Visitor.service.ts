@@ -6,4 +6,10 @@ export const VisitorService = {
       _uid,
     });
   },
+
+  async getUserVisits(_uid?: number) {
+    return axios.post(`http://localhost:4200/visitors/visits`, {
+      _uid,
+    });
+  },
 };

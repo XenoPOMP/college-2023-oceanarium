@@ -16,7 +16,7 @@ import parentStyles from '@components/sections/VisitorAccount/VisitorAccount.mod
 const BonusesTab: FC<BonusesTabProps> = ({}) => {
   const loc = useLocalization();
   const { _uid, isLogged } = useAuth();
-  const { isLoading, data, error, refetch } = useQuery(
+  const { isLoading, data, error } = useQuery(
     'get visitor bonuses for tab',
     () => VisitorService.getUserBonuses(_uid),
     {
@@ -45,7 +45,7 @@ const BonusesTab: FC<BonusesTabProps> = ({}) => {
         </h4>
       </div>
 
-      <div className={cn(styles.bonusList)}>
+      <div className={cn(parentStyles.scrollableBlock, styles.bonusList)}>
         {data?.data.map((bonus: Bonus, index: number) => (
           <VisitorBonus bonus={bonus} key={`bonus-${index}`} />
         ))}

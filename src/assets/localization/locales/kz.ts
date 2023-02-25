@@ -130,6 +130,16 @@ const kz: Localization = {
         },
         availableBefore: 'дейін',
       },
+      visitLabels: {
+        departments: {
+          pacific: 'Тынық мұхиты бөлімі',
+          atlantic: 'Атлант бөлімі',
+          indian: 'Үнді бөлімі',
+          artic: 'Мұзды бөлім',
+          northern: 'Солтүстік бөлім',
+        },
+        pavilion: 'Павильон XX',
+      },
     },
 
     employee: {

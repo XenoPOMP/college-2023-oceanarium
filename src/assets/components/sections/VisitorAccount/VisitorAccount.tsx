@@ -5,11 +5,18 @@ import { VisitorAccountProps } from './VisitorAccount.props';
 import getUiSx from '@utils/getUiSx';
 import useLocalization from '@hooks/useLocalization';
 import BonusesTab from '@sections/BonusesTab/BonusesTab';
+import VisitsTab from '@sections/VisitsTab/VisitsTab';
 
 export type Bonus = {
   bonus_amount: number,
   bonus_purpose: string,
   bonus_date: string,
+};
+
+export type Visit = {
+  visit_department: string,
+  visit_pavilion: number,
+  visit_date: string,
 };
 
 const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
@@ -65,6 +72,8 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
       <div className={cn(styles.divider)}></div>
 
       {page === PagesEnum.bonuses && <BonusesTab />}
+
+      {page === PagesEnum.history && <VisitsTab />}
     </div>
   );
 };

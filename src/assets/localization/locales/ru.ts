@@ -131,6 +131,16 @@ const ru: Localization = {
         },
         availableBefore: 'до',
       },
+      visitLabels: {
+        departments: {
+          pacific: 'Тихоокеанский отдел',
+          atlantic: 'Атлантический отдел',
+          indian: 'Индийский отдел',
+          artic: 'Ледовитый отдел',
+          northern: 'Северный отдел',
+        },
+        pavilion: 'Павильон XX',
+      },
     },
 
     employee: {

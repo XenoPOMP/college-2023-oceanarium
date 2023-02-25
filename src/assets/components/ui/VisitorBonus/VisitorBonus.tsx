@@ -3,6 +3,7 @@ import { FC } from 'react';
 import styles from './VisitorBonus.module.scss';
 import { VisitorBonusProps } from './VisitorBonus.props';
 import useLocalization from '@hooks/useLocalization';
+import parseDate from '@utils/parseDate';
 
 const VisitorBonus: FC<VisitorBonusProps> = ({ bonus }) => {
   const loc = useLocalization();
@@ -15,19 +16,6 @@ const VisitorBonus: FC<VisitorBonusProps> = ({ bonus }) => {
       default:
         return '';
     }
-  };
-
-  const parseDate = (date: string): string => {
-    const pattern = /\d{4}-\d{2}-\d{2}/gi;
-
-    // prettier-ignore
-    // @ts-ignore
-    const result = pattern.exec(date)
-      .toString()
-      .split('-')
-      .reverse();
-
-    return `${result[0]}.${result[1]}.${result[2]}`;
   };
 
   return (

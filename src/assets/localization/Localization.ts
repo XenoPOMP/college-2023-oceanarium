@@ -94,6 +94,16 @@ type Localization = {
           visit: string
         },
         availableBefore: string
+      },
+      visitLabels: {
+        departments: {
+          pacific: string,
+          atlantic: string,
+          indian: string,
+          artic: string,
+          northern: string
+        },
+        pavilion: string
       }
     },
     employee: {

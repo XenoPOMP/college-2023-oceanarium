@@ -18,22 +18,4 @@
 .bonusList {
   grid-column-start: 1;
   grid-column-end: 4;
-  max-height: 277px;
-  overflow-y: scroll;
-  margin: 0 1.5em 1.2em 1.5em;
-
-  &::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-  }
-
-  &::-webkit-scrollbar-track {
-    border-radius: 1.5px;
-    background: rgba(217, 217, 217, 0.5);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 1.5px;
-    background: white;
-  }
 }
