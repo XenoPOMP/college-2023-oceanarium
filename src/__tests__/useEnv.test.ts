@@ -5,6 +5,6 @@ describe('useEnv hook', () => {
   const { API_URL }: Env = useEnv();
 
   test('Get API url', () => {
-    expect(API_URL).toBe('http://localhost:4200/');
+    expect(API_URL).toBe('http://localhost:4200');
   });
 });

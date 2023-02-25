@@ -1,14 +1,14 @@
 const parseDate = (date: string): string => {
-  const pattern = /\d{4}-\d{2}-\d{2}/gi;
+  const pattern = /\d{4}-\d{2}-\d{2}/i;
 
-  // prettier-ignore
   // @ts-ignore
-  const result = pattern.exec(date)
-    .toString()
-    .split('-')
-    .reverse();
+  const result = pattern.exec(date)?.toString().split('-').reverse();
 
-  return `${result[0]}.${result[1]}.${result[2]}`;
+  if (result !== undefined) {
+    return `${result[0]}.${result[1]}.${result[2]}`;
+  }
+
+  return '';
 };
 
 export default parseDate;
