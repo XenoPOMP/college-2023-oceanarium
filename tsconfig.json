@@ -30,7 +30,8 @@
       "@localization/*": ["src/assets/localization/*"],
       "@locales/*": ["src/assets/localization/locales/*"],
       "@media/*": ["src/media/*"],
-      "@sections/*": ["src/assets/components/sections/*"]
+      "@sections/*": ["src/assets/components/sections/*"],
+      "@services/*": ["src/services/*"]
     }
   },
   "include": ["src"],

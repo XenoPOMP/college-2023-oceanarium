@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import useLocalization from '@hooks/useLocalization';
 import useEnv from '@hooks/useEnv';
 import { useQuery } from 'react-query';
-import { UserService } from '../../../services/User.service';
+import { UserService } from '@services/User.service';
 import CircleLoader from '@ui/CircleLoader/CircleLoader';
 
 const AuthForm: FC<AuthFormProps> = ({}) => {

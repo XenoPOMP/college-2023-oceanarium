@@ -5,7 +5,7 @@ import { BonusesTabProps } from './BonusesTab.props';
 import { summary } from '@utils/math-utils';
 import { Bonus } from '@sections/VisitorAccount/VisitorAccount';
 import { useQuery } from 'react-query';
-import { VisitorService } from '../../../../services/Visitor.service';
+import { VisitorService } from '@services/Visitor.service';
 import useLocalization from '@hooks/useLocalization';
 import useAuth from '@hooks/useAuth';
 import CircleLoader from '@ui/CircleLoader/CircleLoader';
