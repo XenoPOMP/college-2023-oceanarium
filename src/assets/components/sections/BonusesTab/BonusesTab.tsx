@@ -10,7 +10,7 @@ import useLocalization from '@hooks/useLocalization';
 import useAuth from '@hooks/useAuth';
 import CircleLoader from '@ui/CircleLoader/CircleLoader';
 import VisitorBonus from '@ui/VisitorBonus/VisitorBonus';
-import { AxiosError } from 'axios/index';
+import { AxiosError } from 'axios';
 import parentStyles from '@components/sections/VisitorAccount/VisitorAccount.module.scss';
 
 const BonusesTab: FC<BonusesTabProps> = ({}) => {
