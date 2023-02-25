@@ -8,6 +8,7 @@ import { AppSettings } from '@redux/reducers/appSettingsSlice';
 import { useSelector } from 'react-redux';
 import { StoreType } from '@redux/types/redux-types';
 import { Link } from 'react-router-dom';
+import logo from '@media/logos/AI_LOGO.png';
 
 const Header = () => {
   const loc = useLocalization();
@@ -26,8 +27,12 @@ const Header = () => {
         )}
       >
         <Link to={'/'} className={cn(styles.logo)}>
-          <h1>{loc.header.logoTitle}</h1>
-          <div className={cn(styles.desc)}>{loc.header.logoDesc}</div>
+          <img className={cn(styles.logot)} src={logo} alt={'taldyk-logo'} />
+
+          <div>
+            <h1>{loc.header.logoTitle}</h1>
+            <div className={cn(styles.desc)}>{loc.header.logoDesc}</div>
+          </div>
         </Link>
 
         <div className={cn(styles.contacts)}>
