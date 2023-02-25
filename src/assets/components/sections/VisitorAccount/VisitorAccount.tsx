@@ -4,7 +4,6 @@ import styles from './VisitorAccount.module.scss';
 import { VisitorAccountProps } from './VisitorAccount.props';
 import getUiSx from '@utils/getUiSx';
 import useLocalization from '@hooks/useLocalization';
-import useAuth from '@hooks/useAuth';
 import BonusesTab from '@sections/BonusesTab/BonusesTab';
 
 export type Bonus = {

@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import styles from './YellowButton.module.scss';
 import { YellowButtonProps } from './YellowButton.props';
 

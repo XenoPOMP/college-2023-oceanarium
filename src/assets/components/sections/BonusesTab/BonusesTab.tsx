@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import styles from './BonusesTab.module.scss';
 import { BonusesTabProps } from './BonusesTab.props';
 import { summary } from '@utils/math-utils';

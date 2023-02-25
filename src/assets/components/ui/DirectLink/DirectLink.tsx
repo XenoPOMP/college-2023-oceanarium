@@ -1,6 +1,4 @@
-import cn from 'classnames';
 import { FC } from 'react';
-import styles from './DirectLink.module.scss';
 import { DirectLinkProps } from './DirectLink.props';
 import TextLink from '@ui/TextLink/TextLink';
 

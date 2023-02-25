@@ -1,6 +1,5 @@
 import cn from 'classnames';
 import { FC } from 'react';
-import styles from './CircleLoader.module.scss';
 import { CircleLoaderProps } from './CircleLoader.props';
 import { motion } from 'framer-motion';
 

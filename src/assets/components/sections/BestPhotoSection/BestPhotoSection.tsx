@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import styles from './BestPhotoSection.module.scss';
 import { BestPhotoSectionProps } from './BestPhotoSection.props';
 import useLocalization from '@hooks/useLocalization';
@@ -11,13 +11,7 @@ import itemTwo from '@media/gallery/item2.png';
 import itemThree from '@media/gallery/item3.png';
 import itemFour from '@media/gallery/item4.png';
 import itemFive from '@media/gallery/item5.png';
-import {
-  changeSlide,
-  Gallery,
-  setSlides,
-  showGallery,
-  Slide,
-} from '@redux/reducers/gallerySlice';
+import { Gallery, Slide } from '@redux/reducers/gallerySlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { StoreType } from '@redux/types/redux-types';
 import useGallery from '@hooks/useGallery';
