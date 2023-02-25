@@ -9,4 +9,8 @@ describe('Math utils', () => {
   test('summary function return correct sum', () => {
     expect(summary(1, 2, 3)).toBe(6);
   });
+
+  test('negative sum', () => {
+    expect(summary(-1, -4, 0, 2)).toBe(-3);
+  });
 });
