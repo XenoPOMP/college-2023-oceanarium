@@ -27,7 +27,7 @@ const Header = () => {
         )}
       >
         <Link to={'/'} className={cn(styles.logo)}>
-          <img className={cn(styles.logot)} src={logo} alt={'taldyk-logo'} />
+          <img className={cn(styles.logotype)} src={logo} alt={'taldyk-logo'} />
 
           <div>
             <h1>{loc.header.logoTitle}</h1>
