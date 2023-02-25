@@ -55,17 +55,18 @@ header.appHeader {
     }
   }
 
-  img.logotype {
-    width: 150px;
-    border-radius: 50%;
-  }
-
   .logo {
     @extend %notSelectable;
+    @extend %flexCenter;
 
     h1 {
       font-size: 1.33em;
       color: black;
+    }
+
+    img.logotype {
+      width: 150px;
+      // border-radius: 50%;
     }
 
     .desc {
