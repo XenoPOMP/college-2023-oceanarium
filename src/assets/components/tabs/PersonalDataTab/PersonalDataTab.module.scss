@@ -11,8 +11,7 @@
     @extend %regular;
 
     font-size: 1em;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: span 2;
 
     &:not(&:first-of-type) {
       padding-top: .5em;
@@ -29,6 +28,13 @@
     border-radius: 1.25em;
     padding: .5em 1em;
     width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    &[type=date] {
+      @extend %light;
+      min-height: 2em;
+    }
 
     &::-webkit-input-placeholder {
       color: rgba(0, 0, 0, 0.5);

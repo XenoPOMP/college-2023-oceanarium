@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import styles from './PersonalDataTab.module.scss';
 import { PersonalDataTabProps } from './PersonalDataTab.props';
 import useLocalization from '@hooks/useLocalization';
@@ -10,6 +10,8 @@ import parentStyles from '@sections/VisitorAccount/VisitorAccount.module.scss';
 import CircleLoader from '@ui/CircleLoader/CircleLoader';
 import { AxiosError } from 'axios';
 import getUiSx from '@utils/getUiSx';
+import parseDate from '@utils/parseDate';
+import IVisitorData from '@type/IVisitorData';
 
 const PersonalDataTab: FC<PersonalDataTabProps> = ({}) => {
   const loc = useLocalization();
@@ -18,11 +20,34 @@ const PersonalDataTab: FC<PersonalDataTabProps> = ({}) => {
     VisitorService.getUserData(_uid),
   );
 
+  const fetchedData = data?.data as IVisitorData;
+
   // prettier-ignore-start
   const [surname, setSurname] = useState<string>('');
   const [name, setName] = useState<string>('');
+  const [date, setDate] = useState<string>('');
   const [login, setLogin] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [repeatPassword, setRepeatPassword] = useState<string>('');
   // prettier-ignore-end
+
+  const executeChange = () => {
+    const query = `
+    UPDATE []
+    SET ${surname !== '' ? `visitor_surname=${surname},` : ''}
+        ${name !== '' ? `visitor_name=${name},` : ''}
+        ${date !== '' ? `visitor_birthdate=${date},` : ''}
+        ${login !== '' ? `visitor_login=${login},` : ''}
+        ${(password === repeatPassword) && password !== '' 
+          ? `visitor_password=${password},` : ''}
+    `;
+
+    console.log(query);
+  }
+
+  useEffect(() => {
+    executeChange({});
+  }, [surname, name, date, login, password, repeatPassword]);
 
   return (
     <>
@@ -48,7 +73,7 @@ const PersonalDataTab: FC<PersonalDataTabProps> = ({}) => {
               />
 
               <div className={cn(styles.preview)}>
-                {data?.data.visitor_surname}{` => ${surname ? surname : data?.data.visitor_surname}`}
+                {fetchedData.visitor_surname}{` => ${surname ? surname : fetchedData.visitor_surname}`}
               </div>
             </>
 
@@ -64,7 +89,7 @@ const PersonalDataTab: FC<PersonalDataTabProps> = ({}) => {
               />
 
               <div className={cn(styles.preview)}>
-                {data?.data.visitor_name}{` => ${name ? name : data?.data.visitor_name}`}
+                {fetchedData.visitor_name}{` => ${name ? name : fetchedData.visitor_name}`}
               </div>
             </>
 
@@ -73,7 +98,17 @@ const PersonalDataTab: FC<PersonalDataTabProps> = ({}) => {
                 {loc.accountPage.visitor.personalDataLabels.birthdate}
               </h4>
 
-              <input placeholder={loc.accountPage.visitor.personalDataLabels.birthdate} />
+              <input
+                value={date}
+                onChange={(event) => setDate(event.target.value)}
+                type={'date'}
+                placeholder={loc.accountPage.visitor.personalDataLabels.birthdate}
+              />
+
+              <div className={cn(styles.preview)}>
+                {parseDate(fetchedData.visitor_birthdate ? fetchedData.visitor_birthdate : '')}
+                {` => ${date ? parseDate(date) : parseDate(fetchedData.visitor_birthdate ? fetchedData.visitor_birthdate : '')}`}
+              </div>
             </>
 
             <>
@@ -88,7 +123,7 @@ const PersonalDataTab: FC<PersonalDataTabProps> = ({}) => {
               />
 
               <div className={cn(styles.preview)}>
-                {data?.data.visitor_login}{` => ${login ? login : data?.data.visitor_login}`}
+                {fetchedData.visitor_login}{` => ${login ? login : fetchedData.visitor_login}`}
               </div>
             </>
 
