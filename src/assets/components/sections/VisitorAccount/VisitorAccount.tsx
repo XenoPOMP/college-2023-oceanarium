@@ -6,6 +6,7 @@ import getUiSx from '@utils/getUiSx';
 import useLocalization from '@hooks/useLocalization';
 import BonusesTab from '@tabs/BonusesTab/BonusesTab';
 import VisitsTab from '@tabs/VisitsTab/VisitsTab';
+import PersonalDataTab from '@tabs/PersonalDataTab/PersonalDataTab';
 
 export type Bonus = {
   bonus_amount: number,
@@ -74,6 +75,8 @@ const VisitorAccount: FC<VisitorAccountProps> = ({}) => {
       {page === PagesEnum.bonuses && <BonusesTab />}
 
       {page === PagesEnum.history && <VisitsTab />}
+
+      {page === PagesEnum.personalData && <PersonalDataTab />}
     </div>
   );
 };

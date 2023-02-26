@@ -141,6 +141,14 @@ const ru: Localization = {
         },
         pavilion: 'Павильон XX',
       },
+      personalDataLabels: {
+        surname: 'Фамилия',
+        name: 'Имя',
+        birthdate: 'Дата рождения',
+        login: 'Логин',
+        password: 'Пароль',
+        repeatPassword: 'Повторите пароль',
+      },
     },
 
     employee: {

@@ -83,6 +83,8 @@
     max-height: 277px;
     overflow-y: scroll;
     margin: 0 1.5em 1.2em 1.5em;
+    grid-column-start: 1;
+    grid-column-end: 4;
 
     &::-webkit-scrollbar {
       width: 3px;

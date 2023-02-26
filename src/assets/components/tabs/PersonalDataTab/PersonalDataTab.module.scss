@@ -1,0 +1,61 @@
+@import "src/assets/styles/templates";
+
+.personalData {
+  @extend %uiGrid;
+
+  // Font size => 20px
+  margin-bottom: 0 !important;
+  padding: 0 .4em;
+
+  h4.label {
+    @extend %regular;
+
+    font-size: 1em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    &:not(&:first-of-type) {
+      padding-top: .5em;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  input {
+    font-size: 1em;
+    color: black;
+    border: none;
+    outline: none;
+    background: #EFF2F5;
+    border-radius: 1.25em;
+    padding: .5em 1em;
+    width: 100%;
+
+    &::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .preview {
+    @extend %fontWithLigatures;
+    @extend %flexCenter;
+
+    justify-content: start;
+    font-size: .75em;
+    font-variant-ligatures: common-ligatures;
+  }
+
+  .passwordPreview {
+    grid-row: span 2;
+    width: 100%;
+    background: red;
+    border-radius: .85em;
+  }
+}
+
+.buttonPlaceholder {
+  @extend %flexCenter;
+
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin: 0 1.5em 1.2em 1.5em;
+}

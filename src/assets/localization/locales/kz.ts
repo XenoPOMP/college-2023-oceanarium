@@ -140,6 +140,14 @@ const kz: Localization = {
         },
         pavilion: 'Павильон XX',
       },
+      personalDataLabels: {
+        surname: 'Тегі',
+        name: 'Аты',
+        birthdate: 'Туған күні',
+        login: 'Кіру',
+        password: 'Құпия сөз',
+        repeatPassword: 'Құпия сөзді қайталаңыз',
+      },
     },
 
     employee: {

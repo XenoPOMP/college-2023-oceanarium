@@ -104,6 +104,14 @@ type Localization = {
           northern: string
         },
         pavilion: string
+      },
+      personalDataLabels: {
+        surname: string,
+        name: string,
+        birthdate: string,
+        login: string,
+        password: string,
+        repeatPassword: string
       }
     },
     employee: {
