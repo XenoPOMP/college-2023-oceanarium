@@ -1,6 +1,6 @@
 export type Env = {
   API_URL?: string,
-  TESTING_MODE?: 'FRONTEND' | 'BACKEND',
+  TESTING_MODE?: 'FRONTEND' | 'BACKEND' | 'FULLSTACK',
 };
 
 const useEnv = (): Env => {

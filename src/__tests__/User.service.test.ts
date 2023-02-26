@@ -6,6 +6,12 @@ import useEnv from '@hooks/useEnv';
 const { TESTING_MODE } = useEnv();
 
 describe.skipIf(TESTING_MODE === 'FRONTEND')('User service', () => {
+  test('Axios statement', () => {
+    const statement = UserService.loginUser('', '');
+
+    expect(statement).toBeInstanceOf(Promise);
+  });
+
   test('Axios request is being sent', () => {
     const spy = vitest.spyOn(axios, 'post');
 

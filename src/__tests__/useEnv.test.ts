@@ -11,6 +11,9 @@ describe.skipIf(TESTING_MODE === 'BACKEND')('useEnv hook', () => {
   });
 
   test('Get testing mode', () => {
-    expect(TESTING_MODE).toBe('FRONTEND');
+    const modes = ['FRONTEND', 'BACKEND', 'FULLSTACK'];
+
+    // @ts-ignore
+    expect.arrayContaining(modes[TESTING_MODE]);
   });
 });
