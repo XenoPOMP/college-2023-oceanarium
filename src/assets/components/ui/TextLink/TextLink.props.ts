@@ -8,6 +8,7 @@ export interface ITextLink {
     hover?: string,
   };
   type: 'external';
+  isRouterLink?: true;
 }
 
 export interface TextLinkProps extends ITextLink {

@@ -148,6 +148,7 @@ const ru: Localization = {
         login: 'Логин',
         password: 'Пароль',
         repeatPassword: 'Повторите пароль',
+        changeDataButton: 'Изменить данные',
       },
     },
 

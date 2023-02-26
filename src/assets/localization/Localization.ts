@@ -111,7 +111,8 @@ type Localization = {
         birthdate: string,
         login: string,
         password: string,
-        repeatPassword: string
+        repeatPassword: string,
+        changeDataButton: string
       }
     },
     employee: {

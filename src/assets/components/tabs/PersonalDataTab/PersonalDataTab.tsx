@@ -12,6 +12,7 @@ import { AxiosError } from 'axios';
 import getUiSx from '@utils/getUiSx';
 import parseDate from '@utils/parseDate';
 import IVisitorData from '@type/IVisitorData';
+import TextLink from '@ui/TextLink/TextLink';
 
 const PersonalDataTab: FC<PersonalDataTabProps> = ({}) => {
   const loc = useLocalization();
@@ -27,27 +28,11 @@ const PersonalDataTab: FC<PersonalDataTabProps> = ({}) => {
   const [name, setName] = useState<string>('');
   const [date, setDate] = useState<string>('');
   const [login, setLogin] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const [repeatPassword, setRepeatPassword] = useState<string>('');
   // prettier-ignore-end
 
   const executeChange = () => {
-    const query = `
-    UPDATE []
-    SET ${surname !== '' ? `visitor_surname=${surname},` : ''}
-        ${name !== '' ? `visitor_name=${name},` : ''}
-        ${date !== '' ? `visitor_birthdate=${date},` : ''}
-        ${login !== '' ? `visitor_login=${login},` : ''}
-        ${(password === repeatPassword) && password !== '' 
-          ? `visitor_password=${password},` : ''}
-    `;
-
-    console.log(query);
+    return () => {};
   }
-
-  useEffect(() => {
-    executeChange({});
-  }, [surname, name, date, login, password, repeatPassword]);
 
   return (
     <>
@@ -129,18 +114,21 @@ const PersonalDataTab: FC<PersonalDataTabProps> = ({}) => {
 
             <>
               <h4 className={cn(styles.label)}>
-                {loc.accountPage.visitor.personalDataLabels.password}
+                <TextLink
+                  type={'external'}
+                  text={loc.accountPage.visitor.personalDataLabels.password}
+                  href={'/change-password'}
+                  isRouterLink
+                />
               </h4>
-
-              <input placeholder={loc.accountPage.visitor.personalDataLabels.password} />
-
-              <div className={cn(styles.passwordPreview)}></div>
-
-              <input placeholder={loc.accountPage.visitor.personalDataLabels.repeatPassword} />
             </>
           </div>
 
-          <div className={cn(styles.buttonPlaceholder)}>Button here</div>
+          <div className={cn(styles.buttonPlaceholder)}>
+            <button onClick={executeChange}>
+              {loc.accountPage.visitor.personalDataLabels.changeDataButton}
+            </button>
+          </div>
         </>
       )}
 

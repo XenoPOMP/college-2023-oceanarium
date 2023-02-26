@@ -51,6 +51,8 @@
   }
 
   .passwordPreview {
+    @extend %uiGrid;
+
     grid-row: span 2;
     width: 100%;
     background: red;
@@ -64,4 +66,46 @@
   grid-column-start: 1;
   grid-column-end: 4;
   margin: 0 1.5em 1.2em 1.5em;
+
+  button {
+    @extend %light;
+    @extend %mainFont;
+
+    font-size: 1em;
+    color: black;
+    border: none;
+    outline: none;
+    background: rgba(60, 234, 88, 0.83);
+    border-radius: 1.25em;
+    padding: .5em 1em;
+    cursor: pointer;
+
+    &:active {
+      filter: brightness(.8);
+    }
+  }
+}
+
+.queryResult {
+  @extend %fontWithLigatures;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: white;
+  filter: drop-shadow(2px 2px black);
+  font-size: .75em;
+  padding: 1em;
+  white-space: pre;
+  width: 500px;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 5px;
+  }
 }

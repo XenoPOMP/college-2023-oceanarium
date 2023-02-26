@@ -147,6 +147,7 @@ const kz: Localization = {
         login: 'Кіру',
         password: 'Құпия сөз',
         repeatPassword: 'Құпия сөзді қайталаңыз',
+        changeDataButton: 'Деректерді өзгерту',
       },
     },
 
