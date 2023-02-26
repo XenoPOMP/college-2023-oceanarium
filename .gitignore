@@ -15,6 +15,7 @@ dist-ssr
 # Vitest
 /coverage
 !/coverage/
+coverage/*
 !/src/__tests__/__snapshots__/
 
 # Editor directories and files
