@@ -1,5 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import getUiSx from '@utils/getUiSx';
+import useEnv from '@hooks/useEnv';
 
 //
 // Функция getUiSx должна возращать объект с
@@ -14,7 +15,9 @@ import getUiSx from '@utils/getUiSx';
 //                     пикселях
 //
 
-describe('Get UI styles', () => {
+const { TESTING_MODE } = useEnv();
+
+describe.skipIf(TESTING_MODE === 'BACKEND')('Get UI styles', () => {
   test('return default items if args are not defined', () => {
     // Ожидаем, что при передачи пустого объекта с настройками
     // функция вернет дефолтные значения

@@ -2,8 +2,11 @@ import { describe, expect, test, vitest } from 'vitest';
 import { fireEvent, render, screen } from '@testing-library/react';
 import YellowButton from '../assets/components/ui/YellowButton/YellowButton';
 import styles from '@ui/YellowButton/YellowButton.module.scss';
+import useEnv from '@hooks/useEnv';
 
-describe('YellowButton ', () => {
+const { TESTING_MODE } = useEnv();
+
+describe.skipIf(TESTING_MODE === 'BACKEND')('YellowButton ', () => {
   test('Callback test', () => {
     // Этот "шпион" следит за каждым вызовом метода
     // console.log

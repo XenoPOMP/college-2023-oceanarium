@@ -1,7 +1,10 @@
 import { describe, expect, test } from 'vitest';
 import parseDate from '@utils/parseDate';
+import useEnv from '@hooks/useEnv';
 
-describe('Parse date function', () => {
+const { TESTING_MODE } = useEnv();
+
+describe.skipIf(TESTING_MODE === 'BACKEND')('Parse date function', () => {
   test('return value with empty date argument', () => {
     expect(parseDate('')).toBe('');
   });

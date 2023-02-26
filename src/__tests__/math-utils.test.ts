@@ -1,7 +1,10 @@
 import { describe, expect, test } from 'vitest';
 import { summary } from '@utils/math-utils';
+import useEnv from '@hooks/useEnv';
 
-describe('Math utils', () => {
+const { TESTING_MODE } = useEnv();
+
+describe.skipIf(TESTING_MODE === 'BACKEND')('Math utils', () => {
   test('summary function return value with no arguments provided', () => {
     expect(summary()).toBe(0);
   });

@@ -3,12 +3,15 @@ import SliderIcon from '@ui/SliderIcon/SliderIcon';
 import renderWithProvider from '@utils/renderWithProvider';
 import styles from '@ui/SliderIcon/SliderIcon.module.scss';
 import { fireEvent, screen } from '@testing-library/react';
+import useEnv from '@hooks/useEnv';
 
 //
 // Этот компонент - иконка снизу галереи.
 //
 
-describe('Slider icon', () => {
+const { TESTING_MODE } = useEnv();
+
+describe.skipIf(TESTING_MODE === 'BACKEND')('Slider icon', () => {
   // Ожидаем, что компонент соответсвует прототипу.
   test('Render with index', () => {
     const component = renderWithProvider(<SliderIcon index={0} />);

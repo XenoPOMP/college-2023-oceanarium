@@ -1,5 +1,6 @@
 export type Env = {
   API_URL?: string,
+  TESTING_MODE?: 'FRONTEND' | 'BACKEND',
 };
 
 const useEnv = (): Env => {
@@ -16,6 +17,8 @@ const useEnv = (): Env => {
 
   return {
     API_URL: fetchFromEnv(env.VITE_API_URL),
+    // @ts-ignore
+    TESTING_MODE: fetchFromEnv(env.VITE_TESTING_MODE),
   };
 };
 
