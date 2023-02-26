@@ -4,8 +4,8 @@ import styles from './VisitorAccount.module.scss';
 import { VisitorAccountProps } from './VisitorAccount.props';
 import getUiSx from '@utils/getUiSx';
 import useLocalization from '@hooks/useLocalization';
-import BonusesTab from '@sections/BonusesTab/BonusesTab';
-import VisitsTab from '@sections/VisitsTab/VisitsTab';
+import BonusesTab from '@tabs/BonusesTab/BonusesTab';
+import VisitsTab from '@tabs/VisitsTab/VisitsTab';
 
 export type Bonus = {
   bonus_amount: number,

@@ -31,7 +31,8 @@
       "@locales/*": ["src/assets/localization/locales/*"],
       "@media/*": ["src/media/*"],
       "@sections/*": ["src/assets/components/sections/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/services/*"],
+      "@tabs/*": ["src/assets/components/tabs/*"],
     }
   },
   "include": ["src"],
