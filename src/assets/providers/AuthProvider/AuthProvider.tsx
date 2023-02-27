@@ -1,5 +1,4 @@
 import { FC, useEffect } from 'react';
-import { AuthProviderProps } from './AuthProvider.props';
 import {
   Authentication,
   authInitial,
