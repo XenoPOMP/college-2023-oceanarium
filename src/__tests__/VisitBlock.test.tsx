@@ -1,8 +1,9 @@
 import { describe, expect, test } from 'vitest';
 import renderWithProviders, { RenderOptions } from '@utils/renderWithProviders';
 import VisitBlock from '@ui/VisitBlock/VisitBlock';
+import skipTestCondition from '@utils/skipTestCondition';
 
-describe('Visit block', () => {
+describe.skipIf(skipTestCondition('FRONTEND'))('Visit block', () => {
   const defaultOptions: RenderOptions = {
     useRedux: true,
   };
