@@ -12,18 +12,21 @@ import useEnv from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE !== 'FRONTEND')('Theme Provider', () => {
-  // Проверяем вставку класса в компонент.
-  test('Classname', () => {
-    // Рендер компонента
-    render(<ThemeProvider />);
+describe.skipIf(TESTING_MODE !== 'FRONTEND' && TESTING_MODE !== 'FULLSTACK')(
+  'Theme Provider',
+  () => {
+    // Проверяем вставку класса в компонент.
+    test('Classname', () => {
+      // Рендер компонента
+      render(<ThemeProvider />);
 
-    // Находим провайдер
-    const selector = document.querySelector(
-      `div ${cn(styles.themes, styles.dark)}`,
-    );
+      // Находим провайдер
+      const selector = document.querySelector(
+        `div ${cn(styles.themes, styles.dark)}`,
+      );
 
-    // Ожидаем, что провайдер с таким классом отрендерился.
-    expect(selector).toBeDefined();
-  });
-});
+      // Ожидаем, что провайдер с таким классом отрендерился.
+      expect(selector).toBeDefined();
+    });
+  },
+);

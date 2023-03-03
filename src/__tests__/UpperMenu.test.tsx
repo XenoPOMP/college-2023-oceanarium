@@ -10,20 +10,23 @@ import useEnv from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE !== 'FRONTEND')('Nav menu', () => {
-  // Ожидаем, что навбар отрендерился
-  test('Render', () => {
-    // Рендерим все приложение
-    renderWithProviders(
-      <>
-        <App />
-      </>,
-      {
-        useRedux: true,
-      },
-    );
+describe.skipIf(TESTING_MODE !== 'FRONTEND' && TESTING_MODE !== 'FULLSTACK')(
+  'Nav menu',
+  () => {
+    // Ожидаем, что навбар отрендерился
+    test('Render', () => {
+      // Рендерим все приложение
+      renderWithProviders(
+        <>
+          <App />
+        </>,
+        {
+          useRedux: true,
+        },
+      );
 
-    // Ожидаем, что навигация отрендерилась.
-    expect(screen.getByRole('navigation')).toBeDefined();
-  });
-});
+      // Ожидаем, что навигация отрендерилась.
+      expect(screen.getByRole('navigation')).toBeDefined();
+    });
+  },
+);

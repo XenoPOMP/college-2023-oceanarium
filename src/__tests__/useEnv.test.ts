@@ -3,17 +3,20 @@ import useEnv, { Env } from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE !== 'FRONTEND')('useEnv hook', () => {
-  const { API_URL, TESTING_MODE }: Env = useEnv();
+describe.skipIf(TESTING_MODE !== 'FRONTEND' && TESTING_MODE !== 'FULLSTACK')(
+  'useEnv hook',
+  () => {
+    const { API_URL, TESTING_MODE }: Env = useEnv();
 
-  test('Get API url', () => {
-    expect(API_URL).toBe('http://localhost:4200');
-  });
+    test('Get API url', () => {
+      expect(API_URL).toBe('http://localhost:4200');
+    });
 
-  test('Get testing mode', () => {
-    const modes = ['FRONTEND', 'BACKEND', 'FULLSTACK'];
+    test('Get testing mode', () => {
+      const modes = ['FRONTEND', 'BACKEND', 'FULLSTACK'];
 
-    // @ts-ignore
-    expect.arrayContaining(modes[TESTING_MODE]);
-  });
-});
+      // @ts-ignore
+      expect.arrayContaining(modes[TESTING_MODE]);
+    });
+  },
+);
