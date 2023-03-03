@@ -55,8 +55,8 @@ describe.skipIf(TESTING_MODE === 'BACKEND')('Text link', () => {
   test('Router link injection', () => {
     renderWithProviders(
       <>
-        <TextLink type={'external'} href={'/'} />
-        <TextLink type={'external'} href={'/main'} />
+        <TextLink type={'external'} isRouterLink href={'/'} />
+        <TextLink type={'external'} isRouterLink href={'/main'} />
       </>,
       {
         useRouter: true,
@@ -69,5 +69,31 @@ describe.skipIf(TESTING_MODE === 'BACKEND')('Text link', () => {
     expect(document.querySelectorAll('a')[1]?.href).toBe(
       'http://localhost:3000/main',
     );
+  });
+
+  test('Font color injection', () => {
+    interface IExtenderCSSProperties extends CSSStyleDeclaration {
+      '--initial-color'?: string;
+      '--hover-color'?: string;
+    }
+
+    const styles: IExtenderCSSProperties = renderWithProviders(
+      <TextLink
+        type={'external'}
+        colors={{
+          initial: 'red',
+          hover: 'yellow',
+        }}
+      />,
+    ).baseElement.style;
+
+    expect(styles['--initial-color']).toBe('red');
+    expect(styles['--initial-color']).toBe('yellow');
+  });
+
+  test('Icon injection', () => {
+    render(<TextLink type={'external'} />);
+
+    expect(document.querySelector('svg')).toBeDefined();
   });
 });
