@@ -11,7 +11,7 @@ import useEnv from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE === 'BACKEND')('Slider icon', () => {
+describe.skipIf(TESTING_MODE !== 'FRONTEND')('Slider icon', () => {
   // Ожидаем, что компонент соответсвует прототипу.
   test('Render with index', () => {
     const component = renderWithProviders(<SliderIcon index={0} />, {

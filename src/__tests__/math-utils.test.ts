@@ -4,7 +4,7 @@ import useEnv from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE === 'BACKEND')('Math utils', () => {
+describe.skipIf(TESTING_MODE !== 'FRONTEND')('Math utils', () => {
   test('summary function return value with no arguments provided', () => {
     expect(summary()).toBe(0);
   });

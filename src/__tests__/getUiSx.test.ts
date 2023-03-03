@@ -17,7 +17,7 @@ import useEnv from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE === 'BACKEND')('Get UI styles', () => {
+describe.skipIf(TESTING_MODE !== 'FRONTEND')('Get UI styles', () => {
   test('return default items if args are not defined', () => {
     // Ожидаем, что при передачи пустого объекта с настройками
     // функция вернет дефолтные значения

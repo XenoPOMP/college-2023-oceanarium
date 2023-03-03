@@ -10,7 +10,7 @@ import useEnv from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE === 'BACKEND')('Nav menu', () => {
+describe.skipIf(TESTING_MODE !== 'FRONTEND')('Nav menu', () => {
   // Ожидаем, что навбар отрендерился
   test('Render', () => {
     // Рендерим все приложение

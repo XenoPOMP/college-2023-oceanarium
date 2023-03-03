@@ -3,7 +3,7 @@ import useEnv, { Env } from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE === 'BACKEND')('useEnv hook', () => {
+describe.skipIf(TESTING_MODE !== 'FRONTEND')('useEnv hook', () => {
   const { API_URL, TESTING_MODE }: Env = useEnv();
 
   test('Get API url', () => {

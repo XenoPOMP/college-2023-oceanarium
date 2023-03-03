@@ -4,7 +4,7 @@ import useEnv from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE === 'BACKEND')('Parse date function', () => {
+describe.skipIf(TESTING_MODE !== 'FRONTEND')('Parse date function', () => {
   test('return value with empty date argument', () => {
     expect(parseDate('')).toBe('');
   });

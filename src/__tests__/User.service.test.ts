@@ -5,7 +5,7 @@ import useEnv from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE === 'FRONTEND')('User service', () => {
+describe.skipIf(TESTING_MODE !== 'BACKEND')('User service', () => {
   test('Axios statement', () => {
     const statement = UserService.loginUser('', '');
 

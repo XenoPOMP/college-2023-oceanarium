@@ -6,7 +6,7 @@ import useEnv from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE === 'BACKEND')('YellowButton ', () => {
+describe.skipIf(TESTING_MODE !== 'FRONTEND')('YellowButton ', () => {
   test('Callback test', () => {
     // Этот "шпион" следит за каждым вызовом метода
     // console.log

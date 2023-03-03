@@ -6,7 +6,7 @@ import renderWithProviders from '@utils/renderWithProviders';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE === 'BACKEND')('Text link', () => {
+describe.skipIf(TESTING_MODE !== 'FRONTEND')('Text link', () => {
   const mockText = 'Simple text';
   const mockHref = 'http://localhost:4200/';
 

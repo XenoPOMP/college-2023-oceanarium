@@ -12,7 +12,7 @@ import useEnv from '@hooks/useEnv';
 
 const { TESTING_MODE } = useEnv();
 
-describe.skipIf(TESTING_MODE === 'BACKEND')('Theme Provider', () => {
+describe.skipIf(TESTING_MODE !== 'FRONTEND')('Theme Provider', () => {
   // Проверяем вставку класса в компонент.
   test('Classname', () => {
     // Рендер компонента
