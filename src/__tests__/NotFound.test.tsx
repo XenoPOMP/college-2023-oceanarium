@@ -14,6 +14,6 @@ describe.skipIf(skipTestCondition('FRONTEND'))('Not found page', () => {
       renderWithProviders(<NotFound />, {
         ...defaultOptions,
       }),
-    );
+    ).toMatchSnapshot();
   });
 });
