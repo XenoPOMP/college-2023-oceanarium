@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import TextLink from '@ui/TextLink/TextLink';
 import useEnv from '@hooks/useEnv';
 import renderWithProviders from '@utils/renderWithProviders';
@@ -54,17 +54,20 @@ describe.skipIf(TESTING_MODE === 'BACKEND')('Text link', () => {
 
   test('Router link injection', () => {
     renderWithProviders(
-      <TextLink
-        type={'external'}
-        text={mockText}
-        href={mockHref}
-        isRouterLink
-      />,
+      <>
+        <TextLink type={'external'} href={'/'} />
+        <TextLink type={'external'} href={'/main'} />
+      </>,
       {
         useRouter: true,
       },
     );
 
-    expect(screen.getByText('Amoga sussy')).toBeDefined();
+    expect(document.querySelectorAll('a')[0]?.href).toBe(
+      'http://localhost:3000/',
+    );
+    expect(document.querySelectorAll('a')[1]?.href).toBe(
+      'http://localhost:3000/main',
+    );
   });
 });
