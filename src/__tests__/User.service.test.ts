@@ -2,52 +2,46 @@ import { describe, expect, test, vitest } from 'vitest';
 import axios from 'axios';
 import { UserService } from '@services/User.service';
 import useEnv from '@hooks/useEnv';
+import skipTestCondition from '@utils/skipTestCondition';
 
-const { TESTING_MODE } = useEnv();
+describe.skipIf(skipTestCondition('BACKEND'))('User service', () => {
+  test('Axios statement', () => {
+    const statement = UserService.loginUser('', '');
 
-describe.skipIf(TESTING_MODE !== 'BACKEND' && TESTING_MODE !== 'FULLSTACK')(
-  'User service',
-  () => {
-    test('Axios statement', () => {
-      const statement = UserService.loginUser('', '');
+    expect(statement).toBeInstanceOf(Promise);
+  });
 
-      expect(statement).toBeInstanceOf(Promise);
+  test('Axios request is being sent', () => {
+    const spy = vitest.spyOn(axios, 'post');
+
+    const mocks = {
+      login: 'Xeno',
+      password: '123',
+    };
+
+    try {
+      UserService.loginUser(mocks.login, mocks.password);
+    } catch (error) {
+      console.log(error);
+    }
+
+    expect(spy).toBeCalledWith(`http://localhost:4200/visitors/login`, {
+      login: mocks.login,
+      password: mocks.password,
     });
+  });
 
-    test('Axios request is being sent', () => {
-      const spy = vitest.spyOn(axios, 'post');
+  test('DB query works', async () => {
+    const mocks = {
+      login: 'BORYA12',
+      password: '123456',
+    };
+    const { login, password } = mocks;
 
-      const mocks = {
-        login: 'Xeno',
-        password: '123',
-      };
-
-      try {
-        UserService.loginUser(mocks.login, mocks.password);
-      } catch (error) {
-        console.log(error);
-      }
-
-      expect(spy).toBeCalledWith(`http://localhost:4200/visitors/login`, {
-        login: mocks.login,
-        password: mocks.password,
-      });
+    expect((await UserService.loginUser(login, password)).data).toStrictEqual({
+      login: 'BORYA12',
+      _uid: 1,
+      role: 'employee',
     });
-
-    test('DB query works', async () => {
-      const mocks = {
-        login: 'BORYA12',
-        password: '123456',
-      };
-      const { login, password } = mocks;
-
-      expect((await UserService.loginUser(login, password)).data).toStrictEqual(
-        {
-          login: 'BORYA12',
-          _uid: 1,
-          role: 'employee',
-        },
-      );
-    });
-  },
-);
+  });
+});
