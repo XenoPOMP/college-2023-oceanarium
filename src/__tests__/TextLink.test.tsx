@@ -1,0 +1,70 @@
+import { describe, expect, test } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import TextLink from '@ui/TextLink/TextLink';
+import useEnv from '@hooks/useEnv';
+import renderWithProviders from '@utils/renderWithProviders';
+
+const { TESTING_MODE } = useEnv();
+
+describe.skipIf(TESTING_MODE === 'BACKEND')('Text link', () => {
+  const mockText = 'Simple text';
+  const mockHref = 'http://localhost:4200/';
+
+  test('Link "a" tag is rendering', () => {
+    render(<TextLink type={'external'} text={mockText} />);
+
+    expect(document.querySelector('a')).toBeDefined();
+  });
+
+  test('Text rendering properly', () => {
+    render(<TextLink type={'external'} text={mockText} />);
+
+    expect(document.querySelector('a')?.text).toBe(mockText);
+  });
+
+  test('CSS styles injection', () => {
+    render(
+      <TextLink
+        type={'external'}
+        text={mockText}
+        css={{
+          fontSize: '12px',
+          fontWeight: 'light',
+        }}
+      />,
+    );
+
+    const styles = document.querySelector('a')?.style;
+    const { fontSize, fontWeight } = styles
+      ? styles
+      : {
+          fontSize: undefined,
+          fontWeight: undefined,
+        };
+
+    expect(fontSize).toBe('12px');
+    expect(fontWeight).toBe(`300`);
+  });
+
+  test('href injection', () => {
+    render(<TextLink type={'external'} text={mockText} href={mockHref} />);
+
+    expect(document.querySelector('a')?.href).toBe(mockHref);
+  });
+
+  test('Router link injection', () => {
+    renderWithProviders(
+      <TextLink
+        type={'external'}
+        text={mockText}
+        href={mockHref}
+        isRouterLink
+      />,
+      {
+        useRouter: true,
+      },
+    );
+
+    expect(screen.getByText('Amoga sussy')).toBeDefined();
+  });
+});

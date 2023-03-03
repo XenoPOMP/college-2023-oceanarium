@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import renderWithProvider from '@utils/renderWithProvider';
+import renderWithProviders from '@utils/renderWithProviders';
 import { screen } from '@testing-library/react';
 import App from '../App';
 import useEnv from '@hooks/useEnv';
@@ -14,10 +14,13 @@ describe.skipIf(TESTING_MODE === 'BACKEND')('Nav menu', () => {
   // Ожидаем, что навбар отрендерился
   test('Render', () => {
     // Рендерим все приложение
-    renderWithProvider(
+    renderWithProviders(
       <>
         <App />
       </>,
+      {
+        useRedux: true,
+      },
     );
 
     // Ожидаем, что навигация отрендерилась.
