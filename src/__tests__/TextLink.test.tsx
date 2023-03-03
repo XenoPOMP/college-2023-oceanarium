@@ -73,11 +73,13 @@ describe.skipIf(TESTING_MODE === 'BACKEND')('Text link', () => {
 
   test('Font color injection', () => {
     interface IExtenderCSSProperties extends CSSStyleDeclaration {
-      '--initial-color'?: string;
-      '--hover-color'?: string;
+      _values: {
+        '--initial-color'?: string,
+        '--hover-color'?: string,
+      };
     }
 
-    const styles: IExtenderCSSProperties = renderWithProviders(
+    renderWithProviders(
       <TextLink
         type={'external'}
         colors={{
@@ -85,10 +87,19 @@ describe.skipIf(TESTING_MODE === 'BACKEND')('Text link', () => {
           hover: 'yellow',
         }}
       />,
-    ).baseElement.style;
+    );
 
-    expect(styles['--initial-color']).toBe('red');
-    expect(styles['--initial-color']).toBe('yellow');
+    // @ts-ignore
+    const styles: IExtenderCSSProperties | undefined =
+      document.querySelector('a')?.style;
+
+    console.log(styles);
+
+    expect(document.querySelector('a')).toBeDefined();
+    // @ts-ignore
+    expect(styles._values['--initial-color']).toBe('red');
+    // @ts-ignore
+    expect(styles._values['--hover-color']).toBe('yellow');
   });
 
   test('Icon injection', () => {
