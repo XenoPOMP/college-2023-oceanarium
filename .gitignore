@@ -16,7 +16,7 @@ dist-ssr
 /coverage
 !/coverage/
 coverage/*
-!/src/__tests__/__snapshots__/
+src/__tests__/__snapshots__/*
 
 # Editor directories and files
 .vscode/*
