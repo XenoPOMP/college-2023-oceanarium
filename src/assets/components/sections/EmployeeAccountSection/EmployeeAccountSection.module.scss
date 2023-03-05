@@ -54,5 +54,16 @@ section.employeeAccount {
 
   .status {
     padding: .75em 1em;
+
+    h3 {
+      @extend %light;
+      font-size: 1em;
+    }
+
+    .date {
+      // Font-size => 16px
+      font-size: .8em;
+      color: rgba(0, 0, 0, 0.6);
+    }
   }
 }

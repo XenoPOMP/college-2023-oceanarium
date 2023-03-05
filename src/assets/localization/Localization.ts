@@ -120,6 +120,11 @@ type Localization = {
         shifts: string,
         awards: string,
         personal: string
+      },
+      statuses: {
+        noData: string,
+        workToday: string,
+        freeDay: string
       }
     },
     messages: {

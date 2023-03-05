@@ -9,6 +9,8 @@ import { EmployeeService } from '@services/Employee.service';
 import useAuth from '@hooks/useAuth';
 import CircleLoader from '@ui/CircleLoader/CircleLoader';
 import { AxiosError } from 'axios';
+import IShift from '@type/IShift';
+import parseDate from '@utils/parseDate';
 
 enum Pages {
   shifts, awards
@@ -17,7 +19,14 @@ enum Pages {
 const EmployeeAccountSection: FC<EmployeeAccountSectionProps> = ({}) => {
   const loc = useLocalization();
   const { _uid } = useAuth();
-  const { isLoading, error } = useQuery('get employee shifts', () => EmployeeService.getShifts(_uid));
+  const { isLoading, error, data } = useQuery('get employee shifts for today', () => EmployeeService.getTodayShift(_uid));
+
+  const {
+    shift_date,
+    shift_type,
+    shift_department,
+    shift_pavilion
+  } = data?.data as IShift;
 
   // prettier-ignore
   const [page, setPage] = useState<Pages>(Pages.shifts);
@@ -53,20 +62,38 @@ const EmployeeAccountSection: FC<EmployeeAccountSectionProps> = ({}) => {
 
       <div className={cn(styles.divider)}></div>
 
-      <div className={cn(styles.status)}>
-        <>
-          {isLoading
-            ? <CircleLoader />
-            : !error &&
-              <div>
-                asd
-              </div>
-          }
+      <>
+        {page === Pages.shifts && <div className={cn(styles.status)}>
+          <>
+            {isLoading
+              ? <CircleLoader />
+              : !error &&
+              ((shift_date === null && shift_type === null && shift_department === null && shift_pavilion == null)
+                  ?
+                  <h3>{loc.accountPage.employee.statuses.noData}</h3>
+                  :
+                  <>
+                    <h3>
+                      {shift_type !== 'free-day'
+                        ?
+                        loc.accountPage.employee.statuses.workToday
+                        :
+                        loc.accountPage.employee.statuses.freeDay
+                      }
+                    </h3>
 
-          {error && (error as AxiosError).code === '500'
-            && loc.accountPage.messages.internalServerErrorMessage}
-        </>
-      </div>
+                    <div className={cn(styles.date)}>
+                      {parseDate(shift_date)}
+                    </div>
+                  </>
+              )
+            }
+
+            {error && (error as AxiosError).code === '500'
+              && loc.accountPage.messages.internalServerErrorMessage}
+          </>
+        </div>}
+      </>
     </section>
   );
 };

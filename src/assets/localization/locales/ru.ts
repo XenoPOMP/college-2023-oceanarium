@@ -158,6 +158,12 @@ const ru: Localization = {
         awards: 'ПРЕМИИ И ШТРАФЫ',
         personal: 'ЛИЧНЫЕ ДАННЫЕ',
       },
+
+      statuses: {
+        noData: 'Нет информации',
+        workToday: 'Сегодня на работу',
+        freeDay: 'Сеглдня выходной',
+      },
     },
 
     messages: {

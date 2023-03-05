@@ -157,6 +157,12 @@ const kz: Localization = {
         awards: 'СЫЙЛЫҚАҚЫЛАР МЕН АЙЫППҰЛДАР',
         personal: 'ЖЕКЕ ДЕРЕКТЕР',
       },
+
+      statuses: {
+        noData: 'Ақпарат жоқ',
+        workToday: 'Бүгін жұмысқа',
+        freeDay: 'Бүгін демалыс',
+      },
     },
 
     messages: {
