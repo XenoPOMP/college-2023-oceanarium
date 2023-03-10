@@ -28,6 +28,9 @@ const VisitorAccountPage: FC<VisitorAccountPageProps> = ({}) => {
         cols: 5,
         maxWidth: 'unset',
       })}
+      header={{
+        variant: 'main',
+      }}
     >
       {userRole === 'visitor' && (
         <>

@@ -103,3 +103,61 @@ header.appHeader {
     }
   }
 }
+
+header.restaurantHeader {
+  @extend %restaurantFont;
+  @extend %flexCenter;
+  $fontColor: #FBFDFE;
+
+  width: 100vw;
+  font-size: 16px;
+  height: 4.375em;
+  background: #78ADFB;
+  color: $fontColor;
+
+  .button {
+    @extend %notSelectable;
+
+    font-size: 1.5em;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    margin: 1.25em 0;
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: calc(100% + 2px);
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: $fontColor;
+      transition: .15s ease;
+    }
+
+    &:hover {
+      &:after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .logo {
+    @extend %flexCenter;
+    $margin: 6.5625em;
+
+    width: 4.375em;
+    aspect-ratio: 1;
+    scale: 1.429;
+    margin: 0 $margin;
+    border-radius: 50%;
+    background: #D2E3FD;
+    border: 0.1px solid #000000;
+    box-shadow: 0 2px 4px #000000;
+
+    svg {
+      width: 45%;
+    }
+  }
+}

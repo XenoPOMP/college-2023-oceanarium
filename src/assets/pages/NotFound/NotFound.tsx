@@ -14,6 +14,9 @@ const NotFound = () => {
         pageDescription: loc.meta.notFoundPage.desc,
         keywords: loc.meta.notFoundPage.keywords,
       }}
+      header={{
+        variant: 'main',
+      }}
     >
       {loc.notFoundPage.errorLabel}
     </Page>

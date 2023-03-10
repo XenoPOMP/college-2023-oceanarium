@@ -15,6 +15,9 @@ const MainPage = () => {
         pageDescription: loc.meta.mainPage.desc,
         keywords: loc.meta.mainPage.keywords,
       }}
+      header={{
+        variant: 'main',
+      }}
     >
       <ExhibitionsPreview />
 

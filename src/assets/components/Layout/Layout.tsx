@@ -5,10 +5,10 @@ import Header from '@ui/Header/Header';
 import Footer from '@ui/Footer/Footer';
 import cn from 'classnames';
 
-const Layout: FC<LayoutProps> = ({ children, className, sx }) => {
+const Layout: FC<LayoutProps> = ({ children, className, sx, header }) => {
   return (
     <GlobalProvider>
-      <Header />
+      <Header variant={header.variant} />
 
       <main style={sx} className={cn(className)}>
         {children}

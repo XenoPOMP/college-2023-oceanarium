@@ -12,7 +12,10 @@ type Localization = {
     account: {
       visitor: MetaInfo,
       employee: MetaInfo
-    }
+    },
+    restaurant: {
+      breakfast: MetaInfo
+    },
   }
   header: {
     logoTitle: string,
@@ -146,6 +149,14 @@ type Localization = {
   accessDenied: {
     label: string,
     goBackText: string
+  },
+  restaurantPage: {
+    header: {
+      buttons: {
+        menu: string,
+        aboutUs: string,
+      }
+    }
   }
 };
 

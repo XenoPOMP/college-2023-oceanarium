@@ -30,6 +30,13 @@ const kz: Localization = {
         keywords: '',
       },
     },
+    restaurant: {
+      breakfast: {
+        title: 'Таңғы Ас | Мейрамхана',
+        desc: '',
+        keywords: '',
+      },
+    },
   },
 
   header: {
@@ -187,6 +194,15 @@ const kz: Localization = {
   accessDenied: {
     label: 'Кіруге тыйым салынады',
     goBackText: 'Артқа қайту',
+  },
+
+  restaurantPage: {
+    header: {
+      buttons: {
+        menu: 'мәзір',
+        aboutUs: 'біз туралы',
+      },
+    },
   },
 };
 

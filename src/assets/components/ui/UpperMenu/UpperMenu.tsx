@@ -39,9 +39,9 @@ const UpperMenu = () => {
         </div>
       </div>
 
-      <div className={cn(styles.link)}>
+      <NavLink to={'/restaurant/breakfast'} className={cn(styles.link)}>
         <span>{loc.nav.restaurant}</span>
-      </div>
+      </NavLink>
 
       <div className={cn(styles.link)}>
         <span>{loc.nav.exhibitions}</span>

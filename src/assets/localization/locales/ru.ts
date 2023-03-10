@@ -30,6 +30,13 @@ const ru: Localization = {
         keywords: '',
       },
     },
+    restaurant: {
+      breakfast: {
+        title: 'Завтрак | Ресторан',
+        desc: '',
+        keywords: '',
+      },
+    },
   },
 
   header: {
@@ -188,6 +195,15 @@ const ru: Localization = {
   accessDenied: {
     label: 'Доступ запрещен',
     goBackText: 'Вернуться назад',
+  },
+
+  restaurantPage: {
+    header: {
+      buttons: {
+        menu: 'меню',
+        aboutUs: 'о нас',
+      },
+    },
   },
 };
 

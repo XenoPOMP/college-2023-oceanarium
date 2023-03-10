@@ -26,6 +26,9 @@ const EmployeeAccountPage: FC<EmployeeAccountPageProps> = ({}) => {
         maxWidth: 'unset',
       })}
       className={cn(styles.page)}
+      header={{
+        variant: 'main',
+      }}
     >
       {userRole === 'employee' && (
         <>
