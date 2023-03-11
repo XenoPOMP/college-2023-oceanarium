@@ -1,25 +1,20 @@
-import cn from 'classnames';
 import { FC } from 'react';
-import styles from './Breakfast.module.scss';
 import { BreakfastProps } from './Breakfast.props';
-import AboutSection from '@sections/AboutSection/AboutSection';
-import Page from '@components/Page/Page';
 import useLocalization from '@hooks/useLocalization';
+import RestaurantPage from '@pages/restaurant/RestaurantPage/RestaurantPage';
 
 const Breakfast: FC<BreakfastProps> = ({}) => {
   const loc = useLocalization();
 
   return (
-    <Page
+    <RestaurantPage
+      menu={loc.restaurantPage.menus.breakfast}
       meta={{
         pageTitle: loc.meta.restaurant.breakfast.title,
         pageDescription: loc.meta.restaurant.breakfast.desc,
         keywords: loc.meta.restaurant.breakfast.keywords,
       }}
-      header={{
-        variant: 'restaurant',
-      }}
-    ></Page>
+    />
   );
 };
 

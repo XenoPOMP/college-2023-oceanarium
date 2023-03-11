@@ -12,7 +12,7 @@ import logo from '@media/logos/AI_LOGO.png';
 import { FC } from 'react';
 import { HeaderProps } from '@ui/Header/Header.props';
 import Banner from '@ui/Banner/Banner';
-import restaurantBanner from '@media/restaurant/restaurant-banner.png';
+import restaurantBanner from '@media/restaurant/eiffel-tour-5.jpg';
 
 const Header: FC<HeaderProps> = ({ variant }) => {
   const loc = useLocalization();
@@ -84,29 +84,32 @@ const Header: FC<HeaderProps> = ({ variant }) => {
               {loc.restaurantPage.header.buttons.menu}
 
               <div className={cn(styles.dropdown)}>
-                <div className={cn(styles.item)}>
+                <Link to={'/restaurant/breakfast'} className={cn(styles.item)}>
                   {loc.restaurantPage.header.buttons.breakfast}
-                </div>
+                </Link>
 
-                <div className={cn(styles.item)}>
+                <Link to={'/restaurant/daily'} className={cn(styles.item)}>
                   {loc.restaurantPage.header.buttons.dailyMenu}
-                </div>
+                </Link>
 
-                <div className={cn(styles.item)}>
+                <Link to={'/restaurant/corporate'} className={cn(styles.item)}>
                   {loc.restaurantPage.header.buttons.corporateMenu}
-                </div>
+                </Link>
 
-                <div className={cn(styles.item)}>
+                <Link to={'/restaurant/children'} className={cn(styles.item)}>
                   {loc.restaurantPage.header.buttons.childrenMenu}
-                </div>
+                </Link>
 
-                <div className={cn(styles.item)}>
+                <Link to={'/restaurant/drinks'} className={cn(styles.item)}>
                   {loc.restaurantPage.header.buttons.drinks}
-                </div>
+                </Link>
 
-                <div className={cn(styles.item)}>
+                <Link
+                  to={'/restaurant/late-breakfast'}
+                  className={cn(styles.item)}
+                >
                   {loc.restaurantPage.header.buttons.lateBreakfast}
-                </div>
+                </Link>
               </div>
             </div>
 
@@ -166,7 +169,7 @@ const Header: FC<HeaderProps> = ({ variant }) => {
           </header>
 
           <Banner
-            background={`url(${restaurantBanner})`}
+            background={`url(${restaurantBanner}) center`}
             width={'100vw'}
             height={'285px'}
             noPointerEvents={true}

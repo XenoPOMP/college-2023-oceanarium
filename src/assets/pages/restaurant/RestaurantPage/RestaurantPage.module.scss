@@ -1,0 +1,22 @@
+@import "src/assets/styles/templates";
+
+.restaurantPage {
+  @extend %restaurantFont;
+  @extend %light;
+
+  width: 100%;
+  font-size: 20px;
+  color: black;
+  background-size: contain;
+  padding: 3.55em 0 6.7em 0;
+
+  article.menu {
+    width: calc(100% - 2em);
+    max-width: 550px;
+    min-height: 100px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 1em;
+    padding: 1.15em;
+  }
+}

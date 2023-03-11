@@ -12,7 +12,7 @@ const Banner: FC<BannerProps> = ({
   return (
     <div
       style={{
-        background: `${background} center`,
+        background: `${background}`,
         width,
         height,
         pointerEvents: noPointerEvents === true ? 'none' : 'all',

@@ -1,0 +1,40 @@
+@import "src/assets/styles/templates";
+
+section.category {
+  @extend %light;
+
+  // 1em => 20px
+  // Font size: 20px
+  font-size: 1em;
+
+  h3 {
+    @extend %light;
+
+    font-size: 1em;
+    margin: 1em 0 .6em 0;
+    text-align: center;
+  }
+
+  .position {
+    @extend %flexCenter;
+    justify-content: space-between;
+    color: black;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1.35em;
+    }
+
+    .line {
+      $linePadding: .5em;
+
+      width: calc(100% - $linePadding - $linePadding);
+      margin: 0 $linePadding 0 $linePadding;
+      height: 1px;
+      background: black;
+    }
+
+    .name {
+      max-width: 75%;
+    }
+  }
+}

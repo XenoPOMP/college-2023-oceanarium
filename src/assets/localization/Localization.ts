@@ -4,6 +4,21 @@ type MetaInfo = {
   keywords: string
 }
 
+export type MenuPosition = {
+  name: string,
+  price: number
+}
+
+export type MenuCategory = {
+  title?: string,
+  positions: Array<MenuPosition>
+};
+
+export type Menu = {
+  title: string,
+  categories: Array<MenuCategory>
+}
+
 type Localization = {
   meta: {
     mainPage: MetaInfo,
@@ -14,7 +29,8 @@ type Localization = {
       employee: MetaInfo
     },
     restaurant: {
-      breakfast: MetaInfo
+      breakfast: MetaInfo,
+      daily: MetaInfo,
     },
   }
   header: {
@@ -162,6 +178,13 @@ type Localization = {
         drinks: string,
         lateBreakfast: string
       }
+    },
+    menus: {
+      breakfast: Menu,
+      daily: Menu,
+      corporate: Menu,
+      children: Menu,
+      drinks: Menu
     }
   }
 };

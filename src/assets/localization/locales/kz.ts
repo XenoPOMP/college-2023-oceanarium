@@ -36,6 +36,11 @@ const kz: Localization = {
         desc: '',
         keywords: '',
       },
+      daily: {
+        title: 'Күнделікті мәзір | Мейрамхана',
+        desc: '',
+        keywords: '',
+      },
     },
   },
 
@@ -207,6 +212,80 @@ const kz: Localization = {
         childrenMenu: 'Балалар мәзірі',
         drinks: 'Сусындар',
         lateBreakfast: 'таңғы ас (кеш)',
+      },
+    },
+    menus: {
+      breakfast: {
+        title: 'Таңғы ас',
+        categories: [
+          {
+            title: 'Бірінші тағамдар',
+            positions: [
+              {
+                name:
+                  'Взбитый тофу с засахаренным чесноком, радиолой и зеленым луком, грибами ' +
+                  'хереса, соусом поблано и укропом, лавашом с тыквенными семечками и сумахом',
+                price: 30,
+              },
+            ],
+          },
+        ],
+      },
+      daily: {
+        title: 'ЕЖЕДНЕВНОЕ МЕНЮ',
+        categories: [
+          {
+            title: 'Первые блюда',
+            positions: [
+              {
+                name: 'Суп дня',
+                price: 15,
+              },
+            ],
+          },
+        ],
+      },
+      corporate: {
+        title: 'ФИРМЕННОЕ МЕНЮ',
+        categories: [
+          {
+            title: '',
+            positions: [
+              {
+                name: 'Свинина с фасолью под фирменным соусом',
+                price: 3,
+              },
+            ],
+          },
+        ],
+      },
+      children: {
+        title: 'ДЕТСКОЕ МЕНЮ',
+        categories: [
+          {
+            title: '',
+            positions: [
+              {
+                name: 'Детское пюре “Гугу - гага”',
+                price: 30,
+              },
+            ],
+          },
+        ],
+      },
+      drinks: {
+        title: 'НАПИТКИ',
+        categories: [
+          {
+            title: 'Горячие',
+            positions: [
+              {
+                name: 'Чай',
+                price: 1,
+              },
+            ],
+          },
+        ],
       },
     },
   },
