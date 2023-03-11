@@ -114,20 +114,57 @@ header.restaurantHeader {
   height: 4.375em;
   background: #78ADFB;
   color: $fontColor;
+  z-index: 1;
 
   .button {
     @extend %notSelectable;
+    @extend %flexCenter;
 
     font-size: 1.5em;
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
-    margin: 1.25em 0;
+    height: 100%;
+    // margin: 1.25em 0;
+
+    &:hover > .dropdown {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    & > .dropdown {
+      $animationTiming: .5s ease;
+
+      position: absolute;
+      left: -3.75em;
+      top: 2.87em;
+      width: calc(100% + 7.5em);
+      background: #78ADFB;
+      display: grid;
+      text-transform: none;
+      transition: transform $animationTiming,
+                    opacity $animationTiming;
+      opacity: 0;
+      transform: translateY(-100%);
+
+      .item {
+        color: $fontColor;
+        // Font size => 16px
+        font-size: 1em;
+        padding: .3125em 0;
+        text-align: center;
+        transition: .15s ease;
+
+        &:hover {
+          background: #649CF0;
+        }
+      }
+    }
 
     &:after {
       position: absolute;
       content: "";
-      top: calc(100% + 2px);
+      top: calc(70% + 2px);
       left: 50%;
       width: 0;
       height: 2px;

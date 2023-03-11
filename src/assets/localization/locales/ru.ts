@@ -202,6 +202,12 @@ const ru: Localization = {
       buttons: {
         menu: 'меню',
         aboutUs: 'о нас',
+        breakfast: 'Завтрак',
+        dailyMenu: 'Ежедневное меню',
+        corporateMenu: 'Фирменное меню',
+        childrenMenu: 'Детское меню',
+        drinks: 'Напитки',
+        lateBreakfast: 'Поздний завтрак',
       },
     },
   },

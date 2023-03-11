@@ -82,6 +82,32 @@ const Header: FC<HeaderProps> = ({ variant }) => {
           <header className={cn(styles.restaurantHeader)}>
             <div className={cn(styles.button)}>
               {loc.restaurantPage.header.buttons.menu}
+
+              <div className={cn(styles.dropdown)}>
+                <div className={cn(styles.item)}>
+                  {loc.restaurantPage.header.buttons.breakfast}
+                </div>
+
+                <div className={cn(styles.item)}>
+                  {loc.restaurantPage.header.buttons.dailyMenu}
+                </div>
+
+                <div className={cn(styles.item)}>
+                  {loc.restaurantPage.header.buttons.corporateMenu}
+                </div>
+
+                <div className={cn(styles.item)}>
+                  {loc.restaurantPage.header.buttons.childrenMenu}
+                </div>
+
+                <div className={cn(styles.item)}>
+                  {loc.restaurantPage.header.buttons.drinks}
+                </div>
+
+                <div className={cn(styles.item)}>
+                  {loc.restaurantPage.header.buttons.lateBreakfast}
+                </div>
+              </div>
             </div>
 
             <NavLink to={'/'} className={cn(styles.logo)}>

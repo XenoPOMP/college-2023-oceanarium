@@ -201,6 +201,12 @@ const kz: Localization = {
       buttons: {
         menu: 'мәзір',
         aboutUs: 'біз туралы',
+        breakfast: 'Таңғы ас',
+        dailyMenu: 'Күнделікті мәзір',
+        corporateMenu: 'Бренд мәзірі',
+        childrenMenu: 'Балалар мәзірі',
+        drinks: 'Сусындар',
+        lateBreakfast: 'таңғы ас (кеш)',
       },
     },
   },

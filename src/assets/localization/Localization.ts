@@ -155,6 +155,12 @@ type Localization = {
       buttons: {
         menu: string,
         aboutUs: string,
+        breakfast: string,
+        dailyMenu: string,
+        corporateMenu: string,
+        childrenMenu: string,
+        drinks: string,
+        lateBreakfast: string
       }
     }
   }
