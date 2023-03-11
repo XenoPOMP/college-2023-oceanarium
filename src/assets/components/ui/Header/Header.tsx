@@ -11,6 +11,8 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '@media/logos/AI_LOGO.png';
 import { FC } from 'react';
 import { HeaderProps } from '@ui/Header/Header.props';
+import Banner from '@ui/Banner/Banner';
+import restaurantBanner from '@media/banners/restaurant-banner.png';
 
 const Header: FC<HeaderProps> = ({ variant }) => {
   const loc = useLocalization();
@@ -136,6 +138,13 @@ const Header: FC<HeaderProps> = ({ variant }) => {
               {loc.restaurantPage.header.buttons.aboutUs}
             </div>
           </header>
+
+          <Banner
+            background={`url(${restaurantBanner})`}
+            width={'100vw'}
+            height={'285px'}
+            noPointerEvents={true}
+          />
         </>
       )}
     </>
