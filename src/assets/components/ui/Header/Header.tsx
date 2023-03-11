@@ -12,7 +12,7 @@ import logo from '@media/logos/AI_LOGO.png';
 import { FC } from 'react';
 import { HeaderProps } from '@ui/Header/Header.props';
 import Banner from '@ui/Banner/Banner';
-import restaurantBanner from '@media/banners/restaurant-banner.png';
+import restaurantBanner from '@media/restaurant/restaurant-banner.png';
 
 const Header: FC<HeaderProps> = ({ variant }) => {
   const loc = useLocalization();
