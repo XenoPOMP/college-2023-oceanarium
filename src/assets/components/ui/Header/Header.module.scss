@@ -130,6 +130,7 @@ header.restaurantHeader {
     &:hover > .dropdown {
       transform: translateY(0);
       opacity: 1;
+      pointer-events: all;
     }
 
     & > .dropdown {
@@ -144,6 +145,7 @@ header.restaurantHeader {
       text-transform: none;
       transition: transform $animationTiming,
                     opacity $animationTiming;
+      pointer-events: none;
       opacity: 0;
       transform: translateY(-100%);
 
