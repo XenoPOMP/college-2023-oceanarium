@@ -7,7 +7,12 @@ import fishesBack from '@media/restaurant/fishes.png';
 import MenuTitle from '@ui/restaurant/MenuTitle/MenuTitle';
 import MenuCategoryComponent from '@ui/restaurant/MenuCategoryComponent/MenuCategoryComponent';
 
-const RestaurantPage: FC<RestaurantPageProps> = ({ meta, children, menu }) => {
+const RestaurantPage: FC<RestaurantPageProps> = ({
+  meta,
+  children,
+  menu,
+  noMenu,
+}) => {
   return (
     <Page
       meta={meta}
@@ -22,11 +27,17 @@ const RestaurantPage: FC<RestaurantPageProps> = ({ meta, children, menu }) => {
         className={cn(styles.restaurantPage)}
       >
         <article className={cn(styles.menu)}>
-          <MenuTitle>{menu.title}</MenuTitle>
+          {noMenu !== true ? (
+            <>
+              <MenuTitle>{menu?.title}</MenuTitle>
 
-          {menu.categories.map((cat) => (
-            <MenuCategoryComponent category={cat} />
-          ))}
+              {menu?.categories.map((cat) => (
+                <MenuCategoryComponent category={cat} />
+              ))}
+            </>
+          ) : (
+            <>{children}</>
+          )}
         </article>
       </div>
     </Page>
