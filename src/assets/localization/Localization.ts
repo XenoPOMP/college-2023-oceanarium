@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 type MetaInfo = {
   title: string,
   desc: string,
