@@ -1,6 +1,4 @@
-import cn from 'classnames';
 import { FC } from 'react';
-import styles from './DailyMenuPage.module.scss';
 import { DailyMenuPageProps } from './DailyMenuPage.props';
 import RestaurantPage from '@pages/restaurant/RestaurantPage/RestaurantPage';
 import useLocalization from '@hooks/useLocalization';

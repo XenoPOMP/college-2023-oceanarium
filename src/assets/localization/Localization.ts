@@ -31,6 +31,9 @@ type Localization = {
     restaurant: {
       breakfast: MetaInfo,
       daily: MetaInfo,
+      corporate: MetaInfo,
+      children: MetaInfo,
+      drinks: MetaInfo
     },
   }
   header: {

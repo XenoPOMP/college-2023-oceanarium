@@ -41,6 +41,21 @@ const kz: Localization = {
         desc: '',
         keywords: '',
       },
+      corporate: {
+        title: 'Бренд мәзірі | Мейрамхана',
+        desc: '',
+        keywords: '',
+      },
+      children: {
+        title: 'Балалар мәзірі | Мейрамхана',
+        desc: '',
+        keywords: '',
+      },
+      drinks: {
+        title: 'Сусындар | Мейрамхана',
+        desc: '',
+        keywords: '',
+      },
     },
   },
 

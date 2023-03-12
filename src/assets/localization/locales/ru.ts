@@ -41,6 +41,21 @@ const ru: Localization = {
         desc: '',
         keywords: '',
       },
+      corporate: {
+        title: 'Фирменное меню | Ресторан',
+        desc: '',
+        keywords: '',
+      },
+      children: {
+        title: 'Десткое меню | Ресторан',
+        desc: '',
+        keywords: '',
+      },
+      drinks: {
+        title: 'Напитки | Ресторан',
+        desc: '',
+        keywords: '',
+      },
     },
   },
 
@@ -352,6 +367,22 @@ const ru: Localization = {
                 name: 'Свинина с фасолью под фирменным соусом',
                 price: 3,
               },
+              {
+                name: 'Салат “Особый”',
+                price: 3,
+              },
+              {
+                name: 'Ещё чойто',
+                price: 3,
+              },
+              {
+                name: 'Суп с финиками и мясом крокодила',
+                price: 3,
+              },
+              {
+                name: 'Пюре из лосося',
+                price: 3,
+              },
             ],
           },
         ],
@@ -364,6 +395,10 @@ const ru: Localization = {
             positions: [
               {
                 name: 'Детское пюре “Гугу - гага”',
+                price: 30,
+              },
+              {
+                name: 'Сок детский “Жидкий нефор”',
                 price: 30,
               },
             ],

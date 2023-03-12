@@ -6,6 +6,8 @@ import VisitorAccountPage from '@pages/VisitorAccountPage/VisitorAccountPage';
 import EmployeeAccountPage from '@pages/EmployeeAccountPage/EmployeeAccountPage';
 import Breakfast from '@pages/restaurant/Breakfast/Breakfast';
 import DailyMenuPage from '@pages/restaurant/DailyMenuPage/DailyMenuPage';
+import CorporateMenuPage from '@pages/restaurant/CorporateMenuPage/CorporateMenuPage';
+import ChildrenMenuPage from '@pages/restaurant/ChildrenMenuPage/ChildrenMenuPage';
 
 function App() {
   return (
@@ -27,6 +29,10 @@ function App() {
           <Route path={'breakfast'} element={<Breakfast />} />
 
           <Route path={'daily'} element={<DailyMenuPage />} />
+
+          <Route path={'corporate'} element={<CorporateMenuPage />} />
+
+          <Route path={'children'} element={<ChildrenMenuPage />} />
         </Route>
       </Routes>
     </Router>
