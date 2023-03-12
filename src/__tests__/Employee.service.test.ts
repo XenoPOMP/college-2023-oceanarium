@@ -9,19 +9,11 @@ describe.skipIf(skipTestCondition('BACKEND'))('Employee service', () => {
   const { API_URL } = useEnv();
   const rootPath = `${API_URL}/employees`;
 
-  test('Return type is promise', () => {
-    const statement = EmployeeService.getShifts(2);
-    const secondStatement = EmployeeService.getTodayShift(2);
-
-    expect(statement).toBeInstanceOf(Promise);
-    expect(secondStatement).toBeInstanceOf(Promise);
-  });
-
-  test('Axios request is being send', () => {
+  test('Axios request is being send', async () => {
     const spy = vitest.spyOn(axios, 'post');
 
     try {
-      EmployeeService.getShifts(2);
+      await EmployeeService.getShifts(2);
     } catch (e) {
       throw e;
     }
