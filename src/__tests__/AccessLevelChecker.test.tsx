@@ -20,6 +20,10 @@ describe.skipIf(skipTestCondition('FRONTEND'))(
     });
 
     test('Body scroll property change', () => {
+      renderWithProviders(<AccessLevelChecker preferredRole={'visitor'} />, {
+        ...defaultConfig,
+      });
+
       expect(document.body.style.overflowY).toBe('hidden');
     });
   },
