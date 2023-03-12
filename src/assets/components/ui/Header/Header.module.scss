@@ -125,6 +125,7 @@ header.restaurantHeader {
     cursor: pointer;
     position: relative;
     height: 100%;
+    color: inherit;
     // margin: 1.25em 0;
 
     &:hover > .dropdown {

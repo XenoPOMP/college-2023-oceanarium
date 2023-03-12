@@ -163,9 +163,9 @@ const Header: FC<HeaderProps> = ({ variant }) => {
               </svg>
             </NavLink>
 
-            <div className={cn(styles.button)}>
+            <NavLink to={'/restaurant/about'} className={cn(styles.button)}>
               {loc.restaurantPage.header.buttons.aboutUs}
-            </div>
+            </NavLink>
           </header>
 
           <Banner

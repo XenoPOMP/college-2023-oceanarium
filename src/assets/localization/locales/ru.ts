@@ -56,6 +56,11 @@ const ru: Localization = {
         desc: '',
         keywords: '',
       },
+      about: {
+        title: 'О нас | Ресторан',
+        desc: '',
+        keywords: '',
+      },
     },
   },
 
@@ -440,6 +445,26 @@ const ru: Localization = {
           },
         ],
       },
+    },
+    about: {
+      sections: [
+        {
+          title: 'О нас',
+          content: [
+            'Мы очень крутые, работаем со всем миром и гребём миллионы тугриков',
+          ],
+        },
+
+        {
+          title: 'Наши поставщики',
+          content: ['тексттексттексттексттексттексттекс'],
+        },
+
+        {
+          title: 'Лучшие работники',
+          content: new Array(4).fill('[DELETED] - XXXXXXXXX'),
+        },
+      ],
     },
   },
 };

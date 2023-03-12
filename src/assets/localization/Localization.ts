@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 type MetaInfo = {
   title: string,
   desc: string,
@@ -19,6 +21,11 @@ export type Menu = {
   categories: Array<MenuCategory>
 }
 
+export type AboutRestaurantSection = {
+  title: string,
+  content: string[]
+};
+
 type Localization = {
   meta: {
     mainPage: MetaInfo,
@@ -33,7 +40,8 @@ type Localization = {
       daily: MetaInfo,
       corporate: MetaInfo,
       children: MetaInfo,
-      drinks: MetaInfo
+      drinks: MetaInfo,
+      about: MetaInfo
     },
   }
   header: {
@@ -188,6 +196,9 @@ type Localization = {
       corporate: Menu,
       children: Menu,
       drinks: Menu
+    },
+    about: {
+      sections: AboutRestaurantSection[]
     }
   }
 };

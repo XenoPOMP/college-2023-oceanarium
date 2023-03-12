@@ -56,6 +56,11 @@ const kz: Localization = {
         desc: '',
         keywords: '',
       },
+      about: {
+        title: 'Біз туралы | Мейрамхана',
+        desc: '',
+        keywords: '',
+      },
     },
   },
 
@@ -432,6 +437,26 @@ const kz: Localization = {
           },
         ],
       },
+    },
+    about: {
+      sections: [
+        {
+          title: 'Біз туралы',
+          content: [
+            'Біз өте кереметпіз, әлеммен жұмыс істейміз және миллиондаған тугриктерді',
+          ],
+        },
+
+        {
+          title: 'Біздің жеткізушілер',
+          content: ['тексттексттексттексттексттексттексттекстт'],
+        },
+
+        {
+          title: 'Үздік жұмысшылар',
+          content: new Array(4).fill('[DELETED] - XXXXXXXXX'),
+        },
+      ],
     },
   },
 };

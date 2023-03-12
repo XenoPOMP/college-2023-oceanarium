@@ -1,0 +1,29 @@
+@import "src/assets/styles/templates";
+
+.about {
+  // 1em = 20px;
+  font-size: 1em;
+
+  section {
+    &:not(:first-of-type) {
+      margin-top: 1.15em;
+    }
+
+    h3 {
+      @extend %light;
+
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 1.15em;
+    }
+
+    .items {
+      @extend %flexCenter;
+      flex-direction: column;
+      align-items: start;
+      row-gap: 1em;
+
+      p {}
+    }
+  }
+}
