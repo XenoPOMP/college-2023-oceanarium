@@ -415,6 +415,27 @@ const ru: Localization = {
                 name: 'Чай',
                 price: 1,
               },
+              {
+                name: 'Кофе',
+                price: 1,
+              },
+            ],
+          },
+          {
+            title: 'Холодные',
+            positions: [
+              {
+                name: 'Blonde du Cochon',
+                price: 7,
+              },
+              {
+                name: 'Lager',
+                price: 7,
+              },
+              {
+                name: 'IPA du Nord-Est',
+                price: 7,
+              },
             ],
           },
         ],

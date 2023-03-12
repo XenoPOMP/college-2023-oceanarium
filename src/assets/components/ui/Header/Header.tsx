@@ -104,12 +104,12 @@ const Header: FC<HeaderProps> = ({ variant }) => {
                   {loc.restaurantPage.header.buttons.drinks}
                 </Link>
 
-                <Link
-                  to={'/restaurant/late-breakfast'}
-                  className={cn(styles.item)}
-                >
-                  {loc.restaurantPage.header.buttons.lateBreakfast}
-                </Link>
+                {/*<Link*/}
+                {/*  to={'/restaurant/late-breakfast'}*/}
+                {/*  className={cn(styles.item)}*/}
+                {/*>*/}
+                {/*  {loc.restaurantPage.header.buttons.lateBreakfast}*/}
+                {/*</Link>*/}
               </div>
             </div>
 
