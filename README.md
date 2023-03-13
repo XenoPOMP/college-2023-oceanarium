@@ -1,6 +1,6 @@
 <h1 align='center'>Проект Океанариум ЯГК 2023</h1>
 
-!\[Version\](https://badgen.net/badge/Version/v.1.12/green)
+<img src='https://badgen.net/badge/Version/v.1.12/green' />
 
 Данный проект использует ``Node.js`` и ``React``.
 
