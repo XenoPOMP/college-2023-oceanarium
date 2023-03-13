@@ -1,6 +1,14 @@
 <h1 align='center'>Проект Океанариум ЯГК 2023</h1>
 
-<img src='https://badgen.net/badge/Version/v.1.12/green' />
+<p align='center'>
+    <img alt='Latest version badge' src='https://badgen.net/badge/Latest%20release/v.1.12/green' />
+    <img alt='React badge' src='https://img.shields.io/badge/react-%2320232a.svg?style=Plastic&logo=react&logoColor=%2361DAFB' />
+</p>
+
+<p align='center'>
+    <img alt='Vitest badge' src='https://badgen.net/badge/Vitest/passing/green' />
+    <img alt='Code coverage badge' src='https://badgen.net/badge/Coverage/82.12/green' />
+</p>
 
 Данный проект использует ``Node.js`` и ``React``.
 
