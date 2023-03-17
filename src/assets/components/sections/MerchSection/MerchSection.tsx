@@ -1,19 +1,27 @@
 import cn from 'classnames';
-import { FC } from 'react';
+import { CSSProperties, FC } from 'react';
 import styles from './MerchSection.module.scss';
 import { MerchSectionProps } from './MerchSection.props';
 import useLocalization from '@hooks/useLocalization';
+import shopBackground from '@media/backs/merch-back.png';
 import shopPhoto from '@media/merch shop/shop.png';
 import getUiSx from '@utils/getUiSx';
 
 const MerchSection: FC<MerchSectionProps> = ({}) => {
   const loc = useLocalization();
 
+  const getStyles = (): CSSProperties => {
+    return {
+      ...getUiSx({
+        gap: 0,
+      }),
+      background: `url(${shopBackground})`
+    } as CSSProperties;
+  }
+
   return (
     <section
-      style={getUiSx({
-        gap: 0,
-      })}
+      style={getStyles()}
       className={cn(styles.merch)}
     >
       <div className={cn(styles.placeholder)}>

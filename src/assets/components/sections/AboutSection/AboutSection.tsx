@@ -4,12 +4,18 @@ import styles from './AboutSection.module.scss';
 import { AboutSectionProps } from './AboutSection.props';
 import getUiSx from '@utils/getUiSx';
 import useLocalization from '@hooks/useLocalization';
+import backgroundImg from '@media/backs/aboutUs-back.png';
 
 const AboutSection: FC<AboutSectionProps> = ({}) => {
   const loc = useLocalization();
 
   return (
-    <section className={cn(styles.aboutUs)}>
+    <section
+      className={cn(styles.aboutUs)}
+      style={{
+        background: `url(${backgroundImg}) center`,
+      }}
+    >
       <div
         className={cn(styles.block)}
         style={getUiSx({
