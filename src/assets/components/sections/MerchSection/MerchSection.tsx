@@ -14,6 +14,7 @@ const MerchSection: FC<MerchSectionProps> = ({}) => {
     return {
       ...getUiSx({
         gap: 0,
+        maxWidth: 'unset'
       }),
       background: `url(${shopBackground})`
     } as CSSProperties;
