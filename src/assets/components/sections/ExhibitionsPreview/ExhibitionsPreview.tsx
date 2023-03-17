@@ -33,6 +33,9 @@ const ExhibitionsPreview = () => {
 
   return (
     <div
+      style={getUiSx({
+        maxWidth: 'unset',
+      })}
       className={cn(
         styles.preview,
         styles.localization,

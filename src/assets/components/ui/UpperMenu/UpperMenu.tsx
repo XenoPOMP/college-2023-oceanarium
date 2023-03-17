@@ -51,7 +51,7 @@ const UpperMenu = () => {
         <span>{loc.nav.forVisitors}</span>
       </div>
 
-      <div className={cn(styles.link)}>
+      <div className={cn(styles.link, styles.last)}>
         <span>{loc.nav.merchShop}</span>
       </div>
     </nav>

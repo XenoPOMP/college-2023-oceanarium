@@ -57,7 +57,7 @@
     }
 
     // Not render border of last link
-    &:last-of-type {
+    &.last {
       span {
         border-right: none;
       }
