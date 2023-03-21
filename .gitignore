@@ -13,7 +13,10 @@ dist-ssr
 *.local
 
 # Vitest
+# Vitest => Coverage
 coverage/*
+!coverage/index.html
+# Vitest => Snapshots
 **/__snapshots__/*
 *.snap
 
