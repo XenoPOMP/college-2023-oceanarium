@@ -6,8 +6,7 @@
 </p>
 
 <p align='center'>
-    <img alt='Vitest badge' src='https://badgen.net/badge/Vitest/passing/green' />
-    <img alt='Code coverage badge' src='https://badgen.net/badge/Coverage/82.12/green' />
+    <img src='http://localhost:4200/badges/coverage/statements' />
 </p>
 
 Данный проект использует ``Node.js`` и ``React``.
