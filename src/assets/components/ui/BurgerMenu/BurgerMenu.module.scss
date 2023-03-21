@@ -10,12 +10,20 @@
   top: 0;
   left: 0;
   width: 100vw;
-  background: red;
-  z-index: 60000;
+  // background: red;
+  z-index: 19000;
   display: none;
+  // border-radius: 0 0 17px 17px;
 
   // Reveal burger menu
   @media (max-width: 796px) {
     display: block;
+  }
+
+  .revealButton {
+    @extend %flexCenter;
+
+    height: 38px;
+    cursor: pointer;
   }
 }
