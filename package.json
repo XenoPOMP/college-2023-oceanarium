@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "build_and_preview": "yarn build && serve ./dist",
     "test": "vitest",
     "test:frontend": "cross-env VITE_TESTING_MODE=FRONTEND yarn test",
     "test:backend": "cross-env VITE_TESTING_MODE=BACKEND yarn test",
