@@ -49,6 +49,12 @@
     font-size: 1em;
     transition: background .15s ease;
 
+    // Block some buttons
+    &.blocked {
+      pointer-events: none;
+      opacity: .45;
+    }
+
     // Text content
     span {
       @extend %flexCenter;

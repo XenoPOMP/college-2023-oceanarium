@@ -43,15 +43,15 @@ const UpperMenu = () => {
         <span>{loc.nav.restaurant}</span>
       </NavLink>
 
-      <div className={cn(styles.link)}>
+      <div className={cn(styles.link, styles.blocked)}>
         <span>{loc.nav.exhibitions}</span>
       </div>
 
-      <div className={cn(styles.link)}>
+      <div className={cn(styles.link, styles.blocked)}>
         <span>{loc.nav.forVisitors}</span>
       </div>
 
-      <div className={cn(styles.link, styles.last)}>
+      <div className={cn(styles.link, styles.last, styles.blocked)}>
         <span>{loc.nav.merchShop}</span>
       </div>
     </nav>
