@@ -1,0 +1,21 @@
+@import "src/assets/styles/templates";
+
+.burgerMenu {
+  @extend %mainFont;
+  @extend %flexCenter;
+
+  text-align: center;
+  font-size: 20px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: red;
+  z-index: 60000;
+  display: none;
+
+  // Reveal burger menu
+  @media (max-width: 796px) {
+    display: block;
+  }
+}

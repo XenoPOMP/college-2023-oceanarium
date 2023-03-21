@@ -32,6 +32,30 @@ header.appHeader {
           column-gap: 1em;
         }
       }
+
+      @media (max-width: 580px) {
+        .logo, .contacts {
+          justify-content: center;
+          font-size: 16px;
+        }
+
+        .logo {
+          img {
+            margin: 0 0 1em 0;
+          }
+
+          h1, .desc {
+            display: none;
+          }
+        }
+      }
+
+      @media (max-width: 539px) {
+        .contacts {
+          flex-direction: column;
+          row-gap: 1em;
+        }
+      }
     }
 
     &.kz {
@@ -52,12 +76,41 @@ header.appHeader {
       @media (max-width: 823px) {
         font-size: 18px;
       }
+
+      @media (max-width: 776px) {
+        font-size: 16px;
+        padding: 1.5em 0;
+
+        .logo, .contacts {
+          justify-content: center;
+        }
+
+        .logo {
+          img {
+            margin: 0 0 1em 0;
+          }
+
+          h1, .desc {
+            display: none;
+          }
+        }
+
+        .contacts {
+          flex-direction: column;
+          row-gap: 1em;
+        }
+      }
+
+      @media (max-width: 410px) {
+        font-size: 13px;
+      }
     }
   }
 
   .logo {
     @extend %notSelectable;
     @extend %flexCenter;
+    justify-content: start;
 
     h1 {
       font-size: 1.33em;
@@ -65,7 +118,7 @@ header.appHeader {
     }
 
     img.logotype {
-      width: 150px;
+      width: 6.25em;
       margin-right: 1em;
       // border-radius: 50%;
     }
