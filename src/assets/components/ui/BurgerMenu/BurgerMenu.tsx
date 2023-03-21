@@ -4,11 +4,14 @@ import styles from './BurgerMenu.module.scss';
 import { BurgerMenuProps } from './BurgerMenu.props';
 import useBoolean from '@hooks/useBoolean';
 import { motion, Transition } from 'framer-motion';
+import useLocalization from '@hooks/useLocalization';
+import { NavLink } from 'react-router-dom';
 
 // TODO Сделать бургер меню
 
 const BurgerMenu: FC<BurgerMenuProps> = ({}) => {
   const { isToggled, toggle } = useBoolean(false);
+  const loc = useLocalization();
 
   const iconAnimationTransition: Transition = {
     duration: 0.15,
@@ -66,6 +69,44 @@ const BurgerMenu: FC<BurgerMenuProps> = ({}) => {
           />
         </svg>
       </div>
+
+      <motion.div
+        initial={{
+          height: isToggled ? 'unset' : 0,
+        }}
+        animate={{
+          height: isToggled ? 'unset' : 0,
+        }}
+        transition={{
+          ease: 'easeOut',
+          duration: 0.3,
+        }}
+        className={cn(styles.links)}
+      >
+        <NavLink to={'/account/visitor'} className={cn(styles.link)}>
+          {loc.nav.account}: {loc.nav.accountDropdown.visitor}
+        </NavLink>
+
+        <NavLink to={'/account/employee'} className={cn(styles.link)}>
+          {loc.nav.account}: {loc.nav.accountDropdown.employee}
+        </NavLink>
+
+        <NavLink to={'/restaurant/breakfast'} className={cn(styles.link)}>
+          {loc.nav.restaurant}
+        </NavLink>
+
+        <NavLink to={'/'} className={cn(styles.link, styles.blocked)}>
+          {loc.nav.exhibitions}
+        </NavLink>
+
+        <NavLink to={'/'} className={cn(styles.link, styles.blocked)}>
+          {loc.nav.forVisitors}
+        </NavLink>
+
+        <NavLink to={'/'} className={cn(styles.link, styles.blocked)}>
+          {loc.nav.merchShop}
+        </NavLink>
+      </motion.div>
     </div>
   );
 };
