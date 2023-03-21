@@ -1,11 +1,8 @@
-import axios from 'axios';
-import useEnv from '@hooks/useEnv';
-
-const { API_URL } = useEnv();
+import ApiClient from '@utils/ApiClient';
 
 export const UserService = {
   async loginUser(login: string, password: string) {
-    return axios.post(`${API_URL}/visitors/login`, {
+    return ApiClient.post(`visitors/login`, {
       login,
       password,
     });

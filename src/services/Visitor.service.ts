@@ -1,23 +1,20 @@
-import axios from 'axios';
-import useEnv from '@hooks/useEnv';
-
-const { API_URL } = useEnv();
+import ApiClient from '@utils/ApiClient';
 
 export const VisitorService = {
   async getUserBonuses(_uid?: number) {
-    return axios.post(`${API_URL}/visitors/bonuses`, {
+    return ApiClient.post(`visitors/bonuses`, {
       _uid,
     });
   },
 
   async getUserVisits(_uid?: number) {
-    return axios.post(`${API_URL}/visitors/visits`, {
+    return ApiClient.post(`visitors/visits`, {
       _uid,
     });
   },
 
   async getUserData(_uid?: number) {
-    return axios.post(`${API_URL}/visitors/data`, {
+    return ApiClient.post(`visitors/data`, {
       _uid,
     });
   },
