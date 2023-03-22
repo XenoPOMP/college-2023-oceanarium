@@ -1,15 +1,15 @@
 <h1 align='center'>Проект Океанариум ЯГК 2023</h1>
 
 
-<p align="center">
+<div style="display: flex; column-gap: 10px; justify-content: center">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cf33a18a-3851-42e1-a721-c3cb62c37d7a/deploy-status)](https://app.netlify.com/sites/taldykoceanarium/deploys)
 
 [![Hosting - Link](https://img.shields.io/static/v1?label=Hosting&message=Link&color=00C7B7&logo=Netlify&logoColor=00C7B7)](https://taldykoceanarium.netlify.app/)
 
-</p>
+</div>
 
-<p align="center">
+<div style="display: flex; column-gap: 10px; justify-content: center; flex-wrap: wrap">
 
 [![react](https://img.shields.io/static/v1?label=&message=react&color=61DAFB&logo=React&logoColor=white)](https://react.dev/)
 
@@ -33,7 +33,7 @@
 
 [![sass](https://img.shields.io/static/v1?label=&message=sass&color=%23CC6699&logo=Sass&logoColor=white)](https://sass-lang.com/)
 
-</p>
+</div>
 
 Данный проект использует ``Node.js`` и ``React``.
 
