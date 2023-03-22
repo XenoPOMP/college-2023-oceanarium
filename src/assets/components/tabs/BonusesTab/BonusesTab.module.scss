@@ -2,8 +2,7 @@
 
 .totalBonuses {
   width: 100%;
-  grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column: span 3;
   padding: 0 1.5em;
 
   h4 {
@@ -16,6 +15,5 @@
 }
 
 .bonusList {
-  grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column: span 3;
 }

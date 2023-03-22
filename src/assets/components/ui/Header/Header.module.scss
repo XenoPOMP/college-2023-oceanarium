@@ -256,4 +256,21 @@ header.restaurantHeader {
       width: 45%;
     }
   }
+
+  @media (max-width: 607px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 527px) {
+    font-size: 12px;
+
+    .logo {
+      width: 4.375em;
+      height: 4.375em;
+    }
+  }
+
+  @media (max-width: 454px) {
+    font-size: 10px;
+  }
 }
