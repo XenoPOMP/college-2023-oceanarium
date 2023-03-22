@@ -1,13 +1,9 @@
 <h1 align='center'>Проект Океанариум ЯГК 2023</h1>
 
-<p align='center'>
-    <img alt='Latest version badge' src='https://badgen.net/badge/Latest%20release/v.1.12/green' />
-    <img alt='React badge' src='https://img.shields.io/badge/react-%2320232a.svg?style=Plastic&logo=react&logoColor=%2361DAFB' />
-</p>
 
-<p align='center'>
-    <img src='http://localhost:4200/badges/coverage/statements' />
-</p>
+![Framework](https://img.shields.io/badge/react-%2320232a.svg?style=Plastic&logo=react&logoColor=%2361DAFB)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cf33a18a-3851-42e1-a721-c3cb62c37d7a/deploy-status)](https://app.netlify.com/sites/taldykoceanarium/deploys)
 
 Данный проект использует ``Node.js`` и ``React``.
 
