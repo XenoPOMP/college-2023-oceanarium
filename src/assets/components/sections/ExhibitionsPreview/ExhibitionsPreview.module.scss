@@ -85,6 +85,51 @@
 
         padding: 0 20px 2.6em 20px;
       }
+
+      @media (max-width: 952px) {
+        font-size: 15px;
+
+        .placeholder.textContent {
+          grid-template-columns: 4fr 1fr;
+        }
+
+        .service {
+          column-gap: 2em !important;
+        }
+
+        section.services .title {
+          margin-bottom: 1em;
+        }
+      }
+
+      @media (max-width: 592px) {
+        font-size: 14px;
+        grid-template-columns: 1fr !important;
+
+        .service {
+          column-gap: 5em !important;
+          padding: 0 1em 0 3em;
+        }
+
+        section.services .item {
+          width: 2em;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      @media (max-width: 474px) {
+        font-size: 13px;
+
+        section.services .service {
+          display: flex;
+          flex-direction: column;
+          column-gap: 0;
+          row-gap: 1em;
+        }
+      }
     }
   }
 

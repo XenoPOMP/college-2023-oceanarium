@@ -51,4 +51,12 @@ section.bestPhoto {
       grid-column: span 5;
     }
   }
+
+  @media (max-width: 550px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 489px) {
+    font-size: 16px;
+  }
 }

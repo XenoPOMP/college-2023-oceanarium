@@ -168,6 +168,9 @@ header.restaurantHeader {
   background: #78ADFB;
   color: $fontColor;
   z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
 
   .button {
     @extend %notSelectable;
