@@ -1,8 +1,13 @@
 <h1 align='center'>Проект Океанариум ЯГК 2023</h1>
 
 <p align="center">
-<a href="https://react.dev/"><img src="https://img.shields.io/static/v1?label=&message=react&color=61DAFB&logo=React&logoColor=white" alt="react"></a>
-<a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/static/v1?label=&message=typescript&color=%233178C6&logo=TypeScript&logoColor=white" alt="typescript"></a>
+<a href="https://nodejs.org/en"><img src="https://img.shields.io/static/v1?label=&message=Node.js&color=%23339933&style=for-the-badge&logo=Node.js&logoColor=white" alt="Node.js"></a>
+<a href="https://yarnpkg.com/"><img src="https://img.shields.io/static/v1?label=&message=yarn&color=%232C8EBB&style=for-the-badge&logo=yarn&logoColor=white" alt="yarn"></a>
+<a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/static/v1?label=&message=typescript&color=%233178C6&style=for-the-badge&logo=typescript&logoColor=white" alt="typescript"></a>
+<a href="https://react.dev/"><img src="https://img.shields.io/static/v1?label=&message=react&color=%2361DAFB&style=for-the-badge&logo=react&logoColor=black" alt="react"></a>
+</p>
+
+<p align="center">
 <a href="https://vitejs.dev/"><img src="https://img.shields.io/static/v1?label=&message=vite&color=%23646CFF&logo=Vite&logoColor=white" alt="vite"></a>
 <a href="https://vitest.dev/"><img src="https://img.shields.io/static/v1?label=&message=vitest&color=%236E9F18&logo=Vitest&logoColor=yellow" alt="vitest"></a>
 <a href="https://prettier.io/"><img src="https://img.shields.io/static/v1?label=&message=prettier&color=1A2B34&logo=prettier&logoColor=F7BA3E" alt="prettier"></a>
