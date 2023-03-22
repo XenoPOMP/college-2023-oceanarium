@@ -1,7 +1,7 @@
 <h1 align='center'>Проект Океанариум ЯГК 2023</h1>
 
 
-<div style="display: flex; column-gap: 10px; justify-content: center">
+<div style="display: flex; column-gap: 10px; text-align: center; justify-content: center">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cf33a18a-3851-42e1-a721-c3cb62c37d7a/deploy-status)](https://app.netlify.com/sites/taldykoceanarium/deploys)
 
