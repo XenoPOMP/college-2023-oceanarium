@@ -43,4 +43,12 @@ section.bestPhoto {
       }
     }
   }
+
+  @media (max-width: 760px) {
+    padding: 3.85em 20px 8.15em 20px;
+
+    .placeholder {
+      grid-column: span 5;
+    }
+  }
 }

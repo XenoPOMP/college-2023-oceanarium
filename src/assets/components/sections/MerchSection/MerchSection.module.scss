@@ -34,4 +34,13 @@ section.merch {
       color: white;
     }
   }
+
+  @media (max-width: 760px) {
+    font-size: 22px;
+    padding: 3.75em 20px 3.25em 20px;
+
+    .placeholder {
+      grid-column: span 5;
+    }
+  }
 }
